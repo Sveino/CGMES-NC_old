@@ -1,0 +1,527 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:eumd="http://entsoe.eu/ns/Metadata-European#"
+    xmlns:nc="http://entsoe.eu/ns/nc#"
+    xmlns:md="http://iec.ch/TC57/61970-552/ModelDescription/1#"
+    xmlns:cims="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dcterms="http://purl.org/dc/terms/#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:euvoc="http://publications.europa.eu/ontology/euvoc#"
+    xmlns:dm="http://iec.ch/TC57/61970-552/DifferenceModel/1#"
+    xmlns:eu="http://iec.ch/TC57/CIM100-European#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:profcim="http://iec.ch/TC57/ns/CIM/prof-cim#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:ido="http://iec.ch/TC57/ns/CIM/IdentifiedObject/constraints/3.0#"
+    xmlns:sh="http://www.w3.org/ns/shacl#"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:ssi="http://entsoe.eu/ns/CIM/SteadyStateInstruction-EU/constraints#"
+    xmlns:prof="http://www.w3.org/ns/dx/prof/#"
+    xmlns:cim="http://iec.ch/TC57/CIM100#"
+    xmlns:dash="http://datashapes.org/dash#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="http://entsoe.eu/ns/CIM/SteadyStateInstruction-EU/constraints" > 
+  <rdf:Description rdf:about="#BiddingZoneBorder.balancingZonalCapacity-cardinality">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:description>This constraint validates the cardinality of the property (attribute).</sh:description>
+    <sh:group rdf:resource="#CardinalityGroup"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:message>Cardinality violation. Upper bound shall be 1</sh:message>
+    <sh:name>BiddingZoneBorder.balancingZonalCapacity-cardinality</sh:name>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:order>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#BiddingZoneBorder.balancingZonalCapacity"/>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#AreaDispatchableUnit.enabled-datatype">
+    <sh:description>This constraint validates the datatype of the property (attribute).</sh:description>
+    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <sh:name>AreaDispatchableUnit.enabled-datatype</sh:name>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#AreaDispatchableUnit.enabled"/>
+    <sh:group rdf:resource="#DatatypesGroup"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <sh:message>The datatype is not literal or it violates the xsd datatype.</sh:message>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Equipment.networkAnalysisEnabled-cardinality">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:description>This constraint validates the cardinality of the property (attribute).</sh:description>
+    <sh:group rdf:resource="#CardinalityGroup"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:message>Cardinality violation. Upper bound shall be 1</sh:message>
+    <sh:name>Equipment.networkAnalysisEnabled-cardinality</sh:name>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sh:path rdf:resource="http://iec.ch/TC57/CIM100#Equipment.networkAnalysisEnabled"/>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#BiddingZone.netDCInterchange-datatype">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#BiddingZone.netDCInterchange"/>
+    <sh:group rdf:resource="#DatatypesGroup"/>
+    <sh:message>The datatype is not literal or it violates the xsd datatype.</sh:message>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sh:order>
+    <sh:description>This constraint validates the datatype of the property (attribute).</sh:description>
+    <sh:name>BiddingZone.netDCInterchange-datatype</sh:name>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#BiddingZone.netACInterchangeTolerance-datatype">
+    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <sh:group rdf:resource="#DatatypesGroup"/>
+    <sh:message>The datatype is not literal or it violates the xsd datatype.</sh:message>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <sh:description>This constraint validates the datatype of the property (attribute).</sh:description>
+    <sh:name>BiddingZone.netACInterchangeTolerance-datatype</sh:name>
+    <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#BiddingZone.netACInterchangeTolerance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#BiddingZone.maximumImport-cardinality">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:description>This constraint validates the cardinality of the property (attribute).</sh:description>
+    <sh:group rdf:resource="#CardinalityGroup"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:message>Cardinality violation. Upper bound shall be 1</sh:message>
+    <sh:name>BiddingZone.maximumImport-cardinality</sh:name>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</sh:order>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#BiddingZone.maximumImport"/>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#DCController.powerRegulationSetPoint-cardinality">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:message>Missing required property (attribute).</sh:message>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sh:name>DCController.powerRegulationSetPoint-cardinality</sh:name>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#DCController.powerRegulationSetPoint"/>
+    <sh:description>This constraint validates the cardinality of the property (attribute).</sh:description>
+    <sh:group rdf:resource="#CardinalityGroup"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#CircuitShare">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:property rdf:resource="#CircuitShare.contributionFactor-datatype"/>
+    <sh:property rdf:resource="#CircuitShare.contributionFactor-cardinality"/>
+    <sh:targetClass rdf:resource="http://entsoe.eu/ns/nc#CircuitShare"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#BiddingZone.maximumImport-datatype">
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#BiddingZone.maximumImport"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:message>The datatype is not literal or it violates the xsd datatype.</sh:message>
+    <sh:name>BiddingZone.maximumImport-datatype</sh:name>
+    <sh:description>This constraint validates the datatype of the property (attribute).</sh:description>
+    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</sh:order>
+    <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    <sh:group rdf:resource="#DatatypesGroup"/>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#PowerTransferCorridor">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:property rdf:resource="#PowerTransferCorridor.enabled-datatype"/>
+    <sh:property rdf:resource="#PowerTransferCorridor.enabled-cardinality"/>
+    <sh:targetClass rdf:resource="http://entsoe.eu/ns/nc#PowerTransferCorridor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#BiddingZoneBorder.crossZonalCapacity-datatype">
+    <sh:group rdf:resource="#DatatypesGroup"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:name>BiddingZoneBorder.crossZonalCapacity-datatype</sh:name>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#BiddingZoneBorder.crossZonalCapacity"/>
+    <sh:message>The datatype is not literal or it violates the xsd datatype.</sh:message>
+    <sh:description>This constraint validates the datatype of the property (attribute).</sh:description>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#BiddingZone.maximumExport-datatype">
+    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <sh:name>BiddingZone.maximumExport-datatype</sh:name>
+    <sh:message>The datatype is not literal or it violates the xsd datatype.</sh:message>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#BiddingZone.maximumExport"/>
+    <sh:group rdf:resource="#DatatypesGroup"/>
+    <sh:description>This constraint validates the datatype of the property (attribute).</sh:description>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sh:order>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Equipment.networkAnalysisEnabled-datatype">
+    <sh:path rdf:resource="http://iec.ch/TC57/CIM100#Equipment.networkAnalysisEnabled"/>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <sh:message>The datatype is not literal or it violates the xsd datatype.</sh:message>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    <sh:group rdf:resource="#DatatypesGroup"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sh:name>Equipment.networkAnalysisEnabled-datatype</sh:name>
+    <sh:description>This constraint validates the datatype of the property (attribute).</sh:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="#AreaDispatchableUnit.enabled-cardinality">
+    <sh:description>This constraint validates the cardinality of the property (attribute).</sh:description>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#AreaDispatchableUnit.enabled"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <sh:group rdf:resource="#CardinalityGroup"/>
+    <sh:message>Missing required property (attribute).</sh:message>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:name>AreaDispatchableUnit.enabled-cardinality</sh:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="#CircuitShare.contributionFactor-datatype">
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#CircuitShare.contributionFactor"/>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <sh:group rdf:resource="#DatatypesGroup"/>
+    <sh:description>This constraint validates the datatype of the property (attribute).</sh:description>
+    <sh:name>CircuitShare.contributionFactor-datatype</sh:name>
+    <sh:message>The datatype is not literal or it violates the xsd datatype.</sh:message>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#PowerTransferCorridor.enabled-datatype">
+    <sh:group rdf:resource="#DatatypesGroup"/>
+    <sh:description>This constraint validates the datatype of the property (attribute).</sh:description>
+    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <sh:name>PowerTransferCorridor.enabled-datatype</sh:name>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#PowerTransferCorridor.enabled"/>
+    <sh:message>The datatype is not literal or it violates the xsd datatype.</sh:message>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#StageTrigger.armed-cardinality">
+    <sh:description>This constraint validates the cardinality of the property (attribute).</sh:description>
+    <sh:message>Missing required property (attribute).</sh:message>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#StageTrigger.armed"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sh:group rdf:resource="#CardinalityGroup"/>
+    <sh:name>StageTrigger.armed-cardinality</sh:name>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+  </rdf:Description>
+  <rdf:Description rdf:about="#PTCActivePowerSupport.value-cardinality">
+    <sh:message>Missing required property (attribute).</sh:message>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:group rdf:resource="#CardinalityGroup"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sh:name>PTCActivePowerSupport.value-cardinality</sh:name>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <sh:description>This constraint validates the cardinality of the property (attribute).</sh:description>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#PTCActivePowerSupport.value"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#PTCActivePowerSupport">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:property rdf:resource="#PTCActivePowerSupport.value-datatype"/>
+    <sh:property rdf:resource="#PTCActivePowerSupport.value-cardinality"/>
+    <sh:targetClass rdf:resource="http://entsoe.eu/ns/nc#PTCActivePowerSupport"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#RemedialActionScheme">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:property rdf:resource="#RemedialActionScheme.armed-datatype"/>
+    <sh:property rdf:resource="#RemedialActionScheme.armed-cardinality"/>
+    <sh:property rdf:resource="#RemedialActionScheme.inService-datatype"/>
+    <sh:property rdf:resource="#RemedialActionScheme.inService-cardinality"/>
+    <sh:targetClass rdf:resource="http://entsoe.eu/ns/nc#RemedialActionScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#BiddingZone.netACInterchangeTolerance-cardinality">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:description>This constraint validates the cardinality of the property (attribute).</sh:description>
+    <sh:group rdf:resource="#CardinalityGroup"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:message>Cardinality violation. Upper bound shall be 1</sh:message>
+    <sh:name>BiddingZone.netACInterchangeTolerance-cardinality</sh:name>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#BiddingZone.netACInterchangeTolerance"/>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#AssociationsGroup">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyGroup"/>
+    <rdfs:label>Associations</rdfs:label>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sh:order>
+  </rdf:Description>
+  <rdf:Description rdf:about="#RemedialActionScheme.armed-cardinality">
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#RemedialActionScheme.armed"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:order>
+    <sh:group rdf:resource="#CardinalityGroup"/>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:description>This constraint validates the cardinality of the property (attribute).</sh:description>
+    <sh:name>RemedialActionScheme.armed-cardinality</sh:name>
+    <sh:message>Missing required property (attribute).</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:about="#BiddingZone.maximumExport-cardinality">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:description>This constraint validates the cardinality of the property (attribute).</sh:description>
+    <sh:group rdf:resource="#CardinalityGroup"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:message>Cardinality violation. Upper bound shall be 1</sh:message>
+    <sh:name>BiddingZone.maximumExport-cardinality</sh:name>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sh:order>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#BiddingZone.maximumExport"/>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#StageTrigger.armed-datatype">
+    <sh:message>The datatype is not literal or it violates the xsd datatype.</sh:message>
+    <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#StageTrigger.armed"/>
+    <sh:group rdf:resource="#DatatypesGroup"/>
+    <sh:name>StageTrigger.armed-datatype</sh:name>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sh:description>This constraint validates the datatype of the property (attribute).</sh:description>
+    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#DCController">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:property rdf:resource="#DCController.powerRegulationSetPoint-datatype"/>
+    <sh:property rdf:resource="#DCController.powerRegulationSetPoint-cardinality"/>
+    <sh:targetClass rdf:resource="http://entsoe.eu/ns/nc#DCController"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#BiddingZone.balancingAllocation-cardinality">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:description>This constraint validates the cardinality of the property (attribute).</sh:description>
+    <sh:group rdf:resource="#CardinalityGroup"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:message>Cardinality violation. Upper bound shall be 1</sh:message>
+    <sh:name>BiddingZone.balancingAllocation-cardinality</sh:name>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:order>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#BiddingZone.balancingAllocation"/>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#PowerTransferCorridor.enabled-cardinality">
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:message>Missing required property (attribute).</sh:message>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#PowerTransferCorridor.enabled"/>
+    <sh:description>This constraint validates the cardinality of the property (attribute).</sh:description>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sh:name>PowerTransferCorridor.enabled-cardinality</sh:name>
+    <sh:group rdf:resource="#CardinalityGroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#StageTrigger">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:property rdf:resource="#StageTrigger.armed-datatype"/>
+    <sh:property rdf:resource="#StageTrigger.armed-cardinality"/>
+    <sh:targetClass rdf:resource="http://entsoe.eu/ns/nc#StageTrigger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#BiddingZone.balancingAllocation-datatype">
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#BiddingZone.balancingAllocation"/>
+    <sh:group rdf:resource="#DatatypesGroup"/>
+    <sh:name>BiddingZone.balancingAllocation-datatype</sh:name>
+    <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <sh:description>This constraint validates the datatype of the property (attribute).</sh:description>
+    <sh:message>The datatype is not literal or it violates the xsd datatype.</sh:message>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:order>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#CardinalityGroup">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyGroup"/>
+    <rdfs:label>Cardinality</rdfs:label>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+  </rdf:Description>
+  <rdf:Description rdf:about="#CircuitShare.contributionFactor-cardinality">
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:message>Missing required property (attribute).</sh:message>
+    <sh:description>This constraint validates the cardinality of the property (attribute).</sh:description>
+    <sh:group rdf:resource="#CardinalityGroup"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:name>CircuitShare.contributionFactor-cardinality</sh:name>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#CircuitShare.contributionFactor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#AreaDispatchableUnit">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:property rdf:resource="#AreaDispatchableUnit.enabled-datatype"/>
+    <sh:property rdf:resource="#AreaDispatchableUnit.enabled-cardinality"/>
+    <sh:targetClass rdf:resource="http://entsoe.eu/ns/nc#AreaDispatchableUnit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#BiddingZone.netDCInterchange-cardinality">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:description>This constraint validates the cardinality of the property (attribute).</sh:description>
+    <sh:group rdf:resource="#CardinalityGroup"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:message>Cardinality violation. Upper bound shall be 1</sh:message>
+    <sh:name>BiddingZone.netDCInterchange-cardinality</sh:name>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sh:order>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#BiddingZone.netDCInterchange"/>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#RemedialActionScheme.armed-datatype">
+    <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <sh:name>RemedialActionScheme.armed-datatype</sh:name>
+    <sh:message>The datatype is not literal or it violates the xsd datatype.</sh:message>
+    <sh:description>This constraint validates the datatype of the property (attribute).</sh:description>
+    <sh:group rdf:resource="#DatatypesGroup"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#RemedialActionScheme.armed"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:order>
+  </rdf:Description>
+  <rdf:Description rdf:about="#PTCActivePowerSupport.value-datatype">
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <sh:name>PTCActivePowerSupport.value-datatype</sh:name>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sh:group rdf:resource="#DatatypesGroup"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:message>The datatype is not literal or it violates the xsd datatype.</sh:message>
+    <sh:description>This constraint validates the datatype of the property (attribute).</sh:description>
+    <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#PTCActivePowerSupport.value"/>
+    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#DatatypesGroup">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyGroup"/>
+    <rdfs:label>Datatypes</rdfs:label>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:order>
+  </rdf:Description>
+  <rdf:Description rdf:about="#BiddingZone.netACInterchange-cardinality">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:description>This constraint validates the cardinality of the property (attribute).</sh:description>
+    <sh:group rdf:resource="#CardinalityGroup"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:message>Cardinality violation. Upper bound shall be 1</sh:message>
+    <sh:name>BiddingZone.netACInterchange-cardinality</sh:name>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sh:order>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#BiddingZone.netACInterchange"/>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#BiddingZoneBorder.balancingZonalCapacity-datatype">
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#BiddingZoneBorder.balancingZonalCapacity"/>
+    <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:name>BiddingZoneBorder.balancingZonalCapacity-datatype</sh:name>
+    <sh:message>The datatype is not literal or it violates the xsd datatype.</sh:message>
+    <sh:description>This constraint validates the datatype of the property (attribute).</sh:description>
+    <sh:group rdf:resource="#DatatypesGroup"/>
+    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:order>
+  </rdf:Description>
+  <rdf:Description rdf:about="#BiddingZoneBorder.crossZonalCapacity-cardinality">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:group rdf:resource="#CardinalityGroup"/>
+    <sh:description>This constraint validates the cardinality of the property (attribute).</sh:description>
+    <sh:name>BiddingZoneBorder.crossZonalCapacity-cardinality</sh:name>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:message>Missing required property (attribute).</sh:message>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#BiddingZoneBorder.crossZonalCapacity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#DCController.powerRegulationSetPoint-datatype">
+    <sh:description>This constraint validates the datatype of the property (attribute).</sh:description>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#DCController.powerRegulationSetPoint"/>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <sh:name>DCController.powerRegulationSetPoint-datatype</sh:name>
+    <sh:group rdf:resource="#DatatypesGroup"/>
+    <sh:message>The datatype is not literal or it violates the xsd datatype.</sh:message>
+    <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+  </rdf:Description>
+  <rdf:Description rdf:about="#RemedialActionScheme.inService-datatype">
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sh:group rdf:resource="#DatatypesGroup"/>
+    <sh:description>This constraint validates the datatype of the property (attribute).</sh:description>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#RemedialActionScheme.inService"/>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    <sh:message>The datatype is not literal or it violates the xsd datatype.</sh:message>
+    <sh:name>RemedialActionScheme.inService-datatype</sh:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Equipment">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:property rdf:resource="#Equipment.networkAnalysisEnabled-datatype"/>
+    <sh:property rdf:resource="#Equipment.networkAnalysisEnabled-cardinality"/>
+    <sh:targetClass rdf:resource="http://iec.ch/TC57/CIM100#Equipment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#BiddingZoneBorder">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:property rdf:resource="#BiddingZoneBorder.balancingZonalCapacity-datatype"/>
+    <sh:property rdf:resource="#BiddingZoneBorder.balancingZonalCapacity-cardinality"/>
+    <sh:property rdf:resource="#BiddingZoneBorder.crossZonalCapacity-datatype"/>
+    <sh:property rdf:resource="#BiddingZoneBorder.crossZonalCapacity-cardinality"/>
+    <sh:targetClass rdf:resource="http://entsoe.eu/ns/nc#BiddingZoneBorder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#BiddingZone.netACInterchange-datatype">
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#BiddingZone.netACInterchange"/>
+    <sh:name>BiddingZone.netACInterchange-datatype</sh:name>
+    <sh:message>The datatype is not literal or it violates the xsd datatype.</sh:message>
+    <sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sh:order>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:description>This constraint validates the datatype of the property (attribute).</sh:description>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <sh:group rdf:resource="#DatatypesGroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#BiddingZone">
+    <sh:property rdf:resource="#BiddingZone.maximumExport-datatype"/>
+    <sh:property rdf:resource="#BiddingZone.balancingAllocation-datatype"/>
+    <sh:property rdf:resource="#BiddingZone.netACInterchangeTolerance-datatype"/>
+    <sh:property rdf:resource="#BiddingZone.maximumExport-cardinality"/>
+    <sh:property rdf:resource="#BiddingZone.maximumImport-cardinality"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:property rdf:resource="#BiddingZone.netDCInterchange-datatype"/>
+    <sh:property rdf:resource="#BiddingZone.netACInterchangeTolerance-cardinality"/>
+    <sh:property rdf:resource="#BiddingZone.maximumImport-datatype"/>
+    <sh:property rdf:resource="#BiddingZone.balancingAllocation-cardinality"/>
+    <sh:property rdf:resource="#BiddingZone.netACInterchange-cardinality"/>
+    <sh:targetClass rdf:resource="http://entsoe.eu/ns/nc#BiddingZone"/>
+    <sh:property rdf:resource="#BiddingZone.netACInterchange-datatype"/>
+    <sh:property rdf:resource="#BiddingZone.netDCInterchange-cardinality"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#RemedialActionScheme.inService-cardinality">
+    <sh:message>Missing required property (attribute).</sh:message>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:group rdf:resource="#CardinalityGroup"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sh:name>RemedialActionScheme.inService-cardinality</sh:name>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <sh:description>This constraint validates the cardinality of the property (attribute).</sh:description>
+    <sh:path rdf:resource="http://entsoe.eu/ns/nc#RemedialActionScheme.inService"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iec.ch/TC57/ns/CIM/IdentifiedObject/constraints/3.0#DatatypesGroupIO">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyGroup"/>
+    <rdfs:label>DatatypesIO</rdfs:label>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:order>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iec.ch/TC57/ns/CIM/IdentifiedObject/constraints/3.0#CardinalityGroup">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyGroup"/>
+    <rdfs:label>CardinalityIO</rdfs:label>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+  </rdf:Description>
+</rdf:RDF>

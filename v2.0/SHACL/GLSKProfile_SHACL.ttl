@@ -1,0 +1,247 @@
+@base          <http://entsoe.eu/ns/CIM/GLSK-EU/constraints> .
+@prefix cim:     <http://iec.ch/TC57/CIM100#> .
+@prefix cims:    <http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#> .
+@prefix dash:    <http://datashapes.org/dash#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/#> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dct:     <http://purl.org/dc/terms/#> .
+@prefix dcterms: <http://purl.org/dc/terms/#> .
+@prefix dm:      <http://iec.ch/TC57/61970-552/DifferenceModel/1#> .
+@prefix eu:      <http://iec.ch/TC57/CIM100-European#> .
+@prefix eumd:    <http://entsoe.eu/ns/Metadata-European#> .
+@prefix euvoc:   <http://publications.europa.eu/ontology/euvoc#> .
+@prefix glsk:    <http://entsoe.eu/ns/CIM/GLSK-EU/constraints#> .
+@prefix ido:     <http://iec.ch/TC57/ns/CIM/IdentifiedObject/constraints/3.0#> .
+@prefix md:      <http://iec.ch/TC57/61970-552/ModelDescription/1#> .
+@prefix nc:      <http://entsoe.eu/ns/nc#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix prof:    <http://www.w3.org/ns/dx/prof/#> .
+@prefix profcim: <http://iec.ch/TC57/ns/CIM/prof-cim#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:    <http://www.w3.org/2006/time#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+glsk:PowerElectronicsUnit.participationFactor-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        glsk:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "PowerElectronicsUnit.participationFactor-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:PowerElectronicsUnit.participationFactor ;
+        sh:severity     sh:Violation .
+
+glsk:AssociationsGroup
+        rdf:type    sh:PropertyGroup ;
+        rdfs:label  "Associations" ;
+        sh:order    2 .
+
+glsk:EnergyGroup.participationFactor-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        glsk:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "EnergyGroup.participationFactor-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:EnergyGroup.participationFactor ;
+        sh:severity     sh:Violation .
+
+glsk:EnergyGroup.participationFactor-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        glsk:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "EnergyGroup.participationFactor-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:EnergyGroup.participationFactor ;
+        sh:severity     sh:Violation .
+
+glsk:BlockEnergyOrder.participationFactor-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        glsk:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "BlockEnergyOrder.participationFactor-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:BlockEnergyOrder.participationFactor ;
+        sh:severity     sh:Violation .
+
+glsk:EnergyConsumer.participationFactor-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        glsk:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "EnergyConsumer.participationFactor-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:EnergyConsumer.participationFactor ;
+        sh:severity     sh:Violation .
+
+glsk:EnergyConsumer  rdf:type  sh:NodeShape ;
+        sh:property     glsk:EnergyConsumer.participationFactor-datatype , glsk:EnergyConsumer.participationFactor-cardinality ;
+        sh:targetClass  cim:EnergyConsumer .
+
+glsk:ScheduleResource
+        rdf:type        sh:NodeShape ;
+        sh:property     glsk:ScheduleResource.participationFactor-datatype , glsk:ScheduleResource.participationFactor-cardinality ;
+        sh:targetClass  nc:ScheduleResource .
+
+glsk:GeneratingUnit.participationFactor-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        glsk:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "GeneratingUnit.participationFactor-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:GeneratingUnit.participationFactor ;
+        sh:severity     sh:Violation .
+
+glsk:PowerElectronicsUnit.participationFactor-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        glsk:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "PowerElectronicsUnit.participationFactor-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:PowerElectronicsUnit.participationFactor ;
+        sh:severity     sh:Violation .
+
+glsk:EnergyGroup  rdf:type  sh:NodeShape ;
+        sh:property     glsk:EnergyGroup.participationFactor-datatype , glsk:EnergyGroup.participationFactor-cardinality ;
+        sh:targetClass  nc:EnergyGroup .
+
+glsk:HydroPump  rdf:type  sh:NodeShape ;
+        sh:property     glsk:HydroPump.participationFactor-datatype , glsk:HydroPump.participationFactor-cardinality ;
+        sh:targetClass  cim:HydroPump .
+
+glsk:BlockEnergyOrder
+        rdf:type        sh:NodeShape ;
+        sh:property     glsk:BlockEnergyOrder.participationFactor-datatype , glsk:BlockEnergyOrder.participationFactor-cardinality ;
+        sh:targetClass  nc:BlockEnergyOrder .
+
+glsk:GeneratingUnit  rdf:type  sh:NodeShape ;
+        sh:property     glsk:GeneratingUnit.participationFactor-datatype , glsk:GeneratingUnit.participationFactor-cardinality ;
+        sh:targetClass  cim:GeneratingUnit .
+
+glsk:GeneratingUnit.participationFactor-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        glsk:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "GeneratingUnit.participationFactor-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:GeneratingUnit.participationFactor ;
+        sh:severity     sh:Violation .
+
+glsk:HydroPump.participationFactor-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        glsk:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "HydroPump.participationFactor-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:HydroPump.participationFactor ;
+        sh:severity     sh:Violation .
+
+glsk:EnergyConsumer.participationFactor-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        glsk:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "EnergyConsumer.participationFactor-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:EnergyConsumer.participationFactor ;
+        sh:severity     sh:Violation .
+
+glsk:CardinalityGroup
+        rdf:type    sh:PropertyGroup ;
+        rdfs:label  "Cardinality" ;
+        sh:order    0 .
+
+glsk:BlockEnergyOrder.participationFactor-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        glsk:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "BlockEnergyOrder.participationFactor-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:BlockEnergyOrder.participationFactor ;
+        sh:severity     sh:Violation .
+
+glsk:HydroPump.participationFactor-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        glsk:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "HydroPump.participationFactor-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:HydroPump.participationFactor ;
+        sh:severity     sh:Violation .
+
+ido:CardinalityGroup  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "CardinalityIO" ;
+        sh:order    0 .
+
+glsk:DatatypesGroup  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "Datatypes" ;
+        sh:order    1 .
+
+ido:DatatypesGroupIO  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "DatatypesIO" ;
+        sh:order    1 .
+
+glsk:ScheduleResource.participationFactor-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        glsk:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "ScheduleResource.participationFactor-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:ScheduleResource.participationFactor ;
+        sh:severity     sh:Violation .
+
+glsk:ScheduleResource.participationFactor-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        glsk:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "ScheduleResource.participationFactor-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:ScheduleResource.participationFactor ;
+        sh:severity     sh:Violation .
+
+glsk:PowerElectronicsUnit
+        rdf:type        sh:NodeShape ;
+        sh:property     glsk:PowerElectronicsUnit.participationFactor-datatype , glsk:PowerElectronicsUnit.participationFactor-cardinality ;
+        sh:targetClass  cim:PowerElectronicsUnit .

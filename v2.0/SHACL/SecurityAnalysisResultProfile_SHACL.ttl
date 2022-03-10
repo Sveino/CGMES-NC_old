@@ -1,0 +1,164 @@
+@base          <http://entsoe.eu/ns/CIM/SecurityAnalysisResult-EU/constraints> .
+@prefix cim:     <http://iec.ch/TC57/CIM100#> .
+@prefix cims:    <http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#> .
+@prefix dash:    <http://datashapes.org/dash#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/#> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dct:     <http://purl.org/dc/terms/#> .
+@prefix dcterms: <http://purl.org/dc/terms/#> .
+@prefix dm:      <http://iec.ch/TC57/61970-552/DifferenceModel/1#> .
+@prefix eu:      <http://iec.ch/TC57/CIM100-European#> .
+@prefix eumd:    <http://entsoe.eu/ns/Metadata-European#> .
+@prefix euvoc:   <http://publications.europa.eu/ontology/euvoc#> .
+@prefix ido:     <http://iec.ch/TC57/ns/CIM/IdentifiedObject/constraints/3.0#> .
+@prefix md:      <http://iec.ch/TC57/61970-552/ModelDescription/1#> .
+@prefix nc:      <http://entsoe.eu/ns/nc#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix prof:    <http://www.w3.org/ns/dx/prof/#> .
+@prefix profcim: <http://iec.ch/TC57/ns/CIM/prof-cim#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sar:     <http://entsoe.eu/ns/CIM/SecurityAnalysisResult-EU/constraints#> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:    <http://www.w3.org/2006/time#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+ido:CardinalityGroup  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "CardinalityIO" ;
+        sh:order    0 .
+
+sar:LimitViolation.value-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        sar:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "LimitViolation.value-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        4 ;
+        sh:path         nc:LimitViolation.value ;
+        sh:severity     sh:Violation .
+
+sar:LimitViolation.dateTime-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:dateTime ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        sar:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "LimitViolation.dateTime-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         nc:LimitViolation.dateTime ;
+        sh:severity     sh:Violation .
+
+sar:LimitViolation.value-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        sar:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "LimitViolation.value-cardinality" ;
+        sh:order        4 ;
+        sh:path         nc:LimitViolation.value ;
+        sh:severity     sh:Violation .
+
+sar:ContingencyLimitViolation.Contingency-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        sar:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "ContingencyLimitViolation.Contingency-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:ContingencyLimitViolation.Contingency ;
+        sh:severity     sh:Violation .
+
+sar:AssociationsGroup
+        rdf:type    sh:PropertyGroup ;
+        rdfs:label  "Associations" ;
+        sh:order    2 .
+
+sar:DatatypesGroup  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "Datatypes" ;
+        sh:order    1 .
+
+ido:DatatypesGroupIO  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "DatatypesIO" ;
+        sh:order    1 .
+
+sar:LimitViolation.dateTime-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        sar:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "LimitViolation.dateTime-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:LimitViolation.dateTime ;
+        sh:severity     sh:Violation .
+
+sar:ContingencyLimitViolation
+        rdf:type        sh:NodeShape ;
+        sh:property     sar:LimitViolation.absoluteValue-cardinality , sar:LimitViolation.value-datatype , sar:LimitViolation.ReportedByRegion-cardinality , sar:LimitViolation.dateTime-datatype , sar:LimitViolation.OperationalLimit-cardinality , sar:LimitViolation.dateTime-cardinality , sar:ContingencyLimitViolation.Contingency-cardinality , sar:LimitViolation.absoluteValue-datatype , sar:LimitViolation.value-cardinality ;
+        sh:targetClass  nc:ContingencyLimitViolation .
+
+sar:LimitViolation.absoluteValue-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        sar:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "LimitViolation.absoluteValue-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        5 ;
+        sh:path         nc:LimitViolation.absoluteValue ;
+        sh:severity     sh:Violation .
+
+sar:LimitViolation.absoluteValue-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        sar:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "LimitViolation.absoluteValue-cardinality" ;
+        sh:order        5 ;
+        sh:path         nc:LimitViolation.absoluteValue ;
+        sh:severity     sh:Violation .
+
+sar:LimitViolation.OperationalLimit-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        sar:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "LimitViolation.OperationalLimit-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:LimitViolation.OperationalLimit ;
+        sh:severity     sh:Violation .
+
+sar:CardinalityGroup  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "Cardinality" ;
+        sh:order    0 .
+
+sar:BaseCaseLimitViolation
+        rdf:type        sh:NodeShape ;
+        sh:property     sar:LimitViolation.OperationalLimit-cardinality , sar:LimitViolation.ReportedByRegion-cardinality , sar:LimitViolation.value-cardinality , sar:LimitViolation.dateTime-cardinality , sar:LimitViolation.absoluteValue-datatype , sar:LimitViolation.absoluteValue-cardinality , sar:LimitViolation.value-datatype , sar:LimitViolation.dateTime-datatype ;
+        sh:targetClass  nc:BaseCaseLimitViolation .
+
+sar:LimitViolation.ReportedByRegion-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        sar:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "LimitViolation.ReportedByRegion-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:LimitViolation.ReportedByRegion ;
+        sh:severity     sh:Violation .

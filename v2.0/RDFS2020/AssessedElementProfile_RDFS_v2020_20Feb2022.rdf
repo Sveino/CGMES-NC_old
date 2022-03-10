@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+xmlns:cim="http://iec.ch/TC57/CIM100#"
+xmlns:cims="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#"
+xmlns:dc="http://purl.org/dc/elements/1.1/#"
+xmlns:dcat="http://www.w3.org/ns/dcat#"
+xmlns:dcterms="http://purl.org/dc/terms/#"
+xmlns:eu="http://iec.ch/TC57/CIM100-European#"
+xmlns:owl="http://www.w3.org/2002/07/owl#"
+xmlns:prof="http://www.w3.org/ns/dx/prof/#"
+xmlns:profcim="http://iec.ch/TC57/ns/CIM/prof-cim#"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:sh="http://www.w3.org/ns/shacl#"
+xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+xmlns:dct="http://purl.org/dc/terms/#"
+xmlns:eumd="http://entsoe.eu/ns/Metadata-European#"
+xmlns:md="http://iec.ch/TC57/61970-552/ModelDescription/1#"
+xmlns:dm="http://iec.ch/TC57/61970-552/DifferenceModel/1#"
+xmlns:prov="http://www.w3.org/ns/prov#"
+xmlns:nc="http://entsoe.eu/ns/nc#"
+xmlns:euvoc="http://publications.europa.eu/ontology/euvoc#"
+xmlns:time="http://www.w3.org/2006/time#"
+xmlns:ae="http://entsoe.eu/ns/CIM/AssessedElement-EU#"
+xml:base ="http://iec.ch/TC57/CIM100"
+>
+<!--  ********** Header **************** -->
+<!-- RDFS header -->
+<rdf:Description rdf:about = "http://entsoe.eu/ns/CIM/AssessedElement-EU#Ontology">
+	<dcat:keyword>AE</dcat:keyword>
+	<owl:priorVersion rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU/1.0"/>
+	<dcat:theme xml:lang ="en">vocabulary</dcat:theme>
+	<owl:versionIRI rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU/2.0"/>
+	<dct:conformsTo>urn:iso:std:iec:61970-600-2:ed-1</dct:conformsTo>
+	<dct:conformsTo>urn:iso:std:iec:61970-301:ed-7:amd1</dct:conformsTo>
+	<dct:conformsTo>file://iec61970cim17v40_iec61968cim13v13a_iec62325cim03v17a.eap</dct:conformsTo>
+	<dct:conformsTo>urn:iso:std:iec:61970-401:draft:ed-1</dct:conformsTo>
+	<dct:conformsTo>urn:iso:std:iec:61970-501:draft:ed-2</dct:conformsTo>
+	<dct:conformsTo>file://CGMES-30v25_501-20v01.eap</dct:conformsTo>
+	<owl:versionInfo xml:lang ="en">2.0.0</owl:versionInfo>
+	<dct:creator xml:lang ="en">ENTSO-E CIM EG CSA project </dct:creator>
+	<dct:description xml:lang ="en">This vocabulary is describing the aseessed element profile.</dct:description>
+	<dct:identifier>urn:uuid:a2de1738-214d-4552-b894-5b33cbc34218</dct:identifier>
+	<dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-02-20T15:38:44Z</dct:issued>
+	<dct:language>en-GB</dct:language>
+	<dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-02-16</dct:modified>
+	<dct:publisher xml:lang ="en">ENTSO-E</dct:publisher>
+	<dct:rights xml:lang ="en">Copyright</dct:rights>
+	<dct:rightsHolder xml:lang ="en">ENTSO-E</dct:rightsHolder>
+	<dct:title xml:lang ="en">Assessed Element Vocabulary</dct:title>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description >
+<!-- ******************************** -->
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/CIM/AssessedElement-EU#Package_AssessedElementProfile">
+	<rdfs:label xml:lang="en">AssessedElementProfile</rdfs:label>
+	<rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This package contains assessed element profile.</rdfs:comment>
+</rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#AssessedElementWithContingency">
+	<rdfs:label xml:lang="en">AssessedElementWithContingency</rdfs:label>
+	<rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The combination of an assessed element and a contingency.</rdfs:comment>
+<cims:stereotype>NC</cims:stereotype>
+	<cims:belongsToCategory rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU#Package_AssessedElementProfile"/>
+	<cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#AssessedElementWithContingency.AssessedElement">
+	<rdfs:label xml:lang="en">AssessedElement</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The assessed element defined for this contingency and assessed element combination.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#AssessedElementWithContingency"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#AssessedElement.AssessedElementWithContingency"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1"/>
+	<cims:AssociationUsed>Yes</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#AssessedElement.AssessedElementWithContingency">
+	<rdfs:label xml:lang="en">AssessedElementWithContingency</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The contingency and assessed element combination to be simulated for this assessed element.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#AssessedElementWithContingency"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#AssessedElementWithContingency.AssessedElement"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+	<cims:AssociationUsed>No</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#AssessedElementWithContingency.Contingency">
+	<rdfs:label xml:lang="en">Contingency</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The contingency defined for this contingency and assessed element combination.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#AssessedElementWithContingency"/>
+	<rdfs:range rdf:resource="#Contingency"/>
+	<cims:inverseRoleName rdf:resource="#Contingency.AssessedElementWithContingency"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1"/>
+	<cims:AssociationUsed>Yes</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="#Contingency.AssessedElementWithContingency">
+	<rdfs:label xml:lang="en">AssessedElementWithContingency</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The contingency and assessed element combination to be simulated for this contingency.</rdfs:comment>
+	<rdfs:domain rdf:resource="#Contingency"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#AssessedElementWithContingency"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#AssessedElementWithContingency.Contingency"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+	<cims:AssociationUsed>No</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#AssessedElementWithRemedialAction">
+	<rdfs:label xml:lang="en">AssessedElementWithRemedialAction</rdfs:label>
+	<rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+<cims:stereotype>NC</cims:stereotype>
+	<cims:belongsToCategory rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU#Package_AssessedElementProfile"/>
+	<cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#AssessedElementWithRemedialAction.AssessedElement">
+	<rdfs:label xml:lang="en">AssessedElement</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The assessed element defined for this assessed element and remedial action combination.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#AssessedElementWithRemedialAction"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#AssessedElement.AssessedElementWithRemedialAction"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1"/>
+	<cims:AssociationUsed>Yes</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#AssessedElement.AssessedElementWithRemedialAction">
+	<rdfs:label xml:lang="en">AssessedElementWithRemedialAction</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The assessed element and remedial action combination to be simulated for this assessed element.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#AssessedElementWithRemedialAction"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#AssessedElementWithRemedialAction.AssessedElement"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+	<cims:AssociationUsed>No</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#AssessedElementWithRemedialAction.RemedialAction">
+	<rdfs:label xml:lang="en">RemedialAction</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The remedial action defined for this assessed element and remedial action combination.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#AssessedElementWithRemedialAction"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#RemedialAction"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#RemedialAction.AssessedElementWithRemedialAction"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1"/>
+	<cims:AssociationUsed>Yes</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#RemedialAction.AssessedElementWithRemedialAction">
+	<rdfs:label xml:lang="en">AssessedElementWithRemedialAction</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The assessed element and remedial action combination to be simulated for this remedial action.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#RemedialAction"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#AssessedElementWithRemedialAction"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#AssessedElementWithRemedialAction.RemedialAction"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+	<cims:AssociationUsed>No</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="#Contingency">
+	<rdfs:label xml:lang="en">Contingency</rdfs:label>
+	<rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An event threatening system reliability, consisting of one or more contingency elements.</rdfs:comment>
+	<cims:belongsToCategory rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU#Package_AssessedElementProfile"/>
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#RemedialAction">
+	<rdfs:label xml:lang="en">RemedialAction</rdfs:label>
+	<rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A remedial action is described by one of many grid state alterations applied to a grid model state or particular scenario in order to resolve one or more Identified constraints. Only costly remedial actions require a cost characteristic.</rdfs:comment>
+<cims:stereotype>NC</cims:stereotype>
+	<cims:belongsToCategory rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU#Package_AssessedElementProfile"/>
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#AssessedElement">
+	<rdfs:label xml:lang="en">AssessedElement</rdfs:label>
+	<rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assessed element is a network element for which the electrical state is evaluated in the regional or cross-regional process and which value is expected to fulfil regional rules function of the operational security limits.
+The information of the validity period of the assessed element is derived from the conducting equipment.
+The measurements and limits are as defined in the steady state hypothesis.</rdfs:comment>
+<cims:stereotype>NC</cims:stereotype>
+	<cims:belongsToCategory rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU#Package_AssessedElementProfile"/>
+	<cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#AssessedElement.inBaseCase">
+	<cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+	<rdfs:label xml:lang="en">inBaseCase</rdfs:label>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<cims:dataType rdf:resource="#Boolean"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1" />
+	<cims:stereotype>NC</cims:stereotype>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indicates if the assessed element is scanned in the base case. True means that the assessed element is scanned in the base case. False means it is not scanned in the base case. In case of false the association AssessedElement.Contingency is required.</rdfs:comment>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="#Boolean">
+	<rdfs:label xml:lang="en">Boolean</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type with the value space &quot;true&quot; and &quot;false&quot;.</rdfs:comment>
+<cims:stereotype>Primitive</cims:stereotype>
+	<cims:belongsToCategory rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU#Package_AssessedElementProfile"/>
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#AssessedElement.ConductingEquipment">
+	<rdfs:label xml:lang="en">ConductingEquipment</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The conducting equipment that is designated as an assessed element, i.e. the equipment that is assessed.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<rdfs:range rdf:resource="#ConductingEquipment"/>
+	<cims:inverseRoleName rdf:resource="#ConductingEquipment.AssessedElement"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+	<cims:AssociationUsed>Yes</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="#ConductingEquipment.AssessedElement">
+	<rdfs:label xml:lang="en">AssessedElement</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The assessed element indicating that the conducting equipment is assessed, i.e. monitored.</rdfs:comment>
+	<rdfs:domain rdf:resource="#ConductingEquipment"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#AssessedElement.ConductingEquipment"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+	<cims:AssociationUsed>No</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#AssessedElement.AssessedSystemOperator">
+	<rdfs:label xml:lang="en">AssessedSystemOperator</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A system operator that assesses the element.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#SystemOperator"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#SystemOperator.AssessedElement"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1"/>
+	<cims:AssociationUsed>Yes</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#SystemOperator.AssessedElement">
+	<rdfs:label xml:lang="en">AssessedElement</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All relevant network elements on which operational security violations need to be managed in a coordinated way.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#SystemOperator"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#AssessedElement.AssessedSystemOperator"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+	<cims:AssociationUsed>No</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#AssessedElement.AssessedTerminal">
+	<rdfs:label xml:lang="en">AssessedTerminal</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The terminal that is assessed.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<rdfs:range rdf:resource="#Terminal"/>
+	<cims:inverseRoleName rdf:resource="#Terminal.AssessedElement"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+	<cims:AssociationUsed>Yes</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="#Terminal.AssessedElement">
+	<rdfs:label xml:lang="en">AssessedElement</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The assessed element indicating that the terminal is assessed, i.e. monitored.</rdfs:comment>
+	<rdfs:domain rdf:resource="#Terminal"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#AssessedElement.AssessedTerminal"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+	<cims:AssociationUsed>No</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#PowerTransferCorridor.AssessedElement">
+	<rdfs:label xml:lang="en">AssessedElement</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The assessed element indicating that the power trasnfer corridor is assessed, i.e. monitored.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#PowerTransferCorridor"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#AssessedElement.AssessedPowerTransferCorridor"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+	<cims:AssociationUsed>No</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#AssessedElement.AssessedPowerTransferCorridor">
+	<rdfs:label xml:lang="en">AssessedPowerTransferCorridor</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The power transfer corridor that is designated as an assessed element.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#PowerTransferCorridor"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#PowerTransferCorridor.AssessedElement"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+	<cims:AssociationUsed>Yes</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#AssessedElement.SecuredForRegion">
+	<rdfs:label xml:lang="en">SecuredForRegion</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is the region where the element is secured.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#Region"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#Region.SecuredAssessedElement"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+	<cims:AssociationUsed>Yes</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#Region.SecuredAssessedElement">
+	<rdfs:label xml:lang="en">SecuredAssessedElement</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The assessed element secured for this region.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#Region"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#AssessedElement.SecuredForRegion"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+	<cims:AssociationUsed>No</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#AssessedElement.ScannedForRegion">
+	<rdfs:label xml:lang="en">ScannedForRegion</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is the region in which this assessed element is scanned.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#Region"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#Region.ScannedAssessedElement"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1"/>
+	<cims:AssociationUsed>Yes</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#Region.ScannedAssessedElement">
+	<rdfs:label xml:lang="en">ScannedAssessedElement</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">These are the scanned assessed elements for a region.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#Region"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#AssessedElement.ScannedForRegion"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+	<cims:AssociationUsed>No</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#AssessedElement.ConservativeForRegion">
+	<rdfs:label xml:lang="en">ConservativeForRegion</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is the region where the element is considered conservative.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#Region"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#Region.ConservativeAssessedElement"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+	<cims:AssociationUsed>Yes</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#Region.ConservativeAssessedElement">
+	<rdfs:label xml:lang="en">ConservativeAssessedElement</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The assessed element which is considered conservative for this region.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#Region"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#AssessedElement.ConservativeForRegion"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+	<cims:AssociationUsed>No</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#AssessedElement.NativeRegion">
+	<rdfs:label xml:lang="en">NativeRegion</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The native region for an assessed element.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#Region"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#Region.NativeAssessedElement"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+	<cims:AssociationUsed>Yes</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#Region.NativeAssessedElement">
+	<rdfs:label xml:lang="en">NativeAssessedElement</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The native assessed element for a native region.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://entsoe.eu/ns/nc#Region"/>
+	<rdfs:range rdf:resource="http://entsoe.eu/ns/nc#AssessedElement"/>
+	<cims:inverseRoleName rdf:resource="http://entsoe.eu/ns/nc#AssessedElement.NativeRegion"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+	<cims:AssociationUsed>No</cims:AssociationUsed>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+<cims:stereotype>NC</cims:stereotype>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="#ConductingEquipment">
+	<rdfs:label xml:lang="en">ConductingEquipment</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The parts of the AC power system that are designed to carry current or that are conductively connected through terminals.</rdfs:comment>
+	<cims:belongsToCategory rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU#Package_AssessedElementProfile"/>
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="#IdentifiedObject">
+	<rdfs:label xml:lang="en">IdentifiedObject</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is a root class to provide common identification for all classes needing identification and naming attributes.</rdfs:comment>
+	<cims:belongsToCategory rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU#Package_AssessedElementProfile"/>
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="#IdentifiedObject.description">
+	<cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+	<rdfs:label xml:lang="en">description</rdfs:label>
+	<rdfs:domain rdf:resource="#IdentifiedObject"/>
+	<cims:dataType rdf:resource="#String"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1" />
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</rdfs:comment>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="#String">
+	<rdfs:label xml:lang="en">String</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A string consisting of a sequence of characters. The character encoding is UTF-8. The string length is unspecified and unlimited.</rdfs:comment>
+<cims:stereotype>Primitive</cims:stereotype>
+	<cims:belongsToCategory rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU#Package_AssessedElementProfile"/>
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="#IdentifiedObject.mRID">
+	<cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+	<rdfs:label xml:lang="en">mRID</rdfs:label>
+	<rdfs:domain rdf:resource="#IdentifiedObject"/>
+	<cims:dataType rdf:resource="#String"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1" />
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
+For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</rdfs:comment>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="#IdentifiedObject.name">
+	<cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+	<rdfs:label xml:lang="en">name</rdfs:label>
+	<rdfs:domain rdf:resource="#IdentifiedObject"/>
+	<cims:dataType rdf:resource="#String"/>
+	<cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1" />
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The name is any free human readable and possibly non unique text naming the object.</rdfs:comment>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#PowerTransferCorridor">
+	<rdfs:label xml:lang="en">PowerTransferCorridor</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A power transfer corridor is defined as a set of circuits (transmission lines or transformers) separating two portions of the power system, or a subset of circuits exposed to a substantial portion of the transmission exchange between two parts of the system.</rdfs:comment>
+<cims:stereotype>NC</cims:stereotype>
+	<cims:belongsToCategory rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU#Package_AssessedElementProfile"/>
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#Region">
+	<rdfs:label xml:lang="en">Region</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A region where the system operator belongs to.</rdfs:comment>
+<cims:stereotype>NC</cims:stereotype>
+	<cims:belongsToCategory rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU#Package_AssessedElementProfile"/>
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://entsoe.eu/ns/nc#SystemOperator">
+	<rdfs:label xml:lang="en">SystemOperator</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">System operator.</rdfs:comment>
+<cims:stereotype>NC</cims:stereotype>
+	<cims:belongsToCategory rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU#Package_AssessedElementProfile"/>
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="#Terminal">
+	<rdfs:label xml:lang="en">Terminal</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An AC electrical connection point to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes.</rdfs:comment>
+	<cims:belongsToCategory rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU#Package_AssessedElementProfile"/>
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="#Date">
+	<rdfs:label xml:lang="en">Date</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Date as &quot;yyyy-mm-dd&quot;, which conforms with ISO 8601. UTC time zone is specified as &quot;yyyy-mm-ddZ&quot;. A local timezone relative UTC is specified as &quot;yyyy-mm-dd(+/-)hh:mm&quot;.</rdfs:comment>
+<cims:stereotype>Primitive</cims:stereotype>
+	<cims:belongsToCategory rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU#Package_AssessedElementProfile"/>
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="#DateTime">
+	<rdfs:label xml:lang="en">DateTime</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Date and time as &quot;yyyy-mm-ddThh:mm:ss.sss&quot;, which conforms with ISO 8601. UTC time zone is specified as &quot;yyyy-mm-ddThh:mm:ss.sssZ&quot;. A local timezone relative UTC is specified as &quot;yyyy-mm-ddThh:mm:ss.sss-hh:mm&quot;. The second component (shown here as &quot;ss.sss&quot;) could have any number of digits in its fractional part to allow any kind of precision beyond seconds.</rdfs:comment>
+<cims:stereotype>Primitive</cims:stereotype>
+	<cims:belongsToCategory rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU#Package_AssessedElementProfile"/>
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://iec.ch/TC57/ns/CIM/prof-cim#IRI">
+	<rdfs:label xml:lang="en">IRI</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An IRI (Internationalized Resource Identifier) within an RDF graph is a Unicode string that conforms to the syntax defined in RFC 3987.
+The primitive is serialized as rdf:resource in RDFXML.
+IRIs in the RDF abstract syntax must be absolute, and may contain a fragment identifier.
+IRI equality: Two IRIs are equal if and only if they are equivalent under Simple String Comparison according to section 5.1 of [RFC3987]. Further normalization must not be performed when comparing IRIs for equality.
+IRIs are a generalization of URIs [RFC3986] that permits a wider range of Unicode characters. Every absolute URI and URL is an IRI, but not every IRI is an URI. When IRIs are used in operations that are only defined for URIs, they must first be converted according to the mapping defined in section 3.1 of [RFC3987]. A notable example is retrieval over the HTTP protocol. The mapping involves UTF-8 encoding of non-ASCII characters, %-encoding of octets not allowed in URIs, and Punycode-encoding of domain names.</rdfs:comment>
+<cims:stereotype>Primitive</cims:stereotype>
+<cims:stereotype>profcim</cims:stereotype>
+	<cims:belongsToCategory rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU#Package_AssessedElementProfile"/>
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://iec.ch/TC57/ns/CIM/prof-cim#StringFixedLanguage">
+	<rdfs:label xml:lang="en">StringFixedLanguage</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A string consisting of a sequence of characters. The character encoding is UTF-8. The string length is unspecified and unlimited.
+The primitive is serialized as literal without language support.</rdfs:comment>
+<cims:stereotype>Primitive</cims:stereotype>
+<cims:stereotype>profcim</cims:stereotype>
+	<cims:belongsToCategory rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU#Package_AssessedElementProfile"/>
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://iec.ch/TC57/ns/CIM/prof-cim#StringIRI">
+	<rdfs:label xml:lang="en">StringIRI</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An IRI (Internationalized Resource Identifier) within an RDF graph is a Unicode string that conforms to the syntax defined in RFC 3987.
+The primitive is serialized as literal without language support.
+IRIs in the RDF abstract syntax must be absolute, and may contain a fragment identifier.
+IRI equality: Two IRIs are equal if and only if they are equivalent under Simple String Comparison according to section 5.1 of [RFC3987]. Further normalization must not be performed when comparing IRIs for equality.
+IRIs are a generalization of URIs [RFC3986] that permits a wider range of Unicode characters. Every absolute URI and URL is an IRI, but not every IRI is an URI. When IRIs are used in operations that are only defined for URIs, they must first be converted according to the mapping defined in section 3.1 of [RFC3987]. A notable example is retrieval over the HTTP protocol. The mapping involves UTF-8 encoding of non-ASCII characters, %-encoding of octets not allowed in URIs, and Punycode-encoding of domain names.</rdfs:comment>
+<cims:stereotype>Primitive</cims:stereotype>
+<cims:stereotype>profcim</cims:stereotype>
+	<cims:belongsToCategory rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU#Package_AssessedElementProfile"/>
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	 </rdf:Description>
+	 <rdf:Description rdf:about="http://iec.ch/TC57/ns/CIM/prof-cim#URL">
+	<rdfs:label xml:lang="en">URL</rdfs:label>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Uniform Resource Locator (URL), colloquially termed a web address, is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. A URL is a specific type of Uniform Resource Identifier (URI), although many people use the two terms interchangeably.URLs occur most commonly to reference web pages (http), but are also used for file transfer (ftp), email (mailto), database access (JDBC), and many other applications.</rdfs:comment>
+<cims:stereotype>Primitive</cims:stereotype>
+<cims:stereotype>profcim</cims:stereotype>
+	<cims:belongsToCategory rdf:resource="http://entsoe.eu/ns/CIM/AssessedElement-EU#Package_AssessedElementProfile"/>
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+	 </rdf:Description>
+</rdf:RDF>

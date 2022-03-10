@@ -1,0 +1,2670 @@
+@base          <http://entsoe.eu/ns/CIM/RemedialAction-EU/constraints> .
+@prefix cim:     <http://iec.ch/TC57/CIM100#> .
+@prefix cims:    <http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#> .
+@prefix dash:    <http://datashapes.org/dash#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/#> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dct:     <http://purl.org/dc/terms/#> .
+@prefix dcterms: <http://purl.org/dc/terms/#> .
+@prefix dm:      <http://iec.ch/TC57/61970-552/DifferenceModel/1#> .
+@prefix eu:      <http://iec.ch/TC57/CIM100-European#> .
+@prefix eumd:    <http://entsoe.eu/ns/Metadata-European#> .
+@prefix euvoc:   <http://publications.europa.eu/ontology/euvoc#> .
+@prefix ido:     <http://iec.ch/TC57/ns/CIM/IdentifiedObject/constraints/3.0#> .
+@prefix md:      <http://iec.ch/TC57/61970-552/ModelDescription/1#> .
+@prefix nc:      <http://entsoe.eu/ns/nc#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix prof:    <http://www.w3.org/ns/dx/prof/#> .
+@prefix profcim: <http://iec.ch/TC57/ns/CIM/prof-cim#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix ra:      <http://entsoe.eu/ns/CIM/RemedialAction-EU/constraints#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:    <http://www.w3.org/2006/time#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+ra:MeasurementCalculatorInput.MeasurementCalculator-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:MeasurementCalculator ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:MeasurementCalculator" ;
+        sh:name         "MeasurementCalculatorInput.MeasurementCalculator-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        2 ;
+        sh:path         ( nc:MeasurementCalculatorInput.MeasurementCalculator rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:GateInputPin.Gate-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:Gate ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:Gate" ;
+        sh:name         "GateInputPin.Gate-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        7 ;
+        sh:path         ( nc:GateInputPin.Gate rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:PinMeasurement.MeasurementCalculator-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:MeasurementCalculator ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:MeasurementCalculator" ;
+        sh:name         "PinMeasurement.MeasurementCalculator-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( nc:PinMeasurement.MeasurementCalculator rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:CardinalityGroup  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "Cardinality" ;
+        sh:order    0 .
+
+ra:CurveData.y1value-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "CurveData.y1value-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        2 ;
+        sh:path         cim:CurveData.y1value ;
+        sh:severity     sh:Violation .
+
+ra:Equipment  rdf:type  sh:NodeShape ;
+        sh:property     ra:Equipment.AggregatedEquipment-cardinality ;
+        sh:targetClass  cim:Equipment .
+
+ra:GridStateAlterationCollection
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.description-cardinality ;
+        sh:targetClass  nc:GridStateAlterationCollection .
+
+ra:MeasurementCalculatorInput.order-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:integer ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "MeasurementCalculatorInput.order-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:MeasurementCalculatorInput.order ;
+        sh:severity     sh:Violation .
+
+ra:Stage.priority-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:integer ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "Stage.priority-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         nc:Stage.priority ;
+        sh:severity     sh:Violation .
+
+ra:MeasurementCalculatorInput.absoluteValue-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "MeasurementCalculatorInput.absoluteValue-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         nc:MeasurementCalculatorInput.absoluteValue ;
+        sh:severity     sh:Violation .
+
+ra:CurveData.Curve-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:RemedialActionCostCharacteristic ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:RemedialActionCostCharacteristic" ;
+        sh:name         "CurveData.Curve-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( cim:CurveData.Curve rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:RemedialActionCostCharacteristic.y1UnitDenominator-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( cim:UnitSymbol.HPerm cim:UnitSymbol.mol cim:UnitSymbol.m3Uncompensated cim:UnitSymbol.radPers cim:UnitSymbol.SPerm cim:UnitSymbol.Wb cim:UnitSymbol.bar cim:UnitSymbol.kat cim:UnitSymbol.cosPhi cim:UnitSymbol.VA cim:UnitSymbol.dBm cim:UnitSymbol.Btu cim:UnitSymbol.lm cim:UnitSymbol.mPers2 cim:UnitSymbol.ha cim:UnitSymbol.rotPers cim:UnitSymbol.A cim:UnitSymbol.A2 cim:UnitSymbol.JPerkgK cim:UnitSymbol.JPerm2 cim:UnitSymbol.Nm cim:UnitSymbol.kgPerJ cim:UnitSymbol.As cim:UnitSymbol.JPerm3 cim:UnitSymbol.m2Pers cim:UnitSymbol.d cim:UnitSymbol.C cim:UnitSymbol.WPersr cim:UnitSymbol.rad cim:UnitSymbol.kg cim:UnitSymbol.therm cim:UnitSymbol.CPerm3 cim:UnitSymbol.VArh cim:UnitSymbol.Mx cim:UnitSymbol.WPerW cim:UnitSymbol.JPermolK cim:UnitSymbol.cd cim:UnitSymbol.WPerm2sr cim:UnitSymbol.h cim:UnitSymbol.G cim:UnitSymbol.F cim:UnitSymbol.Vh cim:UnitSymbol.lPerl cim:UnitSymbol.HzPerHz cim:UnitSymbol.H cim:UnitSymbol.mmHg cim:UnitSymbol.CPerm2 cim:UnitSymbol.radPers2 cim:UnitSymbol.mPers cim:UnitSymbol.KPers cim:UnitSymbol.anglemin cim:UnitSymbol.PaPers cim:UnitSymbol.VPerHz cim:UnitSymbol.J cim:UnitSymbol.m2 cim:UnitSymbol.APerm cim:UnitSymbol.m3Perh cim:UnitSymbol.l cim:UnitSymbol.K cim:UnitSymbol.m3 cim:UnitSymbol.lPerh cim:UnitSymbol.WPers cim:UnitSymbol.dB cim:UnitSymbol.FPerm cim:UnitSymbol.m cim:UnitSymbol.A2s cim:UnitSymbol.kn cim:UnitSymbol.VAr cim:UnitSymbol.charPers cim:UnitSymbol.m3Compensated cim:UnitSymbol.M cim:UnitSymbol.onePerHz cim:UnitSymbol.Wh cim:UnitSymbol.gPerg cim:UnitSymbol.WPerm2 cim:UnitSymbol.molPerkg cim:UnitSymbol.Ah cim:UnitSymbol.N cim:UnitSymbol.mPerm3 cim:UnitSymbol.sPers cim:UnitSymbol.VPerV cim:UnitSymbol.kgm2 cim:UnitSymbol.m3Perkg cim:UnitSymbol.V2 cim:UnitSymbol.Oe cim:UnitSymbol.min cim:UnitSymbol.Vs cim:UnitSymbol.Q cim:UnitSymbol.V2h cim:UnitSymbol.CPerkg cim:UnitSymbol.JPerkg cim:UnitSymbol.Qh cim:UnitSymbol.s cim:UnitSymbol.tonne cim:UnitSymbol.NPerm cim:UnitSymbol.Pa cim:UnitSymbol.VAh cim:UnitSymbol.none cim:UnitSymbol.HzPers cim:UnitSymbol.S cim:UnitSymbol.deg cim:UnitSymbol.ohm cim:UnitSymbol.A2h cim:UnitSymbol.T cim:UnitSymbol.onePerm cim:UnitSymbol.lx cim:UnitSymbol.lPers cim:UnitSymbol.JPerK cim:UnitSymbol.character cim:UnitSymbol.APerA cim:UnitSymbol.V cim:UnitSymbol.ppm cim:UnitSymbol.WPermK cim:UnitSymbol.ohmPerm cim:UnitSymbol.VPerm cim:UnitSymbol.Bq cim:UnitSymbol.W cim:UnitSymbol.GyPers cim:UnitSymbol.Sv cim:UnitSymbol.molPerm3 cim:UnitSymbol.degC cim:UnitSymbol.JPermol cim:UnitSymbol.sr cim:UnitSymbol.count cim:UnitSymbol.m3Pers cim:UnitSymbol.ohmm cim:UnitSymbol.Hz cim:UnitSymbol.rev cim:UnitSymbol.WPerA cim:UnitSymbol.katPerm3 cim:UnitSymbol.gal cim:UnitSymbol.Pas cim:UnitSymbol.VPerVAr cim:UnitSymbol.VPerVA cim:UnitSymbol.anglesec cim:UnitSymbol.ft3 cim:UnitSymbol.molPermol cim:UnitSymbol.JPers cim:UnitSymbol.Gy cim:UnitSymbol.kgm cim:UnitSymbol.kgPerm3 ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "RemedialActionCostCharacteristic.y1UnitDenominator-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        2 ;
+        sh:path         nc:RemedialActionCostCharacteristic.y1UnitDenominator ;
+        sh:severity     sh:Violation .
+
+ra:Stage  rdf:type      sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.name-cardinality , ra:Stage.RemedialActionScheme-cardinality , ra:Stage.priority-cardinality , ra:Stage.GridStateAlterationCollection-valueType , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.mRID-datatype , ra:Stage.RemedialActionScheme-valueType , ido:IdentifiedObject.name-datatype , ra:Stage.priority-datatype , ido:IdentifiedObject.description-datatype , ra:Stage.GridStateAlterationCollection-cardinality , ido:IdentifiedObject.mRID-cardinality ;
+        sh:targetClass  nc:Stage .
+
+ra:QualitativeRemedialActionThreshold.RemedialAction-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "QualitativeRemedialActionThreshold.RemedialAction-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:QualitativeRemedialActionThreshold.RemedialAction ;
+        sh:severity     sh:Violation .
+
+ra:PinMeasurement.MeasurementCalculator-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "PinMeasurement.MeasurementCalculator-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:PinMeasurement.MeasurementCalculator ;
+        sh:severity     sh:Violation .
+
+ra:StaticRangeSchedule.value1Kind-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( nc:ValueOffsetKind.absolute nc:ValueOffsetKind.incremental ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "StaticRangeSchedule.value1Kind-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         nc:StaticRangeSchedule.value1Kind ;
+        sh:severity     sh:Violation .
+
+ra:GridStateAlteration.RemedialAction-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:RemedialAction ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:RemedialAction" ;
+        sh:name         "GridStateAlteration.RemedialAction-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        3 ;
+        sh:path         ( nc:GridStateAlteration.RemedialAction rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:StaticRangeSchedule.parameter2Type-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "StaticRangeSchedule.parameter2Type-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:StaticRangeSchedule.parameter2Type ;
+        sh:severity     sh:Violation .
+
+ra:RemedialActionCostCharacteristic.y1UnitDenominator-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "RemedialActionCostCharacteristic.y1UnitDenominator-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:RemedialActionCostCharacteristic.y1UnitDenominator ;
+        sh:severity     sh:Violation .
+
+ra:StaticRangeSchedule.GridStateAlteration-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "StaticRangeSchedule.GridStateAlteration-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:StaticRangeSchedule.GridStateAlteration ;
+        sh:severity     sh:Violation .
+
+ra:QualitativeRemedialActionThreshold.value-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "QualitativeRemedialActionThreshold.value-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        3 ;
+        sh:path         nc:QualitativeRemedialActionThreshold.value ;
+        sh:severity     sh:Violation .
+
+ra:MeasurementCalculatorInput.absoluteValue-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "MeasurementCalculatorInput.absoluteValue-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:MeasurementCalculatorInput.absoluteValue ;
+        sh:severity     sh:Violation .
+
+ra:StaticRangeSchedule
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.name-cardinality , ra:BasicIntervalSchedule.value1Unit-datatype , ra:StaticRangeSchedule.parameter2Type-cardinality , ra:StaticRangeSchedule.value2Kind-datatype , ido:IdentifiedObject.name-datatype , ra:StaticRangeSchedule.value1Kind-cardinality , ra:BasicIntervalSchedule.startTime-cardinality , ra:StaticRangeSchedule.value1Kind-datatype , ra:StaticRangeSchedule.parameter1Type-cardinality , ra:BasicIntervalSchedule.value2Multiplier-datatype , ra:BasicIntervalSchedule.value1Multiplier-datatype , ra:BasicIntervalSchedule.value1Unit-cardinality , ra:StaticRangeSchedule.value2Kind-cardinality , ido:IdentifiedObject.mRID-datatype , ra:BasicIntervalSchedule.value2Multiplier-cardinality , ra:StaticRangeSchedule.GridStateAlteration-cardinality , ra:BasicIntervalSchedule.value2Unit-cardinality , ra:BasicIntervalSchedule.value1Multiplier-cardinality , ra:StaticRangeSchedule.parameter1Type-datatype , ra:StaticRangeSchedule.parameter2Type-datatype , ido:IdentifiedObject.description-cardinality , ra:BasicIntervalSchedule.startTime-datatype , ra:BasicIntervalSchedule.value2Unit-datatype ;
+        sh:targetClass  nc:StaticRangeSchedule .
+
+ra:IntensityEquipmentReference.parameterType-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:anyURI ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "IntensityEquipmentReference.parameterType-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:IntensityEquipmentReference.parameterType ;
+        sh:severity     sh:Violation .
+
+ra:Equipment.AggregatedEquipment-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "Equipment.AggregatedEquipment-cardinality" ;
+        sh:order        1 ;
+        sh:path         cim:Equipment.AggregatedEquipment ;
+        sh:severity     sh:Violation .
+
+ra:PinPowerTransferCorridor.kind-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "PinPowerTransferCorridor.kind-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:PinPowerTransferCorridor.kind ;
+        sh:severity     sh:Violation .
+
+ra:PinContingency.Contingency-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "PinContingency.Contingency-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:PinContingency.Contingency ;
+        sh:severity     sh:Violation .
+
+ra:StaticRangeSchedule.parameter1Type-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:anyURI ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "StaticRangeSchedule.parameter1Type-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        3 ;
+        sh:path         nc:StaticRangeSchedule.parameter1Type ;
+        sh:severity     sh:Violation .
+
+ra:MeasurementCalculator
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.mRID-cardinality , ra:MeasurementCalculator.kind-cardinality , ido:IdentifiedObject.mRID-datatype , ra:MeasurementCalculator.kind-datatype ;
+        sh:targetClass  nc:MeasurementCalculator .
+
+ra:Stage.GridStateAlterationCollection-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:GridStateAlterationCollection ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:GridStateAlterationCollection" ;
+        sh:name         "Stage.GridStateAlterationCollection-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        2 ;
+        sh:path         ( nc:Stage.GridStateAlterationCollection rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:CurveData.y1value-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "CurveData.y1value-cardinality" ;
+        sh:order        2 ;
+        sh:path         cim:CurveData.y1value ;
+        sh:severity     sh:Violation .
+
+ra:IntensityEquipmentReference.GridStateIntensitySchedule-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:message      "Cardinality violation. Lower bound shall be 1" ;
+        sh:minCount     1 ;
+        sh:name         "IntensityEquipmentReference.GridStateIntensitySchedule-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:IntensityEquipmentReference.GridStateIntensitySchedule ;
+        sh:severity     sh:Violation .
+
+ra:MeasurementCalculatorInput
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:MeasurementCalculatorInput.order-cardinality , ido:IdentifiedObject.name-datatype , ra:MeasurementCalculatorInput.MeasurementCalculator-valueType , ra:MeasurementCalculatorInput.Measurement-cardinality , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.description-datatype , ra:MeasurementCalculatorInput.order-datatype , ra:MeasurementCalculatorInput.absoluteValue-cardinality , ido:IdentifiedObject.mRID-datatype , ra:MeasurementCalculatorInput.absoluteValue-datatype , ido:IdentifiedObject.description-cardinality , ra:MeasurementCalculatorInput.MeasurementCalculator-cardinality ;
+        sh:targetClass  nc:MeasurementCalculatorInput .
+
+ra:PowerElectronicsConnectionAction
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:PowerElectronicsConnectionAction.PowerElectronicsConnection-cardinality , ra:GridStateAlteration.GridStateAlterationCollection-cardinality , ra:GridStateAlteration.GridStateAlterationCollection-valueType , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.mRID-datatype , ra:GridStateAlteration.RemedialAction-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.name-cardinality , ra:GridStateAlteration.timeToImplement-cardinality , ra:GridStateAlteration.timeToImplement-datatype , ra:GridStateAlteration.normalEnabled-cardinality , ra:GridStateAlteration.RemedialAction-valueType , ra:GridStateAlteration.normalEnabled-datatype ;
+        sh:targetClass  nc:PowerElectronicsConnectionAction .
+
+ra:RegulatingControlAction
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:GridStateAlteration.timeToImplement-datatype , ra:GridStateAlteration.GridStateAlterationCollection-valueType , ra:GridStateAlteration.GridStateAlterationCollection-cardinality , ra:GridStateAlteration.RemedialAction-cardinality , ido:IdentifiedObject.description-datatype , ra:GridStateAlteration.timeToImplement-cardinality , ra:GridStateAlteration.normalEnabled-cardinality , ido:IdentifiedObject.mRID-cardinality , ra:GridStateAlteration.normalEnabled-datatype , ido:IdentifiedObject.description-cardinality , ra:GridStateAlteration.RemedialAction-valueType , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.name-datatype , ra:RegulatingControlAction.RegulatingControl-cardinality , ido:IdentifiedObject.mRID-datatype ;
+        sh:targetClass  nc:RegulatingControlAction .
+
+ra:TriggerCondition.RemedialActionScheme-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:RemedialActionScheme ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:RemedialActionScheme" ;
+        sh:name         "TriggerCondition.RemedialActionScheme-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( nc:TriggerCondition.RemedialActionScheme rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:StageTrigger.GateTrigger-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:Gate ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:Gate" ;
+        sh:name         "StageTrigger.GateTrigger-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        5 ;
+        sh:path         ( nc:StageTrigger.GateTrigger rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:IntensityMeasurementReference.GridStateIntensitySchedule-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:message      "Cardinality violation. Lower bound shall be 1" ;
+        sh:minCount     1 ;
+        sh:name         "IntensityMeasurementReference.GridStateIntensitySchedule-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:IntensityMeasurementReference.GridStateIntensitySchedule ;
+        sh:severity     sh:Violation .
+
+ra:StageTrigger.priority-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:integer ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "StageTrigger.priority-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         nc:StageTrigger.priority ;
+        sh:severity     sh:Violation .
+
+ra:StageTrigger.GateComCondition-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:Gate ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:Gate" ;
+        sh:name         "StageTrigger.GateComCondition-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        2 ;
+        sh:path         ( nc:StageTrigger.GateComCondition rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:RemedialAction.kind-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "RemedialAction.kind-cardinality" ;
+        sh:order        4 ;
+        sh:path         nc:RemedialAction.kind ;
+        sh:severity     sh:Violation .
+
+ra:PowerElectronicsConnectionAction.PowerElectronicsConnection-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "PowerElectronicsConnectionAction.PowerElectronicsConnection-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:PowerElectronicsConnectionAction.PowerElectronicsConnection ;
+        sh:severity     sh:Violation .
+
+ra:BasicIntervalSchedule.value2Unit-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "BasicIntervalSchedule.value2Unit-cardinality" ;
+        sh:order        8 ;
+        sh:path         cim:BasicIntervalSchedule.value2Unit ;
+        sh:severity     sh:Violation .
+
+ra:PTCActivePowerSupport.PowerTransferCorridor-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "PTCActivePowerSupport.PowerTransferCorridor-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:PTCActivePowerSupport.PowerTransferCorridor ;
+        sh:severity     sh:Violation .
+
+ra:TopologyAction.Switch-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "TopologyAction.Switch-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:TopologyAction.Switch ;
+        sh:severity     sh:Violation .
+
+ra:PTCActivePowerSupport.RemedialActionScheme-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "PTCActivePowerSupport.RemedialActionScheme-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:PTCActivePowerSupport.RemedialActionScheme ;
+        sh:severity     sh:Violation .
+
+ra:BasicIntervalSchedule.value2Unit-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( cim:UnitSymbol.HPerm cim:UnitSymbol.mol cim:UnitSymbol.m3Uncompensated cim:UnitSymbol.radPers cim:UnitSymbol.SPerm cim:UnitSymbol.Wb cim:UnitSymbol.bar cim:UnitSymbol.kat cim:UnitSymbol.cosPhi cim:UnitSymbol.VA cim:UnitSymbol.dBm cim:UnitSymbol.Btu cim:UnitSymbol.lm cim:UnitSymbol.mPers2 cim:UnitSymbol.ha cim:UnitSymbol.rotPers cim:UnitSymbol.A cim:UnitSymbol.A2 cim:UnitSymbol.JPerkgK cim:UnitSymbol.JPerm2 cim:UnitSymbol.Nm cim:UnitSymbol.kgPerJ cim:UnitSymbol.As cim:UnitSymbol.JPerm3 cim:UnitSymbol.m2Pers cim:UnitSymbol.d cim:UnitSymbol.C cim:UnitSymbol.WPersr cim:UnitSymbol.rad cim:UnitSymbol.kg cim:UnitSymbol.therm cim:UnitSymbol.CPerm3 cim:UnitSymbol.VArh cim:UnitSymbol.Mx cim:UnitSymbol.WPerW cim:UnitSymbol.JPermolK cim:UnitSymbol.cd cim:UnitSymbol.WPerm2sr cim:UnitSymbol.h cim:UnitSymbol.G cim:UnitSymbol.F cim:UnitSymbol.Vh cim:UnitSymbol.lPerl cim:UnitSymbol.HzPerHz cim:UnitSymbol.H cim:UnitSymbol.mmHg cim:UnitSymbol.CPerm2 cim:UnitSymbol.radPers2 cim:UnitSymbol.mPers cim:UnitSymbol.KPers cim:UnitSymbol.anglemin cim:UnitSymbol.PaPers cim:UnitSymbol.VPerHz cim:UnitSymbol.J cim:UnitSymbol.m2 cim:UnitSymbol.APerm cim:UnitSymbol.m3Perh cim:UnitSymbol.l cim:UnitSymbol.K cim:UnitSymbol.m3 cim:UnitSymbol.lPerh cim:UnitSymbol.WPers cim:UnitSymbol.dB cim:UnitSymbol.FPerm cim:UnitSymbol.m cim:UnitSymbol.A2s cim:UnitSymbol.kn cim:UnitSymbol.VAr cim:UnitSymbol.charPers cim:UnitSymbol.m3Compensated cim:UnitSymbol.M cim:UnitSymbol.onePerHz cim:UnitSymbol.Wh cim:UnitSymbol.gPerg cim:UnitSymbol.WPerm2 cim:UnitSymbol.molPerkg cim:UnitSymbol.Ah cim:UnitSymbol.N cim:UnitSymbol.mPerm3 cim:UnitSymbol.sPers cim:UnitSymbol.VPerV cim:UnitSymbol.kgm2 cim:UnitSymbol.m3Perkg cim:UnitSymbol.V2 cim:UnitSymbol.Oe cim:UnitSymbol.min cim:UnitSymbol.Vs cim:UnitSymbol.Q cim:UnitSymbol.V2h cim:UnitSymbol.CPerkg cim:UnitSymbol.JPerkg cim:UnitSymbol.Qh cim:UnitSymbol.s cim:UnitSymbol.tonne cim:UnitSymbol.NPerm cim:UnitSymbol.Pa cim:UnitSymbol.VAh cim:UnitSymbol.none cim:UnitSymbol.HzPers cim:UnitSymbol.S cim:UnitSymbol.deg cim:UnitSymbol.ohm cim:UnitSymbol.A2h cim:UnitSymbol.T cim:UnitSymbol.onePerm cim:UnitSymbol.lx cim:UnitSymbol.lPers cim:UnitSymbol.JPerK cim:UnitSymbol.character cim:UnitSymbol.APerA cim:UnitSymbol.V cim:UnitSymbol.ppm cim:UnitSymbol.WPermK cim:UnitSymbol.ohmPerm cim:UnitSymbol.VPerm cim:UnitSymbol.Bq cim:UnitSymbol.W cim:UnitSymbol.GyPers cim:UnitSymbol.Sv cim:UnitSymbol.molPerm3 cim:UnitSymbol.degC cim:UnitSymbol.JPermol cim:UnitSymbol.sr cim:UnitSymbol.count cim:UnitSymbol.m3Pers cim:UnitSymbol.ohmm cim:UnitSymbol.Hz cim:UnitSymbol.rev cim:UnitSymbol.WPerA cim:UnitSymbol.katPerm3 cim:UnitSymbol.gal cim:UnitSymbol.Pas cim:UnitSymbol.VPerVAr cim:UnitSymbol.VPerVA cim:UnitSymbol.anglesec cim:UnitSymbol.ft3 cim:UnitSymbol.molPermol cim:UnitSymbol.JPers cim:UnitSymbol.Gy cim:UnitSymbol.kgm cim:UnitSymbol.kgPerm3 ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "BasicIntervalSchedule.value2Unit-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        8 ;
+        sh:path         cim:BasicIntervalSchedule.value2Unit ;
+        sh:severity     sh:Violation .
+
+ra:BasicIntervalSchedule.value2Multiplier-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "BasicIntervalSchedule.value2Multiplier-cardinality" ;
+        sh:order        10 ;
+        sh:path         cim:BasicIntervalSchedule.value2Multiplier ;
+        sh:severity     sh:Violation .
+
+ra:Substation  rdf:type  sh:NodeShape ;
+        sh:targetClass  cim:Substation .
+
+ra:GridStateIntensitySchedule.parameterType-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:anyURI ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "GridStateIntensitySchedule.parameterType-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        4 ;
+        sh:path         nc:GridStateIntensitySchedule.parameterType ;
+        sh:severity     sh:Violation .
+
+ra:EquivalentInjectionAction
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.name-datatype , ra:GridStateAlteration.timeToImplement-datatype , ra:GridStateAlteration.timeToImplement-cardinality , ido:IdentifiedObject.mRID-datatype , ra:GridStateAlteration.normalEnabled-cardinality , ido:IdentifiedObject.mRID-cardinality , ra:GridStateAlteration.RemedialAction-cardinality , ra:GridStateAlteration.GridStateAlterationCollection-valueType , ra:GridStateAlteration.GridStateAlterationCollection-cardinality , ra:GridStateAlteration.normalEnabled-datatype , ra:GridStateAlteration.RemedialAction-valueType , ido:IdentifiedObject.name-cardinality , ra:EquivalentInjectionAction.EquivalentInjection-cardinality , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.description-cardinality ;
+        sh:targetClass  nc:EquivalentInjectionAction .
+
+ra:RemedialActionScheme.kind-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( nc:RemedialActionSchemeKind.sips nc:RemedialActionSchemeKind.rasp ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "RemedialActionScheme.kind-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         nc:RemedialActionScheme.kind ;
+        sh:severity     sh:Violation .
+
+ra:MeasurementCalculator.kind-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "MeasurementCalculator.kind-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:MeasurementCalculator.kind ;
+        sh:severity     sh:Violation .
+
+ra:IntensityEquipmentReference
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:IntensityEquipmentReference.GridStateIntensitySchedule-valueType , ra:IntensityEquipmentReference.GridStateIntensitySchedule-cardinality , ra:IntensityEquipmentReference.parameterType-datatype , ra:IntensityEquipmentReference.parameterType-cardinality ;
+        sh:targetClass  nc:IntensityEquipmentReference .
+
+ra:Curve.xMultiplier-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( cim:UnitMultiplier.Z cim:UnitMultiplier.y cim:UnitMultiplier.Y cim:UnitMultiplier.z cim:UnitMultiplier.T cim:UnitMultiplier.c cim:UnitMultiplier.none cim:UnitMultiplier.d cim:UnitMultiplier.a cim:UnitMultiplier.k cim:UnitMultiplier.da cim:UnitMultiplier.micro cim:UnitMultiplier.G cim:UnitMultiplier.h cim:UnitMultiplier.E cim:UnitMultiplier.f cim:UnitMultiplier.P cim:UnitMultiplier.p cim:UnitMultiplier.m cim:UnitMultiplier.M cim:UnitMultiplier.n ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "Curve.xMultiplier-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        6 ;
+        sh:path         cim:Curve.xMultiplier ;
+        sh:severity     sh:Violation .
+
+ra:GateInputPin.logicKind-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( nc:LogicalOperatorsKind.lessThanOrEquals nc:LogicalOperatorsKind.greaterThan nc:LogicalOperatorsKind.notEqual nc:LogicalOperatorsKind.lessThan nc:LogicalOperatorsKind.equals nc:LogicalOperatorsKind.greaterThanOrEquals ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "GateInputPin.logicKind-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        5 ;
+        sh:path         nc:GateInputPin.logicKind ;
+        sh:severity     sh:Violation .
+
+ra:EnergySourceModification
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.mRID-cardinality , ra:EnergySourceModification.EnergySource-cardinality , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.name-cardinality , ra:GridStateAlteration.timeToImplement-cardinality , ra:GridStateAlteration.normalEnabled-datatype , ra:GridStateAlteration.timeToImplement-datatype , ido:IdentifiedObject.mRID-datatype , ra:GridStateAlteration.GridStateAlterationCollection-cardinality , ra:GridStateAlteration.RemedialAction-valueType , ra:GridStateAlteration.GridStateAlterationCollection-valueType , ra:GridStateAlteration.RemedialAction-cardinality , ra:GridStateAlteration.normalEnabled-cardinality ;
+        sh:targetClass  nc:EnergySourceModification .
+
+ra:IntertemporalRangeSchedule
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:IntertemporalRangeSchedule.discrete-datatype , ra:BasicIntervalSchedule.value2Unit-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.mRID-datatype , ra:IntertemporalRangeSchedule.parameterType-datatype , ra:BasicIntervalSchedule.value2Multiplier-datatype , ido:IdentifiedObject.name-cardinality , ra:BasicIntervalSchedule.value1Unit-datatype , ra:IntertemporalRangeSchedule.step-datatype , ra:IntertemporalRangeSchedule.valueKind-cardinality , ra:BasicIntervalSchedule.value1Multiplier-cardinality , ra:BasicIntervalSchedule.value2Multiplier-cardinality , ido:IdentifiedObject.description-cardinality , ra:IntertemporalRangeSchedule.step-cardinality , ra:BasicIntervalSchedule.value1Unit-cardinality , ra:BasicIntervalSchedule.value1Multiplier-datatype , ido:IdentifiedObject.description-datatype , ra:IntertemporalRangeSchedule.valueKind-datatype , ra:IntertemporalRangeSchedule.GridStateAlteration-cardinality , ra:IntertemporalRangeSchedule.discrete-cardinality , ra:BasicIntervalSchedule.value2Unit-datatype , ido:IdentifiedObject.mRID-cardinality , ra:BasicIntervalSchedule.startTime-cardinality , ra:BasicIntervalSchedule.startTime-datatype , ra:IntertemporalRangeSchedule.parameterType-cardinality ;
+        sh:targetClass  nc:IntertemporalRangeSchedule .
+
+ra:QualitativeRemedialActionThreshold.ImpactedSystemOperator-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "QualitativeRemedialActionThreshold.ImpactedSystemOperator-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:QualitativeRemedialActionThreshold.ImpactedSystemOperator ;
+        sh:severity     sh:Violation .
+
+ra:GateInputPin.duration-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:duration ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "GateInputPin.duration-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        2 ;
+        sh:path         nc:GateInputPin.duration ;
+        sh:severity     sh:Violation .
+
+ra:IrregularTimePoint.IntervalSchedule-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( cim:IrregularIntervalSchedule nc:GridStateIntensitySchedule nc:StaticRangeSchedule nc:IntertemporalRangeSchedule ) ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "IrregularTimePoint.IntervalSchedule-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        2 ;
+        sh:path         ( cim:IrregularTimePoint.IntervalSchedule rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:Curve.curveStyle-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( cim:CurveStyle.straightLineYValues cim:CurveStyle.constantYValue ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "Curve.curveStyle-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        8 ;
+        sh:path         cim:Curve.curveStyle ;
+        sh:severity     sh:Violation .
+
+ra:Curve.y1Multiplier-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( cim:UnitMultiplier.Z cim:UnitMultiplier.y cim:UnitMultiplier.Y cim:UnitMultiplier.z cim:UnitMultiplier.T cim:UnitMultiplier.c cim:UnitMultiplier.none cim:UnitMultiplier.d cim:UnitMultiplier.a cim:UnitMultiplier.k cim:UnitMultiplier.da cim:UnitMultiplier.micro cim:UnitMultiplier.G cim:UnitMultiplier.h cim:UnitMultiplier.E cim:UnitMultiplier.f cim:UnitMultiplier.P cim:UnitMultiplier.p cim:UnitMultiplier.m cim:UnitMultiplier.M cim:UnitMultiplier.n ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "Curve.y1Multiplier-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        7 ;
+        sh:path         cim:Curve.y1Multiplier ;
+        sh:severity     sh:Violation .
+
+ra:Gate.kind-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "Gate.kind-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:Gate.kind ;
+        sh:severity     sh:Violation .
+
+ra:DCControllerAction.DCController-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "DCControllerAction.DCController-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:DCControllerAction.DCController ;
+        sh:severity     sh:Violation .
+
+ra:PinMeasurement.Measurement-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "PinMeasurement.Measurement-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:PinMeasurement.Measurement ;
+        sh:severity     sh:Violation .
+
+ra:StaticVarCompensatorAction
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:GridStateAlteration.GridStateAlterationCollection-valueType , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.name-datatype , ra:GridStateAlteration.normalEnabled-datatype , ra:StaticVarCompensatorAction.StaticVarCompensator-cardinality , ra:GridStateAlteration.GridStateAlterationCollection-cardinality , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.description-cardinality , ra:GridStateAlteration.timeToImplement-cardinality , ido:IdentifiedObject.mRID-datatype , ra:GridStateAlteration.RemedialAction-cardinality , ra:GridStateAlteration.RemedialAction-valueType , ra:GridStateAlteration.timeToImplement-datatype , ido:IdentifiedObject.name-cardinality , ra:GridStateAlteration.normalEnabled-cardinality ;
+        sh:targetClass  nc:StaticVarCompensatorAction .
+
+ra:AssociationsGroup  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "Associations" ;
+        sh:order    2 .
+
+ra:TriggerCondition.RemedialActionScheme-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "TriggerCondition.RemedialActionScheme-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:TriggerCondition.RemedialActionScheme ;
+        sh:severity     sh:Violation .
+
+ra:MeasurementCalculatorInput.MeasurementCalculator-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "MeasurementCalculatorInput.MeasurementCalculator-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:MeasurementCalculatorInput.MeasurementCalculator ;
+        sh:severity     sh:Violation .
+
+ra:QualitativeRemedialActionThreshold.kind-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( nc:ImpactAgreementKind.never nc:ImpactAgreementKind.threshold nc:ImpactAgreementKind.noAgreement nc:ImpactAgreementKind.always ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "QualitativeRemedialActionThreshold.kind-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         nc:QualitativeRemedialActionThreshold.kind ;
+        sh:severity     sh:Violation .
+
+ra:TapPositionAction  rdf:type  sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.description-cardinality , ra:GridStateAlteration.GridStateAlterationCollection-cardinality , ra:GridStateAlteration.timeToImplement-datatype , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.mRID-datatype , ra:GridStateAlteration.normalEnabled-cardinality , ra:GridStateAlteration.normalEnabled-datatype , ido:IdentifiedObject.name-cardinality , ra:GridStateAlteration.RemedialAction-valueType , ra:GridStateAlteration.timeToImplement-cardinality , ra:TapPositionAction.TapChanger-cardinality , ido:IdentifiedObject.mRID-cardinality , ra:GridStateAlteration.RemedialAction-cardinality , ra:GridStateAlteration.GridStateAlterationCollection-valueType ;
+        sh:targetClass  nc:TapPositionAction .
+
+ra:LoadAction  rdf:type  sh:NodeShape ;
+        sh:property     ra:GridStateAlteration.normalEnabled-cardinality , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.description-datatype , ra:GridStateAlteration.GridStateAlterationCollection-valueType , ido:IdentifiedObject.description-cardinality , ra:GridStateAlteration.GridStateAlterationCollection-cardinality , ra:GridStateAlteration.RemedialAction-valueType , ido:IdentifiedObject.mRID-datatype , ra:GridStateAlteration.timeToImplement-cardinality , ra:GridStateAlteration.normalEnabled-datatype , ra:LoadAction.EnergyConsumer-cardinality , ra:GridStateAlteration.timeToImplement-datatype , ido:IdentifiedObject.name-datatype , ra:GridStateAlteration.RemedialAction-cardinality ;
+        sh:targetClass  nc:LoadAction .
+
+ra:IntensityMeasurementReference
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:IntensityMeasurementReference.Measurement-cardinality , ra:IntensityMeasurementReference.GridStateIntensitySchedule-valueType , ra:IntensityMeasurementReference.GridStateIntensitySchedule-cardinality ;
+        sh:targetClass  nc:IntensityMeasurementReference .
+
+ra:TapPositionAction.TapChanger-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "TapPositionAction.TapChanger-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:TapPositionAction.TapChanger ;
+        sh:severity     sh:Violation .
+
+ra:PinEquipment.parameterType-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:anyURI ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "PinEquipment.parameterType-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:PinEquipment.parameterType ;
+        sh:severity     sh:Violation .
+
+ra:PinDCTerminal  rdf:type  sh:NodeShape ;
+        sh:property     ra:GateInputPin.thresholdValue-datatype , ra:GateInputPin.thresholdPercentage-datatype , ra:GateInputPin.negate-cardinality , ra:GateInputPin.logicKind-datatype , ra:GateInputPin.thresholdValue-cardinality , ido:IdentifiedObject.mRID-datatype , ra:GateInputPin.thresholdPercentage-cardinality , ra:GateInputPin.duration-datatype , ra:GateInputPin.Gate-cardinality , ra:GateInputPin.logicKind-cardinality , ido:IdentifiedObject.mRID-cardinality , ra:GateInputPin.Gate-valueType , ra:GateInputPin.duration-cardinality , ra:PinDCTerminal.kind-datatype , ido:IdentifiedObject.description-cardinality , ra:GateInputPin.absoluteValue-datatype , ra:GateInputPin.absoluteValue-cardinality , ra:PinDCTerminal.DCTerminal-cardinality , ido:IdentifiedObject.description-datatype , ra:GateInputPin.negate-datatype , ra:PinDCTerminal.kind-cardinality , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.name-datatype ;
+        sh:targetClass  nc:PinDCTerminal .
+
+ra:TriggerCondition.GateTrigger-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "TriggerCondition.GateTrigger-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:TriggerCondition.GateTrigger ;
+        sh:severity     sh:Violation .
+
+ra:GateInputPin.duration-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "GateInputPin.duration-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:GateInputPin.duration ;
+        sh:severity     sh:Violation .
+
+ra:IrregularTimePoint.IntervalSchedule-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "IrregularTimePoint.IntervalSchedule-cardinality" ;
+        sh:order        2 ;
+        sh:path         cim:IrregularTimePoint.IntervalSchedule ;
+        sh:severity     sh:Violation .
+
+ra:ContingencyWithRemedialAction.RemedialAction-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:RemedialAction ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:RemedialAction" ;
+        sh:name         "ContingencyWithRemedialAction.RemedialAction-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( nc:ContingencyWithRemedialAction.RemedialAction rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:BasicIntervalSchedule.value2Multiplier-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( cim:UnitMultiplier.Z cim:UnitMultiplier.y cim:UnitMultiplier.Y cim:UnitMultiplier.z cim:UnitMultiplier.T cim:UnitMultiplier.c cim:UnitMultiplier.none cim:UnitMultiplier.d cim:UnitMultiplier.a cim:UnitMultiplier.k cim:UnitMultiplier.da cim:UnitMultiplier.micro cim:UnitMultiplier.G cim:UnitMultiplier.h cim:UnitMultiplier.E cim:UnitMultiplier.f cim:UnitMultiplier.P cim:UnitMultiplier.p cim:UnitMultiplier.m cim:UnitMultiplier.M cim:UnitMultiplier.n ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "BasicIntervalSchedule.value2Multiplier-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        10 ;
+        sh:path         cim:BasicIntervalSchedule.value2Multiplier ;
+        sh:severity     sh:Violation .
+
+ido:IdentifiedObject.name-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:string ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ido:DatatypesGroupIO ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "IdentifiedObject.name-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0.1 ;
+        sh:path         cim:IdentifiedObject.name ;
+        sh:severity     sh:Violation .
+
+ra:PinTerminal.kind-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "PinTerminal.kind-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:PinTerminal.kind ;
+        sh:severity     sh:Violation .
+
+ra:IntensityEquipmentReference.GridStateIntensitySchedule-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:GridStateIntensitySchedule ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:GridStateIntensitySchedule" ;
+        sh:name         "IntensityEquipmentReference.GridStateIntensitySchedule-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( nc:IntensityEquipmentReference.GridStateIntensitySchedule rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:Curve.y1Unit-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( cim:UnitSymbol.HPerm cim:UnitSymbol.mol cim:UnitSymbol.m3Uncompensated cim:UnitSymbol.radPers cim:UnitSymbol.SPerm cim:UnitSymbol.Wb cim:UnitSymbol.bar cim:UnitSymbol.kat cim:UnitSymbol.cosPhi cim:UnitSymbol.VA cim:UnitSymbol.dBm cim:UnitSymbol.Btu cim:UnitSymbol.lm cim:UnitSymbol.mPers2 cim:UnitSymbol.ha cim:UnitSymbol.rotPers cim:UnitSymbol.A cim:UnitSymbol.A2 cim:UnitSymbol.JPerkgK cim:UnitSymbol.JPerm2 cim:UnitSymbol.Nm cim:UnitSymbol.kgPerJ cim:UnitSymbol.As cim:UnitSymbol.JPerm3 cim:UnitSymbol.m2Pers cim:UnitSymbol.d cim:UnitSymbol.C cim:UnitSymbol.WPersr cim:UnitSymbol.rad cim:UnitSymbol.kg cim:UnitSymbol.therm cim:UnitSymbol.CPerm3 cim:UnitSymbol.VArh cim:UnitSymbol.Mx cim:UnitSymbol.WPerW cim:UnitSymbol.JPermolK cim:UnitSymbol.cd cim:UnitSymbol.WPerm2sr cim:UnitSymbol.h cim:UnitSymbol.G cim:UnitSymbol.F cim:UnitSymbol.Vh cim:UnitSymbol.lPerl cim:UnitSymbol.HzPerHz cim:UnitSymbol.H cim:UnitSymbol.mmHg cim:UnitSymbol.CPerm2 cim:UnitSymbol.radPers2 cim:UnitSymbol.mPers cim:UnitSymbol.KPers cim:UnitSymbol.anglemin cim:UnitSymbol.PaPers cim:UnitSymbol.VPerHz cim:UnitSymbol.J cim:UnitSymbol.m2 cim:UnitSymbol.APerm cim:UnitSymbol.m3Perh cim:UnitSymbol.l cim:UnitSymbol.K cim:UnitSymbol.m3 cim:UnitSymbol.lPerh cim:UnitSymbol.WPers cim:UnitSymbol.dB cim:UnitSymbol.FPerm cim:UnitSymbol.m cim:UnitSymbol.A2s cim:UnitSymbol.kn cim:UnitSymbol.VAr cim:UnitSymbol.charPers cim:UnitSymbol.m3Compensated cim:UnitSymbol.M cim:UnitSymbol.onePerHz cim:UnitSymbol.Wh cim:UnitSymbol.gPerg cim:UnitSymbol.WPerm2 cim:UnitSymbol.molPerkg cim:UnitSymbol.Ah cim:UnitSymbol.N cim:UnitSymbol.mPerm3 cim:UnitSymbol.sPers cim:UnitSymbol.VPerV cim:UnitSymbol.kgm2 cim:UnitSymbol.m3Perkg cim:UnitSymbol.V2 cim:UnitSymbol.Oe cim:UnitSymbol.min cim:UnitSymbol.Vs cim:UnitSymbol.Q cim:UnitSymbol.V2h cim:UnitSymbol.CPerkg cim:UnitSymbol.JPerkg cim:UnitSymbol.Qh cim:UnitSymbol.s cim:UnitSymbol.tonne cim:UnitSymbol.NPerm cim:UnitSymbol.Pa cim:UnitSymbol.VAh cim:UnitSymbol.none cim:UnitSymbol.HzPers cim:UnitSymbol.S cim:UnitSymbol.deg cim:UnitSymbol.ohm cim:UnitSymbol.A2h cim:UnitSymbol.T cim:UnitSymbol.onePerm cim:UnitSymbol.lx cim:UnitSymbol.lPers cim:UnitSymbol.JPerK cim:UnitSymbol.character cim:UnitSymbol.APerA cim:UnitSymbol.V cim:UnitSymbol.ppm cim:UnitSymbol.WPermK cim:UnitSymbol.ohmPerm cim:UnitSymbol.VPerm cim:UnitSymbol.Bq cim:UnitSymbol.W cim:UnitSymbol.GyPers cim:UnitSymbol.Sv cim:UnitSymbol.molPerm3 cim:UnitSymbol.degC cim:UnitSymbol.JPermol cim:UnitSymbol.sr cim:UnitSymbol.count cim:UnitSymbol.m3Pers cim:UnitSymbol.ohmm cim:UnitSymbol.Hz cim:UnitSymbol.rev cim:UnitSymbol.WPerA cim:UnitSymbol.katPerm3 cim:UnitSymbol.gal cim:UnitSymbol.Pas cim:UnitSymbol.VPerVAr cim:UnitSymbol.VPerVA cim:UnitSymbol.anglesec cim:UnitSymbol.ft3 cim:UnitSymbol.molPermol cim:UnitSymbol.JPers cim:UnitSymbol.Gy cim:UnitSymbol.kgm cim:UnitSymbol.kgPerm3 ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "Curve.y1Unit-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        9 ;
+        sh:path         cim:Curve.y1Unit ;
+        sh:severity     sh:Violation .
+
+ra:GateInputPin.Gate-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "GateInputPin.Gate-cardinality" ;
+        sh:order        7 ;
+        sh:path         nc:GateInputPin.Gate ;
+        sh:severity     sh:Violation .
+
+ra:PinTerminalLimit  rdf:type  sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.mRID-cardinality , ra:GateInputPin.Gate-valueType , ra:GateInputPin.thresholdValue-cardinality , ra:GateInputPin.thresholdPercentage-cardinality , ido:IdentifiedObject.name-datatype , ra:GateInputPin.absoluteValue-cardinality , ra:GateInputPin.negate-cardinality , ra:PinTerminalLimit.Terminal-cardinality , ra:GateInputPin.duration-cardinality , ra:GateInputPin.thresholdPercentage-datatype , ido:IdentifiedObject.description-cardinality , ra:GateInputPin.negate-datatype , ra:GateInputPin.logicKind-datatype , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.mRID-datatype , ra:PinTerminalLimit.kind-datatype , ra:GateInputPin.duration-datatype , ra:GateInputPin.Gate-cardinality , ido:IdentifiedObject.description-datatype , ra:GateInputPin.absoluteValue-datatype , ra:GateInputPin.logicKind-cardinality , ra:PinTerminalLimit.kind-cardinality , ra:GateInputPin.thresholdValue-datatype ;
+        sh:targetClass  nc:PinTerminalLimit .
+
+ra:Curve.xUnit-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( cim:UnitSymbol.HPerm cim:UnitSymbol.mol cim:UnitSymbol.m3Uncompensated cim:UnitSymbol.radPers cim:UnitSymbol.SPerm cim:UnitSymbol.Wb cim:UnitSymbol.bar cim:UnitSymbol.kat cim:UnitSymbol.cosPhi cim:UnitSymbol.VA cim:UnitSymbol.dBm cim:UnitSymbol.Btu cim:UnitSymbol.lm cim:UnitSymbol.mPers2 cim:UnitSymbol.ha cim:UnitSymbol.rotPers cim:UnitSymbol.A cim:UnitSymbol.A2 cim:UnitSymbol.JPerkgK cim:UnitSymbol.JPerm2 cim:UnitSymbol.Nm cim:UnitSymbol.kgPerJ cim:UnitSymbol.As cim:UnitSymbol.JPerm3 cim:UnitSymbol.m2Pers cim:UnitSymbol.d cim:UnitSymbol.C cim:UnitSymbol.WPersr cim:UnitSymbol.rad cim:UnitSymbol.kg cim:UnitSymbol.therm cim:UnitSymbol.CPerm3 cim:UnitSymbol.VArh cim:UnitSymbol.Mx cim:UnitSymbol.WPerW cim:UnitSymbol.JPermolK cim:UnitSymbol.cd cim:UnitSymbol.WPerm2sr cim:UnitSymbol.h cim:UnitSymbol.G cim:UnitSymbol.F cim:UnitSymbol.Vh cim:UnitSymbol.lPerl cim:UnitSymbol.HzPerHz cim:UnitSymbol.H cim:UnitSymbol.mmHg cim:UnitSymbol.CPerm2 cim:UnitSymbol.radPers2 cim:UnitSymbol.mPers cim:UnitSymbol.KPers cim:UnitSymbol.anglemin cim:UnitSymbol.PaPers cim:UnitSymbol.VPerHz cim:UnitSymbol.J cim:UnitSymbol.m2 cim:UnitSymbol.APerm cim:UnitSymbol.m3Perh cim:UnitSymbol.l cim:UnitSymbol.K cim:UnitSymbol.m3 cim:UnitSymbol.lPerh cim:UnitSymbol.WPers cim:UnitSymbol.dB cim:UnitSymbol.FPerm cim:UnitSymbol.m cim:UnitSymbol.A2s cim:UnitSymbol.kn cim:UnitSymbol.VAr cim:UnitSymbol.charPers cim:UnitSymbol.m3Compensated cim:UnitSymbol.M cim:UnitSymbol.onePerHz cim:UnitSymbol.Wh cim:UnitSymbol.gPerg cim:UnitSymbol.WPerm2 cim:UnitSymbol.molPerkg cim:UnitSymbol.Ah cim:UnitSymbol.N cim:UnitSymbol.mPerm3 cim:UnitSymbol.sPers cim:UnitSymbol.VPerV cim:UnitSymbol.kgm2 cim:UnitSymbol.m3Perkg cim:UnitSymbol.V2 cim:UnitSymbol.Oe cim:UnitSymbol.min cim:UnitSymbol.Vs cim:UnitSymbol.Q cim:UnitSymbol.V2h cim:UnitSymbol.CPerkg cim:UnitSymbol.JPerkg cim:UnitSymbol.Qh cim:UnitSymbol.s cim:UnitSymbol.tonne cim:UnitSymbol.NPerm cim:UnitSymbol.Pa cim:UnitSymbol.VAh cim:UnitSymbol.none cim:UnitSymbol.HzPers cim:UnitSymbol.S cim:UnitSymbol.deg cim:UnitSymbol.ohm cim:UnitSymbol.A2h cim:UnitSymbol.T cim:UnitSymbol.onePerm cim:UnitSymbol.lx cim:UnitSymbol.lPers cim:UnitSymbol.JPerK cim:UnitSymbol.character cim:UnitSymbol.APerA cim:UnitSymbol.V cim:UnitSymbol.ppm cim:UnitSymbol.WPermK cim:UnitSymbol.ohmPerm cim:UnitSymbol.VPerm cim:UnitSymbol.Bq cim:UnitSymbol.W cim:UnitSymbol.GyPers cim:UnitSymbol.Sv cim:UnitSymbol.molPerm3 cim:UnitSymbol.degC cim:UnitSymbol.JPermol cim:UnitSymbol.sr cim:UnitSymbol.count cim:UnitSymbol.m3Pers cim:UnitSymbol.ohmm cim:UnitSymbol.Hz cim:UnitSymbol.rev cim:UnitSymbol.WPerA cim:UnitSymbol.katPerm3 cim:UnitSymbol.gal cim:UnitSymbol.Pas cim:UnitSymbol.VPerVAr cim:UnitSymbol.VPerVA cim:UnitSymbol.anglesec cim:UnitSymbol.ft3 cim:UnitSymbol.molPermol cim:UnitSymbol.JPers cim:UnitSymbol.Gy cim:UnitSymbol.kgm cim:UnitSymbol.kgPerm3 ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "Curve.xUnit-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        5 ;
+        sh:path         cim:Curve.xUnit ;
+        sh:severity     sh:Violation .
+
+ra:PinEquipment  rdf:type  sh:NodeShape ;
+        sh:property     ra:GateInputPin.Gate-cardinality , ido:IdentifiedObject.description-datatype , ra:GateInputPin.negate-datatype , ra:GateInputPin.logicKind-cardinality , ra:PinEquipment.parameterType-datatype , ra:GateInputPin.duration-cardinality , ra:GateInputPin.thresholdValue-cardinality , ra:PinEquipment.parameterType-cardinality , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.name-datatype , ra:GateInputPin.Gate-valueType , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.description-cardinality , ra:GateInputPin.thresholdValue-datatype , ra:GateInputPin.logicKind-datatype , ra:GateInputPin.thresholdPercentage-datatype , ra:GateInputPin.thresholdPercentage-cardinality , ra:GateInputPin.negate-cardinality , ra:GateInputPin.absoluteValue-cardinality , ra:GateInputPin.duration-datatype , ra:GateInputPin.absoluteValue-datatype ;
+        sh:targetClass  nc:PinEquipment .
+
+ra:IrregularTimePoint.value1-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "IrregularTimePoint.value1-cardinality" ;
+        sh:order        1 ;
+        sh:path         cim:IrregularTimePoint.value1 ;
+        sh:severity     sh:Violation .
+
+ra:GridStateAlteration.GridStateAlterationCollection-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "GridStateAlteration.GridStateAlterationCollection-cardinality" ;
+        sh:order        6 ;
+        sh:path         nc:GridStateAlteration.GridStateAlterationCollection ;
+        sh:severity     sh:Violation .
+
+ra:IrregularTimePoint.value2-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "IrregularTimePoint.value2-cardinality" ;
+        sh:order        0 ;
+        sh:path         cim:IrregularTimePoint.value2 ;
+        sh:severity     sh:Violation .
+
+ra:RemedialActionScheme.GateArmed-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "RemedialActionScheme.GateArmed-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:RemedialActionScheme.GateArmed ;
+        sh:severity     sh:Violation .
+
+ra:DCControllerAction
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.name-datatype , ra:GridStateAlteration.RemedialAction-cardinality , ra:GridStateAlteration.RemedialAction-valueType , ido:IdentifiedObject.mRID-datatype , ra:GridStateAlteration.timeToImplement-datatype , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.name-cardinality , ra:GridStateAlteration.GridStateAlterationCollection-cardinality , ido:IdentifiedObject.description-cardinality , ra:GridStateAlteration.normalEnabled-datatype , ra:GridStateAlteration.GridStateAlterationCollection-valueType , ra:GridStateAlteration.timeToImplement-cardinality , ra:GridStateAlteration.normalEnabled-cardinality , ido:IdentifiedObject.description-datatype , ra:DCControllerAction.DCController-cardinality ;
+        sh:targetClass  nc:DCControllerAction .
+
+ra:RotatingMachineAction
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.mRID-cardinality , ra:GridStateAlteration.normalEnabled-datatype , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.name-datatype , ra:GridStateAlteration.timeToImplement-cardinality , ra:GridStateAlteration.normalEnabled-cardinality , ra:RotatingMachineAction.RotatingMachine-cardinality , ra:GridStateAlteration.timeToImplement-datatype , ra:GridStateAlteration.RemedialAction-cardinality , ra:GridStateAlteration.GridStateAlterationCollection-cardinality , ra:GridStateAlteration.GridStateAlterationCollection-valueType , ido:IdentifiedObject.mRID-datatype , ra:GridStateAlteration.RemedialAction-valueType , ido:IdentifiedObject.description-datatype ;
+        sh:targetClass  nc:RotatingMachineAction .
+
+ra:StaticRangeSchedule.GridStateAlteration-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:StaticRangeSchedule.GridStateAlteration-valueType ;
+        sh:targetClass  nc:StaticRangeSchedule .
+
+ra:IntertemporalRangeSchedule.valueKind-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "IntertemporalRangeSchedule.valueKind-cardinality" ;
+        sh:order        4 ;
+        sh:path         nc:IntertemporalRangeSchedule.valueKind ;
+        sh:severity     sh:Violation .
+
+ra:ACDCConverterAction.ACDCConverter-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "ACDCConverterAction.ACDCConverter-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:ACDCConverterAction.ACDCConverter ;
+        sh:severity     sh:Violation .
+
+ido:DatatypesGroupIO  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "DatatypesIO" ;
+        sh:order    1 .
+
+ra:Line  rdf:type       sh:NodeShape ;
+        sh:targetClass  cim:Line .
+
+ra:BasicIntervalSchedule.startTime-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:dateTime ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "BasicIntervalSchedule.startTime-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        9 ;
+        sh:path         cim:BasicIntervalSchedule.startTime ;
+        sh:severity     sh:Violation .
+
+ra:BatteryUnitAction.BatteryUnit-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "BatteryUnitAction.BatteryUnit-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:BatteryUnitAction.BatteryUnit ;
+        sh:severity     sh:Violation .
+
+ra:StageTrigger  rdf:type  sh:NodeShape ;
+        sh:property     ra:StageTrigger.GateTrigger-valueType , ido:IdentifiedObject.mRID-datatype , ra:StageTrigger.Stage-valueType , ra:StageTrigger.normalArmed-cardinality , ra:StageTrigger.GateComCondition-cardinality , ra:StageTrigger.priority-cardinality , ra:StageTrigger.normalArmed-datatype , ra:StageTrigger.GateTrigger-cardinality , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.description-datatype , ra:StageTrigger.GateArmed-valueType , ido:IdentifiedObject.description-cardinality , ra:StageTrigger.GateArmed-cardinality , ido:IdentifiedObject.name-datatype , ra:StageTrigger.GateComCondition-valueType , ido:IdentifiedObject.name-cardinality , ra:StageTrigger.priority-datatype , ra:StageTrigger.Stage-cardinality ;
+        sh:targetClass  nc:StageTrigger .
+
+ra:RemedialAction.AppointedToRegion-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "RemedialAction.AppointedToRegion-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:RemedialAction.AppointedToRegion ;
+        sh:severity     sh:Violation .
+
+ra:ContingencyWithRemedialAction.Contingency-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "ContingencyWithRemedialAction.Contingency-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:ContingencyWithRemedialAction.Contingency ;
+        sh:severity     sh:Violation .
+
+ido:IdentifiedObject.description-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ido:CardinalityIO ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "IdentifiedObject.description-cardinality" ;
+        sh:order        0.1 ;
+        sh:path         cim:IdentifiedObject.description ;
+        sh:severity     sh:Violation .
+
+ra:PinContingency  rdf:type  sh:NodeShape ;
+        sh:property     ra:GateInputPin.duration-cardinality , ra:GateInputPin.logicKind-cardinality , ra:PinContingency.Contingency-cardinality , ra:GateInputPin.duration-datatype , ido:IdentifiedObject.mRID-datatype , ra:GateInputPin.negate-datatype , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.mRID-cardinality , ra:GateInputPin.absoluteValue-datatype , ido:IdentifiedObject.description-datatype , ra:GateInputPin.negate-cardinality , ido:IdentifiedObject.description-cardinality , ra:GateInputPin.thresholdPercentage-cardinality , ra:GateInputPin.thresholdValue-cardinality , ra:GateInputPin.Gate-valueType , ra:GateInputPin.thresholdValue-datatype , ra:GateInputPin.Gate-cardinality , ra:GateInputPin.thresholdPercentage-datatype , ido:IdentifiedObject.name-cardinality , ra:GateInputPin.logicKind-datatype , ra:GateInputPin.absoluteValue-cardinality ;
+        sh:targetClass  nc:PinContingency .
+
+ra:PinTerminal  rdf:type  sh:NodeShape ;
+        sh:property     ra:PinTerminal.kind-cardinality , ido:IdentifiedObject.mRID-datatype , ra:GateInputPin.thresholdValue-cardinality , ido:IdentifiedObject.description-cardinality , ra:GateInputPin.duration-cardinality , ido:IdentifiedObject.mRID-cardinality , ra:GateInputPin.thresholdPercentage-datatype , ido:IdentifiedObject.description-datatype , ra:GateInputPin.logicKind-datatype , ra:GateInputPin.thresholdValue-datatype , ra:GateInputPin.negate-datatype , ra:PinTerminal.Terminal-cardinality , ra:GateInputPin.logicKind-cardinality , ra:GateInputPin.Gate-valueType , ra:GateInputPin.absoluteValue-cardinality , ido:IdentifiedObject.name-cardinality , ra:GateInputPin.absoluteValue-datatype , ra:GateInputPin.thresholdPercentage-cardinality , ra:PinTerminal.kind-datatype , ra:GateInputPin.Gate-cardinality , ido:IdentifiedObject.name-datatype , ra:GateInputPin.duration-datatype , ra:GateInputPin.negate-cardinality ;
+        sh:targetClass  nc:PinTerminal .
+
+ra:RemedialAction.kind-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( nc:RemedialActionKind.preventive nc:RemedialActionKind.curative nc:RemedialActionKind.curativeAndPreventive ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "RemedialAction.kind-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        4 ;
+        sh:path         nc:RemedialAction.kind ;
+        sh:severity     sh:Violation .
+
+ra:StageTrigger.priority-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "StageTrigger.priority-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:StageTrigger.priority ;
+        sh:severity     sh:Violation .
+
+ra:GridStateAlteration.GridStateAlterationCollection-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:GridStateAlterationCollection ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:GridStateAlterationCollection" ;
+        sh:name         "GridStateAlteration.GridStateAlterationCollection-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        6 ;
+        sh:path         ( nc:GridStateAlteration.GridStateAlterationCollection rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:GridStateIntensitySchedule.valueKind-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( nc:ValueOffsetKind.absolute nc:ValueOffsetKind.incremental ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "GridStateIntensitySchedule.valueKind-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         nc:GridStateIntensitySchedule.valueKind ;
+        sh:severity     sh:Violation .
+
+ra:GridStateAlteration.normalEnabled-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "GridStateAlteration.normalEnabled-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         nc:GridStateAlteration.normalEnabled ;
+        sh:severity     sh:Violation .
+
+ra:EquivalentInjectionAction.EquivalentInjection-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "EquivalentInjectionAction.EquivalentInjection-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:EquivalentInjectionAction.EquivalentInjection ;
+        sh:severity     sh:Violation .
+
+ra:StaticRangeSchedule.GridStateAlteration-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:TopologyAction nc:TapPositionAction nc:RegulatingControlAction nc:DCControllerAction nc:ExternalNetworkInjectionAction nc:PowerElectronicsConnectionAction nc:EquivalentInjectionAction nc:BatteryUnitAction nc:EnergySourceModification nc:RotatingMachineAction nc:ACDCConverterAction nc:ShuntCompensatorModification nc:LoadAction nc:StaticVarCompensatorAction ) ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "StaticRangeSchedule.GridStateAlteration-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( nc:StaticRangeSchedule.GridStateAlteration rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:RemedialActionCostCharacteristic
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:Curve.xMultiplier-cardinality , ra:Curve.y1Multiplier-datatype , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.mRID-cardinality , ra:Curve.xUnit-datatype , ido:IdentifiedObject.name-datatype , ra:Curve.curveStyle-datatype , ra:Curve.curveStyle-cardinality , ra:RemedialActionCostCharacteristic.RemedialAction-cardinality , ra:RemedialActionCostCharacteristic.y1UnitDenominator-cardinality , ra:Curve.y1Unit-datatype , ra:RemedialActionCostCharacteristic.RemedialAction-valueType , ra:Curve.y1Multiplier-cardinality , ra:RemedialActionCostCharacteristic.y1UnitDenominatorMultiplier-datatype , ra:Curve.y1Unit-cardinality , ido:IdentifiedObject.name-cardinality , ra:RemedialActionCostCharacteristic.y1UnitDenominator-datatype , ra:RemedialActionCostCharacteristic.y1UnitNominator-datatype , ra:RemedialActionCostCharacteristic.y1UnitDenominatorMultiplier-cardinality , ra:Curve.xUnit-cardinality , ido:IdentifiedObject.mRID-datatype , ra:RemedialActionCostCharacteristic.y1UnitNominator-cardinality , ra:Curve.xMultiplier-datatype , ido:IdentifiedObject.description-cardinality ;
+        sh:targetClass  nc:RemedialActionCostCharacteristic .
+
+ra:RemedialActionScheme.GateArmed-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:Gate ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:Gate" ;
+        sh:name         "RemedialActionScheme.GateArmed-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        2 ;
+        sh:path         ( nc:RemedialActionScheme.GateArmed rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:GateInputPin.absoluteValue-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "GateInputPin.absoluteValue-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        4 ;
+        sh:path         nc:GateInputPin.absoluteValue ;
+        sh:severity     sh:Violation .
+
+ra:BatteryUnitAction  rdf:type  sh:NodeShape ;
+        sh:property     ra:GridStateAlteration.RemedialAction-cardinality , ido:IdentifiedObject.description-cardinality , ra:GridStateAlteration.normalEnabled-datatype , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.mRID-cardinality , ra:GridStateAlteration.normalEnabled-cardinality , ra:GridStateAlteration.timeToImplement-cardinality , ido:IdentifiedObject.name-cardinality , ra:GridStateAlteration.GridStateAlterationCollection-cardinality , ra:GridStateAlteration.GridStateAlterationCollection-valueType , ra:GridStateAlteration.timeToImplement-datatype , ra:BatteryUnitAction.BatteryUnit-cardinality , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.name-datatype , ra:GridStateAlteration.RemedialAction-valueType ;
+        sh:targetClass  nc:BatteryUnitAction .
+
+ra:SolarRadiationDepedencyCurve
+        rdf:type        sh:NodeShape ;
+        sh:targetClass  nc:SolarRadiationDepedencyCurve .
+
+ra:ContingencyWithRemedialAction
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.mRID-datatype , ra:ContingencyWithRemedialAction.RemedialAction-valueType , ra:ContingencyWithRemedialAction.Contingency-cardinality , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.description-cardinality , ra:ContingencyWithRemedialAction.RemedialAction-cardinality , ido:IdentifiedObject.description-datatype ;
+        sh:targetClass  nc:ContingencyWithRemedialAction .
+
+ra:StaticVarCompensatorAction.StaticVarCompensator-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "StaticVarCompensatorAction.StaticVarCompensator-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:StaticVarCompensatorAction.StaticVarCompensator ;
+        sh:severity     sh:Violation .
+
+ra:RemedialAction.available-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "RemedialAction.available-cardinality" ;
+        sh:order        7 ;
+        sh:path         nc:RemedialAction.available ;
+        sh:severity     sh:Violation .
+
+ra:IntertemporalRangeSchedule.discrete-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "IntertemporalRangeSchedule.discrete-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        3 ;
+        sh:path         nc:IntertemporalRangeSchedule.discrete ;
+        sh:severity     sh:Violation .
+
+ra:Curve.xMultiplier-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "Curve.xMultiplier-cardinality" ;
+        sh:order        6 ;
+        sh:path         cim:Curve.xMultiplier ;
+        sh:severity     sh:Violation .
+
+ra:Gate  rdf:type       sh:NodeShape ;
+        sh:property     ra:Gate.kind-datatype , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.mRID-datatype , ra:Gate.kind-cardinality ;
+        sh:targetClass  nc:Gate .
+
+ra:Gate.kind-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( nc:GateLogicKind.nor nc:GateLogicKind.not nc:GateLogicKind.xor nc:GateLogicKind.xnor nc:GateLogicKind.or nc:GateLogicKind.nand nc:GateLogicKind.and ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "Gate.kind-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         nc:Gate.kind ;
+        sh:severity     sh:Violation .
+
+ra:QualitativeRemedialActionThreshold.kind-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "QualitativeRemedialActionThreshold.kind-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:QualitativeRemedialActionThreshold.kind ;
+        sh:severity     sh:Violation .
+
+ra:GateInputPin.absoluteValue-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "GateInputPin.absoluteValue-cardinality" ;
+        sh:order        4 ;
+        sh:path         nc:GateInputPin.absoluteValue ;
+        sh:severity     sh:Violation .
+
+ra:GridStateIntensitySchedule.GridStateAlteration-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:GridStateIntensitySchedule.GridStateAlteration-valueType ;
+        sh:targetClass  nc:GridStateIntensitySchedule .
+
+ra:GateInputPin.negate-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "GateInputPin.negate-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:GateInputPin.negate ;
+        sh:severity     sh:Violation .
+
+ra:RemedialActionScheme
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:RemedialActionScheme.normalArmed-datatype , ra:RemedialActionScheme.kind-cardinality , ra:RemedialActionScheme.GateArmed-cardinality , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.mRID-datatype , ra:RemedialActionScheme.GateArmed-valueType , ra:RemedialActionScheme.normalArmed-cardinality , ra:RemedialActionScheme.kind-datatype ;
+        sh:targetClass  nc:RemedialActionScheme .
+
+ra:IntensityMeasurementReference.Measurement-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "IntensityMeasurementReference.Measurement-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:IntensityMeasurementReference.Measurement ;
+        sh:severity     sh:Violation .
+
+ra:RemedialActionScheme.kind-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "RemedialActionScheme.kind-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:RemedialActionScheme.kind ;
+        sh:severity     sh:Violation .
+
+ra:IntertemporalRangeSchedule.step-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "IntertemporalRangeSchedule.step-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:IntertemporalRangeSchedule.step ;
+        sh:severity     sh:Violation .
+
+ra:PinDCTerminal.kind-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "PinDCTerminal.kind-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:PinDCTerminal.kind ;
+        sh:severity     sh:Violation .
+
+ra:GridStateAlteration.timeToImplement-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "GridStateAlteration.timeToImplement-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:GridStateAlteration.timeToImplement ;
+        sh:severity     sh:Violation .
+
+ra:IntertemporalRangeSchedule.discrete-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "IntertemporalRangeSchedule.discrete-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:IntertemporalRangeSchedule.discrete ;
+        sh:severity     sh:Violation .
+
+ra:IntertemporalRangeSchedule.GridStateAlteration-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:TopologyAction nc:TapPositionAction nc:RegulatingControlAction nc:DCControllerAction nc:ExternalNetworkInjectionAction nc:PowerElectronicsConnectionAction nc:EquivalentInjectionAction nc:BatteryUnitAction nc:EnergySourceModification nc:RotatingMachineAction nc:ACDCConverterAction nc:ShuntCompensatorModification nc:LoadAction nc:StaticVarCompensatorAction ) ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "IntertemporalRangeSchedule.GridStateAlteration-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( nc:IntertemporalRangeSchedule.GridStateAlteration rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:IntertemporalRangeSchedule.parameterType-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:anyURI ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "IntertemporalRangeSchedule.parameterType-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        2 ;
+        sh:path         nc:IntertemporalRangeSchedule.parameterType ;
+        sh:severity     sh:Violation .
+
+ra:TopologyAction  rdf:type  sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.description-datatype , ra:GridStateAlteration.timeToImplement-cardinality , ra:GridStateAlteration.RemedialAction-cardinality , ra:TopologyAction.Switch-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.mRID-cardinality , ra:GridStateAlteration.normalEnabled-cardinality , ra:GridStateAlteration.GridStateAlterationCollection-valueType , ido:IdentifiedObject.mRID-datatype , ra:GridStateAlteration.normalEnabled-datatype , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.name-cardinality , ra:GridStateAlteration.RemedialAction-valueType , ra:GridStateAlteration.timeToImplement-datatype , ra:GridStateAlteration.GridStateAlterationCollection-cardinality ;
+        sh:targetClass  nc:TopologyAction .
+
+ra:RemedialActionScheme.normalArmed-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "RemedialActionScheme.normalArmed-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        4 ;
+        sh:path         nc:RemedialActionScheme.normalArmed ;
+        sh:severity     sh:Violation .
+
+ra:IntertemporalRangeSchedule.step-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "IntertemporalRangeSchedule.step-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:IntertemporalRangeSchedule.step ;
+        sh:severity     sh:Violation .
+
+ra:QualitativeRemedialActionThreshold
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:QualitativeRemedialActionThreshold.value-datatype , ra:QualitativeRemedialActionThreshold.value-cardinality , ra:QualitativeRemedialActionThreshold.ImpactedSystemOperator-cardinality , ra:QualitativeRemedialActionThreshold.kind-datatype , ra:QualitativeRemedialActionThreshold.kind-cardinality , ra:QualitativeRemedialActionThreshold.RemedialAction-valueType , ra:QualitativeRemedialActionThreshold.RemedialAction-cardinality ;
+        sh:targetClass  nc:QualitativeRemedialActionThreshold .
+
+ido:IdentifiedObject.description-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:string ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ido:DatatypesGroupIO ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "IdentifiedObject.description-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0.1 ;
+        sh:path         cim:IdentifiedObject.description ;
+        sh:severity     sh:Violation .
+
+ra:MeasurementCalculatorInput.order-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "MeasurementCalculatorInput.order-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:MeasurementCalculatorInput.order ;
+        sh:severity     sh:Violation .
+
+ra:StaticRangeSchedule.value2Kind-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "StaticRangeSchedule.value2Kind-cardinality" ;
+        sh:order        4 ;
+        sh:path         nc:StaticRangeSchedule.value2Kind ;
+        sh:severity     sh:Violation .
+
+ra:GridStateAlteration.RemedialAction-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "GridStateAlteration.RemedialAction-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:GridStateAlteration.RemedialAction ;
+        sh:severity     sh:Violation .
+
+ra:RemedialAction.ConnectingSystemOperator-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "RemedialAction.ConnectingSystemOperator-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:RemedialAction.ConnectingSystemOperator ;
+        sh:severity     sh:Violation .
+
+ra:Stage.priority-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "Stage.priority-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:Stage.priority ;
+        sh:severity     sh:Violation .
+
+ra:CurveData.xvalue-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "CurveData.xvalue-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         cim:CurveData.xvalue ;
+        sh:severity     sh:Violation .
+
+ra:StaticRangeSchedule.parameter1Type-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "StaticRangeSchedule.parameter1Type-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:StaticRangeSchedule.parameter1Type ;
+        sh:severity     sh:Violation .
+
+ra:EnergySourceModification.EnergySource-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "EnergySourceModification.EnergySource-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:EnergySourceModification.EnergySource ;
+        sh:severity     sh:Violation .
+
+ra:StageTrigger.GateArmed-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:Gate ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:Gate" ;
+        sh:name         "StageTrigger.GateArmed-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( nc:StageTrigger.GateArmed rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:CurveData.Curve-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "CurveData.Curve-cardinality" ;
+        sh:order        0 ;
+        sh:path         cim:CurveData.Curve ;
+        sh:severity     sh:Violation .
+
+ra:GridStateIntensitySchedule.GridStateAlteration-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:TopologyAction nc:TapPositionAction nc:RegulatingControlAction nc:DCControllerAction nc:ExternalNetworkInjectionAction nc:PowerElectronicsConnectionAction nc:EquivalentInjectionAction nc:BatteryUnitAction nc:EnergySourceModification nc:RotatingMachineAction nc:ACDCConverterAction nc:ShuntCompensatorModification nc:LoadAction nc:StaticVarCompensatorAction ) ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "GridStateIntensitySchedule.GridStateAlteration-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        3 ;
+        sh:path         ( nc:GridStateIntensitySchedule.GridStateAlteration rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:PTCActivePowerSupport.maximum-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "PTCActivePowerSupport.maximum-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        3 ;
+        sh:path         nc:PTCActivePowerSupport.maximum ;
+        sh:severity     sh:Violation .
+
+ra:GateInputPin.thresholdValue-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "GateInputPin.thresholdValue-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        3 ;
+        sh:path         nc:GateInputPin.thresholdValue ;
+        sh:severity     sh:Violation .
+
+ra:GateInputPin.logicKind-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "GateInputPin.logicKind-cardinality" ;
+        sh:order        5 ;
+        sh:path         nc:GateInputPin.logicKind ;
+        sh:severity     sh:Violation .
+
+ra:Stage.RemedialActionScheme-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:RemedialActionScheme ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:RemedialActionScheme" ;
+        sh:name         "Stage.RemedialActionScheme-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( nc:Stage.RemedialActionScheme rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:IrregularTimePoint.value1-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "IrregularTimePoint.value1-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         cim:IrregularTimePoint.value1 ;
+        sh:severity     sh:Violation .
+
+ra:GridStateIntensitySchedule.parameterType-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "GridStateIntensitySchedule.parameterType-cardinality" ;
+        sh:order        4 ;
+        sh:path         nc:GridStateIntensitySchedule.parameterType ;
+        sh:severity     sh:Violation .
+
+ra:StageTrigger.normalArmed-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "StageTrigger.normalArmed-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        4 ;
+        sh:path         nc:StageTrigger.normalArmed ;
+        sh:severity     sh:Violation .
+
+ra:CurveData.xvalue-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "CurveData.xvalue-cardinality" ;
+        sh:order        1 ;
+        sh:path         cim:CurveData.xvalue ;
+        sh:severity     sh:Violation .
+
+ra:IntertemporalRangeSchedule.parameterType-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "IntertemporalRangeSchedule.parameterType-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:IntertemporalRangeSchedule.parameterType ;
+        sh:severity     sh:Violation .
+
+ra:DatatypesGroup  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "Datatypes" ;
+        sh:order    1 .
+
+ra:Stage.GridStateAlterationCollection-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "Stage.GridStateAlterationCollection-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:Stage.GridStateAlterationCollection ;
+        sh:severity     sh:Violation .
+
+ra:PinDCTerminal.DCTerminal-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "PinDCTerminal.DCTerminal-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:PinDCTerminal.DCTerminal ;
+        sh:severity     sh:Violation .
+
+ra:StageTrigger.Stage-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:Stage ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:Stage" ;
+        sh:name         "StageTrigger.Stage-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        3 ;
+        sh:path         ( nc:StageTrigger.Stage rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:IrregularTimePoint.IntervalSchedule-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:IrregularTimePoint.IntervalSchedule-valueType ;
+        sh:targetClass  cim:IrregularTimePoint .
+
+ra:GridStateIntensitySchedule
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.name-cardinality , ra:GridStateIntensitySchedule.valueKind-datatype , ra:BasicIntervalSchedule.value1Unit-datatype , ra:BasicIntervalSchedule.startTime-datatype , ra:BasicIntervalSchedule.value1Multiplier-datatype , ra:GridStateIntensitySchedule.valueKind-cardinality , ido:IdentifiedObject.description-datatype , ra:GridStateIntensitySchedule.parameterType-cardinality , ra:BasicIntervalSchedule.value2Unit-datatype , ra:BasicIntervalSchedule.value1Unit-cardinality , ra:BasicIntervalSchedule.value2Multiplier-datatype , ra:BasicIntervalSchedule.startTime-cardinality , ra:GridStateIntensitySchedule.parameterType-datatype , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.mRID-datatype , ra:BasicIntervalSchedule.value2Multiplier-cardinality , ra:GridStateIntensitySchedule.GridStateAlteration-cardinality , ra:BasicIntervalSchedule.value1Multiplier-cardinality , ido:IdentifiedObject.description-cardinality , ra:BasicIntervalSchedule.value2Unit-cardinality ;
+        sh:targetClass  nc:GridStateIntensitySchedule .
+
+ra:Stage.RemedialActionScheme-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "Stage.RemedialActionScheme-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:Stage.RemedialActionScheme ;
+        sh:severity     sh:Violation .
+
+ra:RegulatingControlAction.RegulatingControl-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "RegulatingControlAction.RegulatingControl-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:RegulatingControlAction.RegulatingControl ;
+        sh:severity     sh:Violation .
+
+ra:RotatingMachineAction.RotatingMachine-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "RotatingMachineAction.RotatingMachine-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:RotatingMachineAction.RotatingMachine ;
+        sh:severity     sh:Violation .
+
+ra:BasicIntervalSchedule.value1Unit-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "BasicIntervalSchedule.value1Unit-cardinality" ;
+        sh:order        6 ;
+        sh:path         cim:BasicIntervalSchedule.value1Unit ;
+        sh:severity     sh:Violation .
+
+ra:ShuntCompensatorModification.ShuntCompensator-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "ShuntCompensatorModification.ShuntCompensator-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:ShuntCompensatorModification.ShuntCompensator ;
+        sh:severity     sh:Violation .
+
+ra:BasicIntervalSchedule.startTime-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "BasicIntervalSchedule.startTime-cardinality" ;
+        sh:order        9 ;
+        sh:path         cim:BasicIntervalSchedule.startTime ;
+        sh:severity     sh:Violation .
+
+ra:IntertemporalRangeSchedule.GridStateAlteration-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "IntertemporalRangeSchedule.GridStateAlteration-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:IntertemporalRangeSchedule.GridStateAlteration ;
+        sh:severity     sh:Violation .
+
+ra:ShuntCompensatorModification
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:GridStateAlteration.normalEnabled-datatype , ido:IdentifiedObject.mRID-datatype , ra:GridStateAlteration.timeToImplement-datatype , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.mRID-cardinality , ra:GridStateAlteration.GridStateAlterationCollection-valueType , ra:ShuntCompensatorModification.ShuntCompensator-cardinality , ra:GridStateAlteration.normalEnabled-cardinality , ra:GridStateAlteration.RemedialAction-valueType , ra:GridStateAlteration.timeToImplement-cardinality , ra:GridStateAlteration.GridStateAlterationCollection-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.description-datatype , ra:GridStateAlteration.RemedialAction-cardinality ;
+        sh:targetClass  nc:ShuntCompensatorModification .
+
+ra:PinTerminal.Terminal-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "PinTerminal.Terminal-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:PinTerminal.Terminal ;
+        sh:severity     sh:Violation .
+
+ra:GateInputPin.thresholdPercentage-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "GateInputPin.thresholdPercentage-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        6 ;
+        sh:path         nc:GateInputPin.thresholdPercentage ;
+        sh:severity     sh:Violation .
+
+ra:ExternalNetworkInjectionAction
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:GridStateAlteration.GridStateAlterationCollection-cardinality , ido:IdentifiedObject.description-cardinality , ra:GridStateAlteration.normalEnabled-cardinality , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.mRID-cardinality , ra:GridStateAlteration.RemedialAction-cardinality , ra:ExternalNetworkInjectionAction.ExternalNetworkInjection-cardinality , ra:GridStateAlteration.normalEnabled-datatype , ra:GridStateAlteration.timeToImplement-datatype , ra:GridStateAlteration.GridStateAlterationCollection-valueType , ido:IdentifiedObject.name-cardinality , ra:GridStateAlteration.timeToImplement-cardinality , ra:GridStateAlteration.RemedialAction-valueType ;
+        sh:targetClass  nc:ExternalNetworkInjectionAction .
+
+ra:MeasurementCalculatorInput.Measurement-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "MeasurementCalculatorInput.Measurement-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:MeasurementCalculatorInput.Measurement ;
+        sh:severity     sh:Violation .
+
+ra:GridStateAlteration.timeToImplement-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:duration ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "GridStateAlteration.timeToImplement-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        2 ;
+        sh:path         nc:GridStateAlteration.timeToImplement ;
+        sh:severity     sh:Violation .
+
+ra:StageTrigger.GateComCondition-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "StageTrigger.GateComCondition-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:StageTrigger.GateComCondition ;
+        sh:severity     sh:Violation .
+
+ra:RemedialActionCostCharacteristic.y1UnitNominator-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "RemedialActionCostCharacteristic.y1UnitNominator-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:RemedialActionCostCharacteristic.y1UnitNominator ;
+        sh:severity     sh:Violation .
+
+ra:QualitativeRemedialActionThreshold.value-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "QualitativeRemedialActionThreshold.value-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:QualitativeRemedialActionThreshold.value ;
+        sh:severity     sh:Violation .
+
+ra:RemedialAction.available-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "RemedialAction.available-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        7 ;
+        sh:path         nc:RemedialAction.available ;
+        sh:severity     sh:Violation .
+
+ra:Curve.y1Multiplier-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "Curve.y1Multiplier-cardinality" ;
+        sh:order        7 ;
+        sh:path         cim:Curve.y1Multiplier ;
+        sh:severity     sh:Violation .
+
+ra:GridStateAlteration.normalEnabled-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "GridStateAlteration.normalEnabled-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:GridStateAlteration.normalEnabled ;
+        sh:severity     sh:Violation .
+
+ra:StageTrigger.GateTrigger-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "StageTrigger.GateTrigger-cardinality" ;
+        sh:order        5 ;
+        sh:path         nc:StageTrigger.GateTrigger ;
+        sh:severity     sh:Violation .
+
+ido:IdentifiedObject.mRID-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:string ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ido:DatatypesGroupIO ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "IdentifiedObject.mRID-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0.1 ;
+        sh:path         cim:IdentifiedObject.mRID ;
+        sh:severity     sh:Violation .
+
+ra:PinDCTerminal.kind-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( nc:PinDCTerminalKind.voltage nc:PinDCTerminalKind.current ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "PinDCTerminal.kind-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         nc:PinDCTerminal.kind ;
+        sh:severity     sh:Violation .
+
+ra:Equipment.AggregatedEquipment-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( cim:Equipment cim:GeneratingUnit ) ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "Equipment.AggregatedEquipment-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( cim:Equipment.AggregatedEquipment rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:GeneratingUnit  rdf:type  sh:NodeShape ;
+        sh:property     ra:Equipment.AggregatedEquipment-cardinality ;
+        sh:targetClass  cim:GeneratingUnit .
+
+ido:CardinalityGroup  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "CardinalityIO" ;
+        sh:order    0 .
+
+ra:ACDCConverterAction
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:GridStateAlteration.timeToImplement-cardinality , ra:ACDCConverterAction.ACDCConverter-cardinality , ra:GridStateAlteration.GridStateAlterationCollection-valueType , ra:GridStateAlteration.RemedialAction-cardinality , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.name-datatype , ra:GridStateAlteration.timeToImplement-datatype , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.description-cardinality , ra:GridStateAlteration.GridStateAlterationCollection-cardinality , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.mRID-cardinality , ra:GridStateAlteration.RemedialAction-valueType , ra:GridStateAlteration.normalEnabled-cardinality , ra:GridStateAlteration.normalEnabled-datatype ;
+        sh:targetClass  nc:ACDCConverterAction .
+
+ra:PinTerminalLimit.kind-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "PinTerminalLimit.kind-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:PinTerminalLimit.kind ;
+        sh:severity     sh:Violation .
+
+ra:GridStateIntensitySchedule.valueKind-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "GridStateIntensitySchedule.valueKind-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:GridStateIntensitySchedule.valueKind ;
+        sh:severity     sh:Violation .
+
+ra:IrregularTimePoint
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:IrregularTimePoint.time-datatype , ra:IrregularTimePoint.time-cardinality , ra:IrregularTimePoint.IntervalSchedule-cardinality , ra:IrregularTimePoint.value1-datatype , ra:IrregularTimePoint.value1-cardinality , ra:IrregularTimePoint.value2-datatype , ra:IrregularTimePoint.value2-cardinality ;
+        sh:targetClass  cim:IrregularTimePoint .
+
+ra:GateInputPin.negate-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "GateInputPin.negate-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         nc:GateInputPin.negate ;
+        sh:severity     sh:Violation .
+
+ra:TriggerCondition.GateTrigger-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:Gate ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:Gate" ;
+        sh:name         "TriggerCondition.GateTrigger-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( nc:TriggerCondition.GateTrigger rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:Curve.curveStyle-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "Curve.curveStyle-cardinality" ;
+        sh:order        8 ;
+        sh:path         cim:Curve.curveStyle ;
+        sh:severity     sh:Violation .
+
+ra:StageTrigger.GateArmed-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "StageTrigger.GateArmed-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:StageTrigger.GateArmed ;
+        sh:severity     sh:Violation .
+
+ra:PTCActivePowerSupport.normal-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "PTCActivePowerSupport.normal-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:PTCActivePowerSupport.normal ;
+        sh:severity     sh:Violation .
+
+ra:PTCActivePowerSupport.maximum-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "PTCActivePowerSupport.maximum-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:PTCActivePowerSupport.maximum ;
+        sh:severity     sh:Violation .
+
+ra:StageTrigger.Stage-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "StageTrigger.Stage-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:StageTrigger.Stage ;
+        sh:severity     sh:Violation .
+
+ra:GateInputPin.thresholdValue-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "GateInputPin.thresholdValue-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:GateInputPin.thresholdValue ;
+        sh:severity     sh:Violation .
+
+ra:CurveData  rdf:type  sh:NodeShape ;
+        sh:property     ra:CurveData.y1value-datatype , ra:CurveData.y1value-cardinality , ra:CurveData.xvalue-datatype , ra:CurveData.xvalue-cardinality , ra:CurveData.Curve-valueType , ra:CurveData.Curve-cardinality ;
+        sh:targetClass  cim:CurveData .
+
+ra:PinEquipment.parameterType-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "PinEquipment.parameterType-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:PinEquipment.parameterType ;
+        sh:severity     sh:Violation .
+
+ido:IdentifiedObject.mRID-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ido:CardinalityIO ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "IdentifiedObject.mRID-cardinality" ;
+        sh:order        0.1 ;
+        sh:path         cim:IdentifiedObject.mRID ;
+        sh:severity     sh:Violation .
+
+ra:PinGate.GateOutput-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "PinGate.GateOutput-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:PinGate.GateOutput ;
+        sh:severity     sh:Violation .
+
+ra:RemedialActionCostCharacteristic.y1UnitDenominatorMultiplier-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( cim:UnitMultiplier.Z cim:UnitMultiplier.y cim:UnitMultiplier.Y cim:UnitMultiplier.z cim:UnitMultiplier.T cim:UnitMultiplier.c cim:UnitMultiplier.none cim:UnitMultiplier.d cim:UnitMultiplier.a cim:UnitMultiplier.k cim:UnitMultiplier.da cim:UnitMultiplier.micro cim:UnitMultiplier.G cim:UnitMultiplier.h cim:UnitMultiplier.E cim:UnitMultiplier.f cim:UnitMultiplier.P cim:UnitMultiplier.p cim:UnitMultiplier.m cim:UnitMultiplier.M cim:UnitMultiplier.n ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "RemedialActionCostCharacteristic.y1UnitDenominatorMultiplier-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        3 ;
+        sh:path         nc:RemedialActionCostCharacteristic.y1UnitDenominatorMultiplier ;
+        sh:severity     sh:Violation .
+
+ra:Equipment.AggregatedEquipment-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:Equipment.AggregatedEquipment-valueType ;
+        sh:targetClass  cim:GeneratingUnit , cim:Equipment .
+
+ra:BasicIntervalSchedule.value1Unit-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( cim:UnitSymbol.HPerm cim:UnitSymbol.mol cim:UnitSymbol.m3Uncompensated cim:UnitSymbol.radPers cim:UnitSymbol.SPerm cim:UnitSymbol.Wb cim:UnitSymbol.bar cim:UnitSymbol.kat cim:UnitSymbol.cosPhi cim:UnitSymbol.VA cim:UnitSymbol.dBm cim:UnitSymbol.Btu cim:UnitSymbol.lm cim:UnitSymbol.mPers2 cim:UnitSymbol.ha cim:UnitSymbol.rotPers cim:UnitSymbol.A cim:UnitSymbol.A2 cim:UnitSymbol.JPerkgK cim:UnitSymbol.JPerm2 cim:UnitSymbol.Nm cim:UnitSymbol.kgPerJ cim:UnitSymbol.As cim:UnitSymbol.JPerm3 cim:UnitSymbol.m2Pers cim:UnitSymbol.d cim:UnitSymbol.C cim:UnitSymbol.WPersr cim:UnitSymbol.rad cim:UnitSymbol.kg cim:UnitSymbol.therm cim:UnitSymbol.CPerm3 cim:UnitSymbol.VArh cim:UnitSymbol.Mx cim:UnitSymbol.WPerW cim:UnitSymbol.JPermolK cim:UnitSymbol.cd cim:UnitSymbol.WPerm2sr cim:UnitSymbol.h cim:UnitSymbol.G cim:UnitSymbol.F cim:UnitSymbol.Vh cim:UnitSymbol.lPerl cim:UnitSymbol.HzPerHz cim:UnitSymbol.H cim:UnitSymbol.mmHg cim:UnitSymbol.CPerm2 cim:UnitSymbol.radPers2 cim:UnitSymbol.mPers cim:UnitSymbol.KPers cim:UnitSymbol.anglemin cim:UnitSymbol.PaPers cim:UnitSymbol.VPerHz cim:UnitSymbol.J cim:UnitSymbol.m2 cim:UnitSymbol.APerm cim:UnitSymbol.m3Perh cim:UnitSymbol.l cim:UnitSymbol.K cim:UnitSymbol.m3 cim:UnitSymbol.lPerh cim:UnitSymbol.WPers cim:UnitSymbol.dB cim:UnitSymbol.FPerm cim:UnitSymbol.m cim:UnitSymbol.A2s cim:UnitSymbol.kn cim:UnitSymbol.VAr cim:UnitSymbol.charPers cim:UnitSymbol.m3Compensated cim:UnitSymbol.M cim:UnitSymbol.onePerHz cim:UnitSymbol.Wh cim:UnitSymbol.gPerg cim:UnitSymbol.WPerm2 cim:UnitSymbol.molPerkg cim:UnitSymbol.Ah cim:UnitSymbol.N cim:UnitSymbol.mPerm3 cim:UnitSymbol.sPers cim:UnitSymbol.VPerV cim:UnitSymbol.kgm2 cim:UnitSymbol.m3Perkg cim:UnitSymbol.V2 cim:UnitSymbol.Oe cim:UnitSymbol.min cim:UnitSymbol.Vs cim:UnitSymbol.Q cim:UnitSymbol.V2h cim:UnitSymbol.CPerkg cim:UnitSymbol.JPerkg cim:UnitSymbol.Qh cim:UnitSymbol.s cim:UnitSymbol.tonne cim:UnitSymbol.NPerm cim:UnitSymbol.Pa cim:UnitSymbol.VAh cim:UnitSymbol.none cim:UnitSymbol.HzPers cim:UnitSymbol.S cim:UnitSymbol.deg cim:UnitSymbol.ohm cim:UnitSymbol.A2h cim:UnitSymbol.T cim:UnitSymbol.onePerm cim:UnitSymbol.lx cim:UnitSymbol.lPers cim:UnitSymbol.JPerK cim:UnitSymbol.character cim:UnitSymbol.APerA cim:UnitSymbol.V cim:UnitSymbol.ppm cim:UnitSymbol.WPermK cim:UnitSymbol.ohmPerm cim:UnitSymbol.VPerm cim:UnitSymbol.Bq cim:UnitSymbol.W cim:UnitSymbol.GyPers cim:UnitSymbol.Sv cim:UnitSymbol.molPerm3 cim:UnitSymbol.degC cim:UnitSymbol.JPermol cim:UnitSymbol.sr cim:UnitSymbol.count cim:UnitSymbol.m3Pers cim:UnitSymbol.ohmm cim:UnitSymbol.Hz cim:UnitSymbol.rev cim:UnitSymbol.WPerA cim:UnitSymbol.katPerm3 cim:UnitSymbol.gal cim:UnitSymbol.Pas cim:UnitSymbol.VPerVAr cim:UnitSymbol.VPerVA cim:UnitSymbol.anglesec cim:UnitSymbol.ft3 cim:UnitSymbol.molPermol cim:UnitSymbol.JPers cim:UnitSymbol.Gy cim:UnitSymbol.kgm cim:UnitSymbol.kgPerm3 ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "BasicIntervalSchedule.value1Unit-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        6 ;
+        sh:path         cim:BasicIntervalSchedule.value1Unit ;
+        sh:severity     sh:Violation .
+
+ra:PinMeasurement  rdf:type  sh:NodeShape ;
+        sh:property     ra:GateInputPin.thresholdValue-datatype , ra:GateInputPin.absoluteValue-datatype , ra:GateInputPin.logicKind-datatype , ra:GateInputPin.duration-datatype , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.description-cardinality , ra:GateInputPin.thresholdPercentage-datatype , ra:GateInputPin.absoluteValue-cardinality , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.mRID-datatype , ra:GateInputPin.thresholdValue-cardinality , ra:GateInputPin.Gate-cardinality , ra:GateInputPin.logicKind-cardinality , ra:PinMeasurement.Measurement-cardinality , ido:IdentifiedObject.description-datatype , ra:GateInputPin.thresholdPercentage-cardinality , ra:GateInputPin.Gate-valueType , ra:PinMeasurement.MeasurementCalculator-cardinality , ra:PinMeasurement.MeasurementCalculator-valueType , ra:GateInputPin.negate-cardinality , ra:GateInputPin.duration-cardinality , ido:IdentifiedObject.mRID-cardinality , ra:GateInputPin.negate-datatype ;
+        sh:targetClass  nc:PinMeasurement .
+
+ra:PinTerminal.kind-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( nc:PinTerminalKind.voltageAngle nc:PinTerminalKind.reactivePower nc:PinTerminalKind.apparentPower nc:PinTerminalKind.current nc:PinTerminalKind.voltageMagnitude nc:PinTerminalKind.activePower ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "PinTerminal.kind-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         nc:PinTerminal.kind ;
+        sh:severity     sh:Violation .
+
+ra:ExternalNetworkInjectionAction.ExternalNetworkInjection-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "ExternalNetworkInjectionAction.ExternalNetworkInjection-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:ExternalNetworkInjectionAction.ExternalNetworkInjection ;
+        sh:severity     sh:Violation .
+
+ra:Curve.y1Unit-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "Curve.y1Unit-cardinality" ;
+        sh:order        9 ;
+        sh:path         cim:Curve.y1Unit ;
+        sh:severity     sh:Violation .
+
+ra:IntertemporalRangeSchedule.valueKind-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( nc:ValueOffsetKind.absolute nc:ValueOffsetKind.incremental ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "IntertemporalRangeSchedule.valueKind-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        4 ;
+        sh:path         nc:IntertemporalRangeSchedule.valueKind ;
+        sh:severity     sh:Violation .
+
+ra:RemedialActionScheme.normalArmed-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "RemedialActionScheme.normalArmed-cardinality" ;
+        sh:order        4 ;
+        sh:path         nc:RemedialActionScheme.normalArmed ;
+        sh:severity     sh:Violation .
+
+ra:PinTerminalLimit.Terminal-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "PinTerminalLimit.Terminal-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:PinTerminalLimit.Terminal ;
+        sh:severity     sh:Violation .
+
+ra:PinPowerTransferCorridor.PowerTransferCorridor-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "PinPowerTransferCorridor.PowerTransferCorridor-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:PinPowerTransferCorridor.PowerTransferCorridor ;
+        sh:severity     sh:Violation .
+
+ra:TriggerCondition  rdf:type  sh:NodeShape ;
+        sh:property     ra:TriggerCondition.GateTrigger-cardinality , ra:TriggerCondition.RemedialActionScheme-cardinality , ido:IdentifiedObject.name-datatype , ra:TriggerCondition.RemedialActionScheme-valueType , ra:TriggerCondition.GateTrigger-valueType , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.mRID-datatype ;
+        sh:targetClass  nc:TriggerCondition .
+
+ra:BasicIntervalSchedule.value1Multiplier-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "BasicIntervalSchedule.value1Multiplier-cardinality" ;
+        sh:order        7 ;
+        sh:path         cim:BasicIntervalSchedule.value1Multiplier ;
+        sh:severity     sh:Violation .
+
+ra:ContingencyWithRemedialAction.RemedialAction-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "ContingencyWithRemedialAction.RemedialAction-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:ContingencyWithRemedialAction.RemedialAction ;
+        sh:severity     sh:Violation .
+
+ra:StaticRangeSchedule.value2Kind-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( nc:ValueOffsetKind.absolute nc:ValueOffsetKind.incremental ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "StaticRangeSchedule.value2Kind-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        4 ;
+        sh:path         nc:StaticRangeSchedule.value2Kind ;
+        sh:severity     sh:Violation .
+
+ra:PTCActivePowerSupport.normal-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "PTCActivePowerSupport.normal-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:PTCActivePowerSupport.normal ;
+        sh:severity     sh:Violation .
+
+ra:LoadAction.EnergyConsumer-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "LoadAction.EnergyConsumer-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:LoadAction.EnergyConsumer ;
+        sh:severity     sh:Violation .
+
+ido:IdentifiedObject.name-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ido:CardinalityIO ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "IdentifiedObject.name-cardinality" ;
+        sh:order        0.1 ;
+        sh:path         cim:IdentifiedObject.name ;
+        sh:severity     sh:Violation .
+
+ra:IntensityEquipmentReference.parameterType-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "IntensityEquipmentReference.parameterType-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:IntensityEquipmentReference.parameterType ;
+        sh:severity     sh:Violation .
+
+ra:Curve.xUnit-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "Curve.xUnit-cardinality" ;
+        sh:order        5 ;
+        sh:path         cim:Curve.xUnit ;
+        sh:severity     sh:Violation .
+
+ra:IrregularTimePoint.time-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "IrregularTimePoint.time-cardinality" ;
+        sh:order        3 ;
+        sh:path         cim:IrregularTimePoint.time ;
+        sh:severity     sh:Violation .
+
+ra:BasicIntervalSchedule.value1Multiplier-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( cim:UnitMultiplier.Z cim:UnitMultiplier.y cim:UnitMultiplier.Y cim:UnitMultiplier.z cim:UnitMultiplier.T cim:UnitMultiplier.c cim:UnitMultiplier.none cim:UnitMultiplier.d cim:UnitMultiplier.a cim:UnitMultiplier.k cim:UnitMultiplier.da cim:UnitMultiplier.micro cim:UnitMultiplier.G cim:UnitMultiplier.h cim:UnitMultiplier.E cim:UnitMultiplier.f cim:UnitMultiplier.P cim:UnitMultiplier.p cim:UnitMultiplier.m cim:UnitMultiplier.M cim:UnitMultiplier.n ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "BasicIntervalSchedule.value1Multiplier-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        7 ;
+        sh:path         cim:BasicIntervalSchedule.value1Multiplier ;
+        sh:severity     sh:Violation .
+
+ra:PinGate  rdf:type    sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.description-datatype , ra:GateInputPin.logicKind-cardinality , ra:PinGate.GateOutput-valueType , ra:GateInputPin.Gate-valueType , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.description-cardinality , ra:GateInputPin.logicKind-datatype , ra:PinGate.GateOutput-cardinality , ra:GateInputPin.thresholdValue-datatype , ido:IdentifiedObject.mRID-datatype , ra:GateInputPin.thresholdPercentage-cardinality , ra:GateInputPin.negate-datatype , ido:IdentifiedObject.name-datatype , ra:GateInputPin.thresholdValue-cardinality , ra:GateInputPin.Gate-cardinality , ra:GateInputPin.duration-cardinality , ra:GateInputPin.absoluteValue-datatype , ra:GateInputPin.thresholdPercentage-datatype , ra:GateInputPin.absoluteValue-cardinality , ra:GateInputPin.duration-datatype , ra:GateInputPin.negate-cardinality , ido:IdentifiedObject.mRID-cardinality ;
+        sh:targetClass  nc:PinGate .
+
+ra:MeasurementCalculator.kind-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( nc:CalculationKind.division nc:CalculationKind.multiplication nc:CalculationKind.squareRoot nc:CalculationKind.summation ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "MeasurementCalculator.kind-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         nc:MeasurementCalculator.kind ;
+        sh:severity     sh:Violation .
+
+ra:StaticRangeSchedule.parameter2Type-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:anyURI ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "StaticRangeSchedule.parameter2Type-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        2 ;
+        sh:path         nc:StaticRangeSchedule.parameter2Type ;
+        sh:severity     sh:Violation .
+
+ra:RemedialActionCostCharacteristic.y1UnitDenominatorMultiplier-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "RemedialActionCostCharacteristic.y1UnitDenominatorMultiplier-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:RemedialActionCostCharacteristic.y1UnitDenominatorMultiplier ;
+        sh:severity     sh:Violation .
+
+ra:IrregularTimePoint.time-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "IrregularTimePoint.time-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        3 ;
+        sh:path         cim:IrregularTimePoint.time ;
+        sh:severity     sh:Violation .
+
+ra:IrregularTimePoint.value2-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "IrregularTimePoint.value2-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         cim:IrregularTimePoint.value2 ;
+        sh:severity     sh:Violation .
+
+ra:GateInputPin.thresholdPercentage-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "GateInputPin.thresholdPercentage-cardinality" ;
+        sh:order        6 ;
+        sh:path         nc:GateInputPin.thresholdPercentage ;
+        sh:severity     sh:Violation .
+
+ra:GridStateIntensitySchedule.GridStateAlteration-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "GridStateIntensitySchedule.GridStateAlteration-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:GridStateIntensitySchedule.GridStateAlteration ;
+        sh:severity     sh:Violation .
+
+ra:IntertemporalRangeSchedule.GridStateAlteration-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:IntertemporalRangeSchedule.GridStateAlteration-valueType ;
+        sh:targetClass  nc:IntertemporalRangeSchedule .
+
+ra:RemedialActionCostCharacteristic.RemedialAction-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:RemedialAction ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:RemedialAction" ;
+        sh:name         "RemedialActionCostCharacteristic.RemedialAction-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( nc:RemedialActionCostCharacteristic.RemedialAction rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:RemedialActionCostCharacteristic.RemedialAction-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "RemedialActionCostCharacteristic.RemedialAction-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:RemedialActionCostCharacteristic.RemedialAction ;
+        sh:severity     sh:Violation .
+
+ra:StageTrigger.normalArmed-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "StageTrigger.normalArmed-cardinality" ;
+        sh:order        4 ;
+        sh:path         nc:StageTrigger.normalArmed ;
+        sh:severity     sh:Violation .
+
+ra:PinTerminalLimit.kind-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( nc:PinTerminalLimitKind.currentLimit nc:PinTerminalLimitKind.voltageAngleLimit nc:PinTerminalLimitKind.voltageLimit nc:PinTerminalLimitKind.apparentPowerLimit nc:PinTerminalLimitKind.activePowerLimit ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "PinTerminalLimit.kind-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         nc:PinTerminalLimit.kind ;
+        sh:severity     sh:Violation .
+
+ra:PTCActivePowerSupport.RemedialActionScheme-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:RemedialActionScheme ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:RemedialActionScheme" ;
+        sh:name         "PTCActivePowerSupport.RemedialActionScheme-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        2 ;
+        sh:path         ( nc:PTCActivePowerSupport.RemedialActionScheme rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:IrregularIntervalSchedule
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:BasicIntervalSchedule.value1Unit-cardinality , ido:IdentifiedObject.name-datatype , ra:BasicIntervalSchedule.value1Unit-datatype , ra:BasicIntervalSchedule.value2Unit-cardinality , ido:IdentifiedObject.description-datatype , ra:BasicIntervalSchedule.value1Multiplier-cardinality , ra:BasicIntervalSchedule.value2Unit-datatype , ra:BasicIntervalSchedule.value1Multiplier-datatype , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.description-cardinality , ra:BasicIntervalSchedule.startTime-datatype , ido:IdentifiedObject.mRID-datatype , ra:BasicIntervalSchedule.value2Multiplier-cardinality , ra:BasicIntervalSchedule.value2Multiplier-datatype , ido:IdentifiedObject.mRID-cardinality , ra:BasicIntervalSchedule.startTime-cardinality ;
+        sh:targetClass  cim:IrregularIntervalSchedule .
+
+ra:RemedialAction  rdf:type  sh:NodeShape ;
+        sh:property     ra:RemedialAction.available-cardinality , ra:RemedialAction.available-datatype , ido:IdentifiedObject.mRID-cardinality , ra:RemedialAction.kind-datatype , ra:RemedialAction.AppointedToRegion-cardinality , ra:RemedialAction.kind-cardinality , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.name-datatype , ra:RemedialAction.ConnectingSystemOperator-cardinality ;
+        sh:targetClass  nc:RemedialAction .
+
+ra:RemedialActionCostCharacteristic.y1UnitNominator-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( cim:Currency.DJF cim:Currency.ZMK cim:Currency.MNT cim:Currency.AUD cim:Currency.BOV cim:Currency.UZS cim:Currency.DOP cim:Currency.GTQ cim:Currency.AED cim:Currency.VEF cim:Currency.IQD cim:Currency.AZN cim:Currency.AWG cim:Currency.USD cim:Currency.DZD cim:Currency.ZAR cim:Currency.NPR cim:Currency.COP cim:Currency.TZS cim:Currency.BIF cim:Currency.BHD cim:Currency.TJS cim:Currency.NZD cim:Currency.MGA cim:Currency.SEK cim:Currency.ERN cim:Currency.SRD cim:Currency.MOP cim:Currency.SBD cim:Currency.SHP cim:Currency.MMK cim:Currency.TTD cim:Currency.ALL cim:Currency.SDG cim:Currency.HTG cim:Currency.CLF cim:Currency.KPW cim:Currency.KWD cim:Currency.GHS cim:Currency.GEL cim:Currency.NOK cim:Currency.BZD cim:Currency.EUR cim:Currency.SYP cim:Currency.HKD cim:Currency.BYR cim:Currency.NIO cim:Currency.AOA cim:Currency.CNY cim:Currency.RON cim:Currency.BGN cim:Currency.BBD cim:Currency.XCD cim:Currency.PYG cim:Currency.PLN cim:Currency.KGS cim:Currency.AFN cim:Currency.MXN cim:Currency.MWK cim:Currency.JOD cim:Currency.LRD cim:Currency.IDR cim:Currency.OMR cim:Currency.UAH cim:Currency.BSD cim:Currency.SCR cim:Currency.LVL cim:Currency.TND cim:Currency.CUC cim:Currency.FJD cim:Currency.KHR cim:Currency.CVE cim:Currency.QAR cim:Currency.UYU cim:Currency.MZN cim:Currency.KZT cim:Currency.CLP cim:Currency.DKK cim:Currency.ISK cim:Currency.CZK cim:Currency.GBP cim:Currency.COU cim:Currency.CHF cim:Currency.GNF cim:Currency.GMD cim:Currency.HRK cim:Currency.LKR cim:Currency.RUB cim:Currency.BRL cim:Currency.ANG cim:Currency.RWF cim:Currency.BND cim:Currency.XPF cim:Currency.THB cim:Currency.SOS cim:Currency.VUV cim:Currency.TOP cim:Currency.AMD cim:Currency.KMF cim:Currency.MVR cim:Currency.BTN cim:Currency.SLL cim:Currency.PGK cim:Currency.LAK cim:Currency.FKP cim:Currency.NAD cim:Currency.ZWL cim:Currency.PKR cim:Currency.XAF cim:Currency.CAD cim:Currency.MDL cim:Currency.BOB cim:Currency.LSL cim:Currency.VND cim:Currency.NGN cim:Currency.ETB cim:Currency.KES cim:Currency.MAD cim:Currency.IRR cim:Currency.JMD cim:Currency.BWP cim:Currency.CRC cim:Currency.UGX cim:Currency.SAR cim:Currency.LTL cim:Currency.HNL cim:Currency.GYD cim:Currency.CDF cim:Currency.MYR cim:Currency.JPY cim:Currency.LYD cim:Currency.ILS cim:Currency.TMT cim:Currency.STD cim:Currency.MKD cim:Currency.HUF cim:Currency.KRW cim:Currency.RSD cim:Currency.PEN cim:Currency.KYD cim:Currency.GIP cim:Currency.WST cim:Currency.TWD cim:Currency.YER cim:Currency.MRO cim:Currency.ARS cim:Currency.BDT cim:Currency.EGP cim:Currency.BAM cim:Currency.SZL cim:Currency.INR cim:Currency.BMD cim:Currency.TRY cim:Currency.PAB cim:Currency.EEK cim:Currency.XOF cim:Currency.CUP cim:Currency.LBP cim:Currency.PHP cim:Currency.MUR cim:Currency.SGD ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "RemedialActionCostCharacteristic.y1UnitNominator-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         nc:RemedialActionCostCharacteristic.y1UnitNominator ;
+        sh:severity     sh:Violation .
+
+ra:PinPowerTransferCorridor
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:GateInputPin.Gate-cardinality , ra:GateInputPin.absoluteValue-datatype , ra:GateInputPin.logicKind-cardinality , ra:GateInputPin.absoluteValue-cardinality , ido:IdentifiedObject.mRID-datatype , ra:GateInputPin.duration-datatype , ra:GateInputPin.Gate-valueType , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.name-cardinality , ra:GateInputPin.logicKind-datatype , ido:IdentifiedObject.mRID-cardinality , ra:GateInputPin.duration-cardinality , ra:PinPowerTransferCorridor.kind-datatype , ra:PinPowerTransferCorridor.PowerTransferCorridor-cardinality , ra:GateInputPin.thresholdPercentage-cardinality , ra:GateInputPin.negate-cardinality , ra:GateInputPin.negate-datatype , ra:GateInputPin.thresholdValue-datatype , ra:GateInputPin.thresholdPercentage-datatype , ra:GateInputPin.thresholdValue-cardinality , ido:IdentifiedObject.name-datatype , ra:PinPowerTransferCorridor.kind-cardinality , ido:IdentifiedObject.description-datatype ;
+        sh:targetClass  nc:PinPowerTransferCorridor .
+
+ra:QualitativeRemedialActionThreshold.RemedialAction-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:RemedialAction ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:RemedialAction" ;
+        sh:name         "QualitativeRemedialActionThreshold.RemedialAction-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( nc:QualitativeRemedialActionThreshold.RemedialAction rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:IntensityMeasurementReference.GridStateIntensitySchedule-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:GridStateIntensitySchedule ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:GridStateIntensitySchedule" ;
+        sh:name         "IntensityMeasurementReference.GridStateIntensitySchedule-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( nc:IntensityMeasurementReference.GridStateIntensitySchedule rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:PinPowerTransferCorridor.kind-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ra:DatatypesGroup ;
+        sh:in           ( nc:PinPowerTransferCorridorKind.reactivePower nc:PinPowerTransferCorridorKind.activePower ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "PinPowerTransferCorridor.kind-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         nc:PinPowerTransferCorridor.kind ;
+        sh:severity     sh:Violation .
+
+ra:PinGate.GateOutput-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        ra:AssociationsGroup ;
+        sh:in           ( nc:Gate ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:Gate" ;
+        sh:name         "PinGate.GateOutput-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( nc:PinGate.GateOutput rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ra:PTCActivePowerSupport
+        rdf:type        sh:NodeShape ;
+        sh:property     ra:PTCActivePowerSupport.maximum-datatype , ra:PTCActivePowerSupport.maximum-cardinality , ra:PTCActivePowerSupport.RemedialActionScheme-valueType , ra:PTCActivePowerSupport.RemedialActionScheme-cardinality , ra:PTCActivePowerSupport.PowerTransferCorridor-cardinality , ra:PTCActivePowerSupport.normal-datatype , ra:PTCActivePowerSupport.normal-cardinality ;
+        sh:targetClass  nc:PTCActivePowerSupport .
+
+ra:StaticRangeSchedule.value1Kind-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ra:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "StaticRangeSchedule.value1Kind-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:StaticRangeSchedule.value1Kind ;
+        sh:severity     sh:Violation .

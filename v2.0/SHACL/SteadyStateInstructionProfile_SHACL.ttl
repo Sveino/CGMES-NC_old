@@ -1,0 +1,492 @@
+@base          <http://entsoe.eu/ns/CIM/SteadyStateInstruction-EU/constraints> .
+@prefix cim:     <http://iec.ch/TC57/CIM100#> .
+@prefix cims:    <http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#> .
+@prefix dash:    <http://datashapes.org/dash#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/#> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dct:     <http://purl.org/dc/terms/#> .
+@prefix dcterms: <http://purl.org/dc/terms/#> .
+@prefix dm:      <http://iec.ch/TC57/61970-552/DifferenceModel/1#> .
+@prefix eu:      <http://iec.ch/TC57/CIM100-European#> .
+@prefix eumd:    <http://entsoe.eu/ns/Metadata-European#> .
+@prefix euvoc:   <http://publications.europa.eu/ontology/euvoc#> .
+@prefix ido:     <http://iec.ch/TC57/ns/CIM/IdentifiedObject/constraints/3.0#> .
+@prefix md:      <http://iec.ch/TC57/61970-552/ModelDescription/1#> .
+@prefix nc:      <http://entsoe.eu/ns/nc#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix prof:    <http://www.w3.org/ns/dx/prof/#> .
+@prefix profcim: <http://iec.ch/TC57/ns/CIM/prof-cim#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix ssi:     <http://entsoe.eu/ns/CIM/SteadyStateInstruction-EU/constraints#> .
+@prefix time:    <http://www.w3.org/2006/time#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+ssi:BiddingZoneBorder.balancingZonalCapacity-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ssi:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "BiddingZoneBorder.balancingZonalCapacity-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:BiddingZoneBorder.balancingZonalCapacity ;
+        sh:severity     sh:Violation .
+
+ssi:AssociationsGroup
+        rdf:type    sh:PropertyGroup ;
+        rdfs:label  "Associations" ;
+        sh:order    2 .
+
+ssi:Equipment.networkAnalysisEnabled-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ssi:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "Equipment.networkAnalysisEnabled-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         cim:Equipment.networkAnalysisEnabled ;
+        sh:severity     sh:Violation .
+
+ssi:BiddingZone.maximumExport-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ssi:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "BiddingZone.maximumExport-cardinality" ;
+        sh:order        4 ;
+        sh:path         nc:BiddingZone.maximumExport ;
+        sh:severity     sh:Violation .
+
+ssi:PTCActivePowerSupport.value-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ssi:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "PTCActivePowerSupport.value-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:PTCActivePowerSupport.value ;
+        sh:severity     sh:Violation .
+
+ssi:BiddingZoneBorder.balancingZonalCapacity-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ssi:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "BiddingZoneBorder.balancingZonalCapacity-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         nc:BiddingZoneBorder.balancingZonalCapacity ;
+        sh:severity     sh:Violation .
+
+ssi:CardinalityGroup  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "Cardinality" ;
+        sh:order    0 .
+
+ido:DatatypesGroupIO  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "DatatypesIO" ;
+        sh:order    1 .
+
+ssi:DatatypesGroup  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "Datatypes" ;
+        sh:order    1 .
+
+ssi:DCController.powerRegulationSetPoint-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ssi:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "DCController.powerRegulationSetPoint-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:DCController.powerRegulationSetPoint ;
+        sh:severity     sh:Violation .
+
+ssi:CircuitShare.contributionFactor-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ssi:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "CircuitShare.contributionFactor-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:CircuitShare.contributionFactor ;
+        sh:severity     sh:Violation .
+
+ssi:BiddingZone.netACInterchange-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ssi:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "BiddingZone.netACInterchange-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        3 ;
+        sh:path         nc:BiddingZone.netACInterchange ;
+        sh:severity     sh:Violation .
+
+ssi:RemedialActionScheme.inService-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ssi:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "RemedialActionScheme.inService-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:RemedialActionScheme.inService ;
+        sh:severity     sh:Violation .
+
+ssi:PowerTransferCorridor
+        rdf:type        sh:NodeShape ;
+        sh:property     ssi:PowerTransferCorridor.enabled-datatype , ssi:PowerTransferCorridor.enabled-cardinality ;
+        sh:targetClass  nc:PowerTransferCorridor .
+
+ssi:BiddingZone.netACInterchangeTolerance-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ssi:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "BiddingZone.netACInterchangeTolerance-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:BiddingZone.netACInterchangeTolerance ;
+        sh:severity     sh:Violation .
+
+ssi:BiddingZone.maximumImport-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ssi:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "BiddingZone.maximumImport-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        5 ;
+        sh:path         nc:BiddingZone.maximumImport ;
+        sh:severity     sh:Violation .
+
+ssi:Equipment  rdf:type  sh:NodeShape ;
+        sh:property     ssi:Equipment.networkAnalysisEnabled-datatype , ssi:Equipment.networkAnalysisEnabled-cardinality ;
+        sh:targetClass  cim:Equipment .
+
+ssi:PowerTransferCorridor.enabled-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ssi:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "PowerTransferCorridor.enabled-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:PowerTransferCorridor.enabled ;
+        sh:severity     sh:Violation .
+
+ssi:CircuitShare.contributionFactor-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ssi:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "CircuitShare.contributionFactor-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:CircuitShare.contributionFactor ;
+        sh:severity     sh:Violation .
+
+ssi:AreaDispatchableUnit.enabled-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ssi:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "AreaDispatchableUnit.enabled-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:AreaDispatchableUnit.enabled ;
+        sh:severity     sh:Violation .
+
+ssi:PowerTransferCorridor.enabled-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ssi:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "PowerTransferCorridor.enabled-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:PowerTransferCorridor.enabled ;
+        sh:severity     sh:Violation .
+
+ssi:PTCActivePowerSupport.value-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ssi:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "PTCActivePowerSupport.value-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:PTCActivePowerSupport.value ;
+        sh:severity     sh:Violation .
+
+ssi:BiddingZone.maximumExport-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ssi:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "BiddingZone.maximumExport-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        4 ;
+        sh:path         nc:BiddingZone.maximumExport ;
+        sh:severity     sh:Violation .
+
+ssi:RemedialActionScheme.armed-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ssi:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "RemedialActionScheme.armed-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         nc:RemedialActionScheme.armed ;
+        sh:severity     sh:Violation .
+
+ssi:AreaDispatchableUnit.enabled-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ssi:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "AreaDispatchableUnit.enabled-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:AreaDispatchableUnit.enabled ;
+        sh:severity     sh:Violation .
+
+ssi:StageTrigger.armed-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ssi:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "StageTrigger.armed-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:StageTrigger.armed ;
+        sh:severity     sh:Violation .
+
+ssi:PTCActivePowerSupport
+        rdf:type        sh:NodeShape ;
+        sh:property     ssi:PTCActivePowerSupport.value-datatype , ssi:PTCActivePowerSupport.value-cardinality ;
+        sh:targetClass  nc:PTCActivePowerSupport .
+
+ssi:BiddingZone.balancingAllocation-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ssi:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "BiddingZone.balancingAllocation-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:BiddingZone.balancingAllocation ;
+        sh:severity     sh:Violation .
+
+ssi:RemedialActionScheme
+        rdf:type        sh:NodeShape ;
+        sh:property     ssi:RemedialActionScheme.armed-datatype , ssi:RemedialActionScheme.armed-cardinality , ssi:RemedialActionScheme.inService-datatype , ssi:RemedialActionScheme.inService-cardinality ;
+        sh:targetClass  nc:RemedialActionScheme .
+
+ssi:BiddingZone.netDCInterchange-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ssi:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "BiddingZone.netDCInterchange-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:BiddingZone.netDCInterchange ;
+        sh:severity     sh:Violation .
+
+ssi:RemedialActionScheme.inService-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ssi:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "RemedialActionScheme.inService-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:RemedialActionScheme.inService ;
+        sh:severity     sh:Violation .
+
+ssi:BiddingZone  rdf:type  sh:NodeShape ;
+        sh:property     ssi:BiddingZone.maximumExport-datatype , ssi:BiddingZone.balancingAllocation-datatype , ssi:BiddingZone.netACInterchangeTolerance-datatype , ssi:BiddingZone.maximumExport-cardinality , ssi:BiddingZone.maximumImport-cardinality , ssi:BiddingZone.netDCInterchange-datatype , ssi:BiddingZone.netACInterchangeTolerance-cardinality , ssi:BiddingZone.maximumImport-datatype , ssi:BiddingZone.balancingAllocation-cardinality , ssi:BiddingZone.netACInterchange-cardinality , ssi:BiddingZone.netACInterchange-datatype , ssi:BiddingZone.netDCInterchange-cardinality ;
+        sh:targetClass  nc:BiddingZone .
+
+ssi:DCController.powerRegulationSetPoint-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ssi:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "DCController.powerRegulationSetPoint-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:DCController.powerRegulationSetPoint ;
+        sh:severity     sh:Violation .
+
+ido:CardinalityGroup  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "CardinalityIO" ;
+        sh:order    0 .
+
+ssi:RemedialActionScheme.armed-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ssi:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "RemedialActionScheme.armed-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:RemedialActionScheme.armed ;
+        sh:severity     sh:Violation .
+
+ssi:BiddingZone.maximumImport-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ssi:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "BiddingZone.maximumImport-cardinality" ;
+        sh:order        5 ;
+        sh:path         nc:BiddingZone.maximumImport ;
+        sh:severity     sh:Violation .
+
+ssi:BiddingZoneBorder.crossZonalCapacity-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ssi:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "BiddingZoneBorder.crossZonalCapacity-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:BiddingZoneBorder.crossZonalCapacity ;
+        sh:severity     sh:Violation .
+
+ssi:BiddingZone.netACInterchangeTolerance-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ssi:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "BiddingZone.netACInterchangeTolerance-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:BiddingZone.netACInterchangeTolerance ;
+        sh:severity     sh:Violation .
+
+ssi:CircuitShare  rdf:type  sh:NodeShape ;
+        sh:property     ssi:CircuitShare.contributionFactor-datatype , ssi:CircuitShare.contributionFactor-cardinality ;
+        sh:targetClass  nc:CircuitShare .
+
+ssi:Equipment.networkAnalysisEnabled-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ssi:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "Equipment.networkAnalysisEnabled-cardinality" ;
+        sh:order        0 ;
+        sh:path         cim:Equipment.networkAnalysisEnabled ;
+        sh:severity     sh:Violation .
+
+ssi:DCController  rdf:type  sh:NodeShape ;
+        sh:property     ssi:DCController.powerRegulationSetPoint-datatype , ssi:DCController.powerRegulationSetPoint-cardinality ;
+        sh:targetClass  nc:DCController .
+
+ssi:AreaDispatchableUnit
+        rdf:type        sh:NodeShape ;
+        sh:property     ssi:AreaDispatchableUnit.enabled-datatype , ssi:AreaDispatchableUnit.enabled-cardinality ;
+        sh:targetClass  nc:AreaDispatchableUnit .
+
+ssi:BiddingZoneBorder
+        rdf:type        sh:NodeShape ;
+        sh:property     ssi:BiddingZoneBorder.balancingZonalCapacity-datatype , ssi:BiddingZoneBorder.balancingZonalCapacity-cardinality , ssi:BiddingZoneBorder.crossZonalCapacity-datatype , ssi:BiddingZoneBorder.crossZonalCapacity-cardinality ;
+        sh:targetClass  nc:BiddingZoneBorder .
+
+ssi:BiddingZone.netDCInterchange-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ssi:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "BiddingZone.netDCInterchange-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        2 ;
+        sh:path         nc:BiddingZone.netDCInterchange ;
+        sh:severity     sh:Violation .
+
+ssi:StageTrigger  rdf:type  sh:NodeShape ;
+        sh:property     ssi:StageTrigger.armed-datatype , ssi:StageTrigger.armed-cardinality ;
+        sh:targetClass  nc:StageTrigger .
+
+ssi:BiddingZoneBorder.crossZonalCapacity-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ssi:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "BiddingZoneBorder.crossZonalCapacity-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:BiddingZoneBorder.crossZonalCapacity ;
+        sh:severity     sh:Violation .
+
+ssi:BiddingZone.balancingAllocation-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ssi:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "BiddingZone.balancingAllocation-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         nc:BiddingZone.balancingAllocation ;
+        sh:severity     sh:Violation .
+
+ssi:BiddingZone.netACInterchange-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ssi:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "BiddingZone.netACInterchange-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:BiddingZone.netACInterchange ;
+        sh:severity     sh:Violation .
+
+ssi:StageTrigger.armed-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ssi:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "StageTrigger.armed-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:StageTrigger.armed ;
+        sh:severity     sh:Violation .

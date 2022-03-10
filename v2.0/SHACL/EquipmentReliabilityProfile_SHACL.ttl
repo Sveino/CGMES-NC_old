@@ -1,0 +1,3211 @@
+@base          <http://entsoe.eu/ns/CIM/EquipmentReliability-EU/constraints> .
+@prefix cim:     <http://iec.ch/TC57/CIM100#> .
+@prefix cims:    <http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#> .
+@prefix dash:    <http://datashapes.org/dash#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/#> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dct:     <http://purl.org/dc/terms/#> .
+@prefix dcterms: <http://purl.org/dc/terms/#> .
+@prefix dm:      <http://iec.ch/TC57/61970-552/DifferenceModel/1#> .
+@prefix er:      <http://entsoe.eu/ns/CIM/EquipmentReliability-EU/constraints#> .
+@prefix eu:      <http://iec.ch/TC57/CIM100-European#> .
+@prefix eumd:    <http://entsoe.eu/ns/Metadata-European#> .
+@prefix euvoc:   <http://publications.europa.eu/ontology/euvoc#> .
+@prefix ido:     <http://iec.ch/TC57/ns/CIM/IdentifiedObject/constraints/3.0#> .
+@prefix md:      <http://iec.ch/TC57/61970-552/ModelDescription/1#> .
+@prefix nc:      <http://entsoe.eu/ns/nc#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix prof:    <http://www.w3.org/ns/dx/prof/#> .
+@prefix profcim: <http://iec.ch/TC57/ns/CIM/prof-cim#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:    <http://www.w3.org/2006/time#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+er:VoltageAngleLimit  rdf:type  sh:NodeShape ;
+        sh:property     er:VoltageAngleLimit.value-datatype , ido:IdentifiedObject.name-cardinality , er:OperationalLimit.OperationalLimitSet-valueType , ido:IdentifiedObject.description-datatype , er:OperationalLimit.OperationalLimitType-valueType , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.mRID-datatype , er:VoltageAngleLimit.value-cardinality , ido:IdentifiedObject.name-datatype , er:OperationalLimit.OperationalLimitType-cardinality , er:OperationalLimit.OperationalLimitSet-cardinality , ido:IdentifiedObject.mRID-cardinality , er:VoltageAngleLimit.AngleReferenceTerminal-cardinality ;
+        sh:targetClass  nc:VoltageAngleLimit .
+
+er:Curve.curveStyle-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:in           ( cim:CurveStyle.straightLineYValues cim:CurveStyle.constantYValue ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "Curve.curveStyle-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        2 ;
+        sh:path         cim:Curve.curveStyle ;
+        sh:severity     sh:Violation .
+
+er:EnergyGroup.SchedulingArea-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     er:EnergyGroup.SchedulingArea-valueType ;
+        sh:targetClass  nc:EnergyGroup .
+
+er:LoadFrequencyControlArea.includeFrequencyBias-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "LoadFrequencyControlArea.includeFrequencyBias-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:LoadFrequencyControlArea.includeFrequencyBias ;
+        sh:severity     sh:Violation .
+
+er:OperationalLimitType.PermanentAmbientTemperatureDependencyCurve-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "OperationalLimitType.PermanentAmbientTemperatureDependencyCurve-cardinality" ;
+        sh:order        3 ;
+        sh:path         cim:OperationalLimitType.PermanentAmbientTemperatureDependencyCurve ;
+        sh:severity     sh:Violation .
+
+er:CapacityCalculationRegion
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.mRID-datatype , er:CapacityCalculationRegion.SecurityCoordinator-valueType , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.description-datatype , er:CapacityCalculationRegion.SecurityCoordinator-cardinality ;
+        sh:targetClass  nc:CapacityCalculationRegion .
+
+er:Curve.xMultiplier-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:in           ( cim:UnitMultiplier.Z cim:UnitMultiplier.y cim:UnitMultiplier.Y cim:UnitMultiplier.z cim:UnitMultiplier.T cim:UnitMultiplier.c cim:UnitMultiplier.none cim:UnitMultiplier.d cim:UnitMultiplier.a cim:UnitMultiplier.k cim:UnitMultiplier.da cim:UnitMultiplier.micro cim:UnitMultiplier.G cim:UnitMultiplier.h cim:UnitMultiplier.E cim:UnitMultiplier.f cim:UnitMultiplier.P cim:UnitMultiplier.p cim:UnitMultiplier.m cim:UnitMultiplier.M cim:UnitMultiplier.n ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "Curve.xMultiplier-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        6 ;
+        sh:path         cim:Curve.xMultiplier ;
+        sh:severity     sh:Violation .
+
+er:GeneratingUnit.minEconomicP-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "GeneratingUnit.minEconomicP-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        6 ;
+        sh:path         cim:GeneratingUnit.minEconomicP ;
+        sh:severity     sh:Violation .
+
+er:Circuit.CircuitShare-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "Circuit.CircuitShare-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:Circuit.CircuitShare ;
+        sh:severity     sh:Violation .
+
+er:DCTieCorridor  rdf:type  sh:NodeShape ;
+        sh:property     er:TieCorridor.delayFRR-cardinality , er:DCTieCorridor.maxFRRlimit-datatype , ido:IdentifiedObject.description-cardinality , er:TieCorridor.delayFRR-datatype , er:DCTieCorridor.AreaDispatchableUnit-cardinality , er:TieCorridor.thresholdFRR-datatype , er:TieCorridor.maxFRRramp-datatype , er:DCTieCorridor.AreaDispatchableUnit-valueType , er:TieCorridor.maxFRRramp-cardinality , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.mRID-cardinality , er:TieCorridor.thresholdFRR-cardinality , ido:IdentifiedObject.mRID-datatype , er:DCTieCorridor.maxFRRlimit-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.name-cardinality , er:DCTieCorridor.minFRRlimit-datatype , er:DCTieCorridor.minFRRlimit-cardinality ;
+        sh:targetClass  nc:DCTieCorridor .
+
+er:BiddingZoneBorder  rdf:type  sh:NodeShape ;
+        sh:property     er:BiddingZoneBorder.BiddingZoneTwo-cardinality , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.description-cardinality , er:BiddingZoneBorder.CapacityCalculationRegion-valueType , ido:IdentifiedObject.name-datatype , er:BiddingZoneBorder.BiddingZoneOne-cardinality , er:BiddingZoneBorder.CapacityCalculationRegion-cardinality , ido:IdentifiedObject.name-cardinality , er:BiddingZoneBorder.BiddingZoneTwo-valueType , ido:IdentifiedObject.description-datatype , er:BiddingZoneBorder.BiddingZoneOne-valueType , ido:IdentifiedObject.mRID-cardinality ;
+        sh:targetClass  nc:BiddingZoneBorder .
+
+er:EnergyComponent.GeneratingUnit-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "EnergyComponent.GeneratingUnit-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:EnergyComponent.GeneratingUnit ;
+        sh:severity     sh:Violation .
+
+er:VoltageAngleLimit.AngleReferenceTerminal-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "VoltageAngleLimit.AngleReferenceTerminal-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:VoltageAngleLimit.AngleReferenceTerminal ;
+        sh:severity     sh:Violation .
+
+er:HydroPump.shortPF-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "HydroPump.shortPF-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:HydroPump.shortPF ;
+        sh:severity     sh:Violation .
+
+er:CapacityCalculationRegion.SecurityCoordinator-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:SecurityCoordinator ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:SecurityCoordinator" ;
+        sh:name         "CapacityCalculationRegion.SecurityCoordinator-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( nc:CapacityCalculationRegion.SecurityCoordinator rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:DCConverterUnit.Substation-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "DCConverterUnit.Substation-cardinality" ;
+        sh:order        1 ;
+        sh:path         cim:DCConverterUnit.Substation ;
+        sh:severity     sh:Violation .
+
+er:OrganisationRole.globalLocationNumber-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "OrganisationRole.globalLocationNumber-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:OrganisationRole.globalLocationNumber ;
+        sh:severity     sh:Violation .
+
+er:PowerElectronicsUnit.longPF-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "PowerElectronicsUnit.longPF-cardinality" ;
+        sh:order        4 ;
+        sh:path         nc:PowerElectronicsUnit.longPF ;
+        sh:severity     sh:Violation .
+
+er:EnergyComponent.EnergyConsumer-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( cim:EnergyConsumer ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: cim:EnergyConsumer" ;
+        sh:name         "EnergyComponent.EnergyConsumer-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        2 ;
+        sh:path         ( nc:EnergyComponent.EnergyConsumer rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:SchedulingArea.SystemOperator-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "SchedulingArea.SystemOperator-cardinality" ;
+        sh:order        4 ;
+        sh:path         nc:SchedulingArea.SystemOperator ;
+        sh:severity     sh:Violation .
+
+er:PowerElectronicsUnit.longPF-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "PowerElectronicsUnit.longPF-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        4 ;
+        sh:path         nc:PowerElectronicsUnit.longPF ;
+        sh:severity     sh:Violation .
+
+er:HydroPump.minEconomicP-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "HydroPump.minEconomicP-cardinality" ;
+        sh:order        5 ;
+        sh:path         nc:HydroPump.minEconomicP ;
+        sh:severity     sh:Violation .
+
+er:SchedulingArea.isMeteringGridArea-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "SchedulingArea.isMeteringGridArea-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        12 ;
+        sh:path         nc:SchedulingArea.isMeteringGridArea ;
+        sh:severity     sh:Violation .
+
+er:PowerElectronicsUnit.shortPF-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "PowerElectronicsUnit.shortPF-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        2 ;
+        sh:path         nc:PowerElectronicsUnit.shortPF ;
+        sh:severity     sh:Violation .
+
+er:AreaDispatchableUnit.GeneratingUnit-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( cim:GeneratingUnit ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: cim:GeneratingUnit" ;
+        sh:name         "AreaDispatchableUnit.GeneratingUnit-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        2 ;
+        sh:path         ( nc:AreaDispatchableUnit.GeneratingUnit rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:BiddingZoneBorder.CapacityCalculationRegion-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:CapacityCalculationRegion ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:CapacityCalculationRegion" ;
+        sh:name         "BiddingZoneBorder.CapacityCalculationRegion-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( nc:BiddingZoneBorder.CapacityCalculationRegion rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:ControlArea.SystemOperator-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:DirectCurrentSystemOperator nc:ClosedDistributionSystemOperator nc:DistributionSystemOperator nc:TransmissionSystemOperator ) ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "ControlArea.SystemOperator-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( cim:ControlArea.SystemOperator rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:SchedulingArea.SystemOperator-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:DirectCurrentSystemOperator nc:ClosedDistributionSystemOperator nc:DistributionSystemOperator nc:TransmissionSystemOperator ) ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "SchedulingArea.SystemOperator-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        4 ;
+        sh:path         ( nc:SchedulingArea.SystemOperator rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:TieCorridor.thresholdFRR-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "TieCorridor.thresholdFRR-cardinality" ;
+        sh:order        5 ;
+        sh:path         nc:TieCorridor.thresholdFRR ;
+        sh:severity     sh:Violation .
+
+er:BlockEnergyComponent
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.mRID-cardinality , er:EnergyComponent.PowerElectronicsUnit-cardinality , er:EnergyComponent.GeneratingUnit-valueType , er:EnergyComponent.GeneratingUnit-cardinality , ido:IdentifiedObject.name-datatype , er:EnergyComponent.EnergyGroup-cardinality , er:EnergyComponent.HydroPump-valueType , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.description-cardinality , er:EnergyComponent.EnergyConsumer-valueType , er:EnergyComponent.EnergyGroup-valueType , er:EnergyComponent.HydroPump-cardinality , er:EnergyComponent.EnergyConsumer-cardinality , er:EnergyComponent.PowerElectronicsUnit-valueType , ido:IdentifiedObject.description-datatype ;
+        sh:targetClass  nc:BlockEnergyComponent .
+
+er:Line  rdf:type       sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.name-cardinality , er:Line.SchedulingArea-cardinality ;
+        sh:targetClass  cim:Line .
+
+er:CircuitShare.normalContributionFactor-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "CircuitShare.normalContributionFactor-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         nc:CircuitShare.normalContributionFactor ;
+        sh:severity     sh:Violation .
+
+er:DCPole.SchedulingArea-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "DCPole.SchedulingArea-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:DCPole.SchedulingArea ;
+        sh:severity     sh:Violation .
+
+er:PowerElectronicsUnit
+        rdf:type        sh:NodeShape ;
+        sh:property     er:PowerElectronicsUnit.shortPF-datatype , er:PowerElectronicsUnit.minEconomicP-cardinality , er:PowerElectronicsUnit.ScheduleResource-cardinality , er:PowerElectronicsUnit.longPF-cardinality , er:Equipment.Circuit-cardinality , ido:IdentifiedObject.description-datatype , er:PowerElectronicsUnit.longPF-datatype , er:PowerElectronicsUnit.shortPF-cardinality , er:PowerElectronicsUnit.maxEconomicP-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.name-cardinality , er:Equipment.AggregatedEquipment-cardinality , er:PowerElectronicsUnit.ScheduleResource-valueType , er:PowerElectronicsUnit.maxEconomicP-datatype , er:PowerElectronicsUnit.minEconomicP-datatype , ido:IdentifiedObject.description-cardinality ;
+        sh:targetClass  cim:PowerElectronicsUnit .
+
+er:EnergyConsumer.maxEconomicP-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "EnergyConsumer.maxEconomicP-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:EnergyConsumer.maxEconomicP ;
+        sh:severity     sh:Violation .
+
+er:EnergyComponent.EnergyConsumer-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "EnergyComponent.EnergyConsumer-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:EnergyComponent.EnergyConsumer ;
+        sh:severity     sh:Violation .
+
+er:LoadFrequencyControlArea.deficientGenerationLimit-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "LoadFrequencyControlArea.deficientGenerationLimit-cardinality" ;
+        sh:order        7 ;
+        sh:path         nc:LoadFrequencyControlArea.deficientGenerationLimit ;
+        sh:severity     sh:Violation .
+
+er:CurveData.Curve-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "CurveData.Curve-cardinality" ;
+        sh:order        0 ;
+        sh:path         cim:CurveData.Curve ;
+        sh:severity     sh:Violation .
+
+er:EnergyCoordinationRegion.EnergyAlignmentCoordinator-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:EnergyAlignmentCoordinator ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:EnergyAlignmentCoordinator" ;
+        sh:name         "EnergyCoordinationRegion.EnergyAlignmentCoordinator-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( nc:EnergyCoordinationRegion.EnergyAlignmentCoordinator rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:EnergyTypeReference.kind-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "EnergyTypeReference.kind-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:EnergyTypeReference.kind ;
+        sh:severity     sh:Violation .
+
+er:SecurityCoordinator
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.description-datatype , er:OrganisationRole.Organisation-valueType , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.description-cardinality , er:OrganisationRole.Organisation-cardinality , ido:IdentifiedObject.mRID-cardinality , er:OrganisationRole.globalLocationNumber-cardinality , er:OrganisationRole.globalLocationNumber-datatype ;
+        sh:targetClass  nc:SecurityCoordinator .
+
+er:CurveData.y1value-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "CurveData.y1value-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        2 ;
+        sh:path         cim:CurveData.y1value ;
+        sh:severity     sh:Violation .
+
+er:Substation.SchedulingArea-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     er:Substation.SchedulingArea-valueType ;
+        sh:targetClass  cim:Substation .
+
+er:ControlArea.OutageCoordinationRegion-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "ControlArea.OutageCoordinationRegion-cardinality" ;
+        sh:order        0 ;
+        sh:path         cim:ControlArea.OutageCoordinationRegion ;
+        sh:severity     sh:Violation .
+
+er:CurveData.xvalue-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "CurveData.xvalue-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         cim:CurveData.xvalue ;
+        sh:severity     sh:Violation .
+
+er:BlockEnergyOrder  rdf:type  sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.mRID-cardinality , er:BlockEnergyOrder.BlockEnergyComponent-valueType , er:BlockEnergyOrder.BlockEnergyComponent-cardinality , er:BlockEnergyOrder.shortPF-datatype , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.mRID-datatype , er:BlockEnergyOrder.sequence-cardinality , ido:IdentifiedObject.description-datatype , er:BlockEnergyOrder.shortPF-cardinality , ido:IdentifiedObject.name-cardinality , er:BlockEnergyOrder.sequence-datatype , ido:IdentifiedObject.description-cardinality , er:BlockEnergyOrder.longPF-cardinality , er:BlockEnergyOrder.longPF-datatype ;
+        sh:targetClass  nc:BlockEnergyOrder .
+
+er:Feeder.NormalEnergizingSubstation-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( cim:Substation ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: cim:Substation" ;
+        sh:name         "Feeder.NormalEnergizingSubstation-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        2 ;
+        sh:path         ( cim:Feeder.NormalEnergizingSubstation rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:OutageCoordinationRegion.SecurityCoordinator-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:SecurityCoordinator ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:SecurityCoordinator" ;
+        sh:name         "OutageCoordinationRegion.SecurityCoordinator-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( nc:OutageCoordinationRegion.SecurityCoordinator rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ido:CardinalityGroup  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "CardinalityIO" ;
+        sh:order    0 .
+
+er:BiddingZoneBorder.BiddingZoneTwo-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "BiddingZoneBorder.BiddingZoneTwo-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:BiddingZoneBorder.BiddingZoneTwo ;
+        sh:severity     sh:Violation .
+
+er:TieCorridor.delayFRR-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "TieCorridor.delayFRR-cardinality" ;
+        sh:order        6 ;
+        sh:path         nc:TieCorridor.delayFRR ;
+        sh:severity     sh:Violation .
+
+er:SchedulingArea.isMeteringGridArea-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "SchedulingArea.isMeteringGridArea-cardinality" ;
+        sh:order        12 ;
+        sh:path         nc:SchedulingArea.isMeteringGridArea ;
+        sh:severity     sh:Violation .
+
+er:LoadFrequencyControlBlock
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.name-datatype , er:LoadFrequencyControlBlock.SynchronousArea-cardinality , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.mRID-cardinality , er:LoadFrequencyControlBlock.SynchronousArea-valueType , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.description-cardinality ;
+        sh:targetClass  nc:LoadFrequencyControlBlock .
+
+er:AreaDispatchableUnit.normalEnabled-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "AreaDispatchableUnit.normalEnabled-cardinality" ;
+        sh:order        4 ;
+        sh:path         nc:AreaDispatchableUnit.normalEnabled ;
+        sh:severity     sh:Violation .
+
+er:OperationalLimitType.RecoveryOverloadLimitCurve-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:RecoveryOverloadLimitCurve ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:RecoveryOverloadLimitCurve" ;
+        sh:name         "OperationalLimitType.RecoveryOverloadLimitCurve-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( cim:OperationalLimitType.RecoveryOverloadLimitCurve rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:PTCTriggeredEquipment.Equipment-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "PTCTriggeredEquipment.Equipment-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:PTCTriggeredEquipment.Equipment ;
+        sh:severity     sh:Violation .
+
+er:EnergyConsumer.shortPF-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "EnergyConsumer.shortPF-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:EnergyConsumer.shortPF ;
+        sh:severity     sh:Violation .
+
+er:CurveData.xvalue-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "CurveData.xvalue-cardinality" ;
+        sh:order        1 ;
+        sh:path         cim:CurveData.xvalue ;
+        sh:severity     sh:Violation .
+
+ido:IdentifiedObject.name-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ido:CardinalityIO ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "IdentifiedObject.name-cardinality" ;
+        sh:order        0.1 ;
+        sh:path         cim:IdentifiedObject.name ;
+        sh:severity     sh:Violation .
+
+er:CurveData  rdf:type  sh:NodeShape ;
+        sh:property     er:CurveData.y1value-datatype , er:CurveData.y1value-cardinality , er:CurveData.xvalue-datatype , er:CurveData.xvalue-cardinality , er:CurveData.Curve-cardinality ;
+        sh:targetClass  cim:CurveData .
+
+er:Line.SchedulingArea-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     er:Line.SchedulingArea-valueType ;
+        sh:targetClass  cim:Line .
+
+er:AreaDispatchableUnit.GeneratingUnit-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "AreaDispatchableUnit.GeneratingUnit-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:AreaDispatchableUnit.GeneratingUnit ;
+        sh:severity     sh:Violation .
+
+er:PTCTriggeredEquipment
+        rdf:type        sh:NodeShape ;
+        sh:property     er:PTCTriggeredEquipment.ExceptionalPowerTransferCorridor-cardinality , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.name-datatype , er:PTCTriggeredEquipment.ExceptionalPowerTransferCorridor-valueType , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.name-cardinality , er:PTCTriggeredEquipment.Equipment-cardinality , ido:IdentifiedObject.description-cardinality ;
+        sh:targetClass  nc:PTCTriggeredEquipment .
+
+er:BiddingZoneBorder.BiddingZoneOne-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:BiddingZone ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:BiddingZone" ;
+        sh:name         "BiddingZoneBorder.BiddingZoneOne-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( nc:BiddingZoneBorder.BiddingZoneOne rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ido:IdentifiedObject.name-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:string ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ido:DatatypesGroupIO ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "IdentifiedObject.name-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0.1 ;
+        sh:path         cim:IdentifiedObject.name ;
+        sh:severity     sh:Violation .
+
+er:EnergyConsumer.maxEconomicP-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "EnergyConsumer.maxEconomicP-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        2 ;
+        sh:path         nc:EnergyConsumer.maxEconomicP ;
+        sh:severity     sh:Violation .
+
+er:OrganisationRole.globalLocationNumber-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:string ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "OrganisationRole.globalLocationNumber-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        2 ;
+        sh:path         nc:OrganisationRole.globalLocationNumber ;
+        sh:severity     sh:Violation .
+
+er:AmbientTemperatureDependencyCurve
+        rdf:type        sh:NodeShape ;
+        sh:property     er:Curve.y1Unit-cardinality , er:Curve.xMultiplier-datatype , er:Curve.xMultiplier-cardinality , er:Curve.xUnit-cardinality , er:Curve.y1Multiplier-datatype , er:Curve.y1Multiplier-cardinality , er:Curve.xUnit-datatype , er:Curve.y1Unit-datatype , er:Curve.curveStyle-cardinality , er:Curve.curveStyle-datatype ;
+        sh:targetClass  nc:AmbientTemperatureDependencyCurve .
+
+er:PowerElectronicsUnit.ScheduleResource-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:ScheduleResource ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:ScheduleResource" ;
+        sh:name         "PowerElectronicsUnit.ScheduleResource-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( cim:PowerElectronicsUnit.ScheduleResource rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:GeneratingUnit.ScheduleResource-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:ScheduleResource ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:ScheduleResource" ;
+        sh:name         "GeneratingUnit.ScheduleResource-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( cim:GeneratingUnit.ScheduleResource rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:DCConverterUnit.DCPole-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:DCPole ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:DCPole" ;
+        sh:name         "DCConverterUnit.DCPole-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( cim:DCConverterUnit.DCPole rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:DCPole.DCTieCorridor-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "DCPole.DCTieCorridor-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:DCPole.DCTieCorridor ;
+        sh:severity     sh:Violation .
+
+er:Curve.curveStyle-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "Curve.curveStyle-cardinality" ;
+        sh:order        2 ;
+        sh:path         cim:Curve.curveStyle ;
+        sh:severity     sh:Violation .
+
+er:DCPole.DCLine-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "DCPole.DCLine-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:DCPole.DCLine ;
+        sh:severity     sh:Violation .
+
+er:OutageCoordinationRegion.SecurityCoordinator-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "OutageCoordinationRegion.SecurityCoordinator-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:OutageCoordinationRegion.SecurityCoordinator ;
+        sh:severity     sh:Violation .
+
+er:EnergyComponent.EnergyGroup-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:EnergyGroup ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:EnergyGroup" ;
+        sh:name         "EnergyComponent.EnergyGroup-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        4 ;
+        sh:path         ( nc:EnergyComponent.EnergyGroup rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:LoadFrequencyControlArea.frequencyRestorationReserveDelay-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "LoadFrequencyControlArea.frequencyRestorationReserveDelay-cardinality" ;
+        sh:order        8 ;
+        sh:path         nc:LoadFrequencyControlArea.frequencyRestorationReserveDelay ;
+        sh:severity     sh:Violation .
+
+er:EnergyGroup.EnergyType-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:EnergyTypeReference ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:EnergyTypeReference" ;
+        sh:name         "EnergyGroup.EnergyType-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        2 ;
+        sh:path         ( nc:EnergyGroup.EnergyType rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:GeneratingUnit.maxEconomicP-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "GeneratingUnit.maxEconomicP-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        7 ;
+        sh:path         cim:GeneratingUnit.maxEconomicP ;
+        sh:severity     sh:Violation .
+
+er:BlockEnergyOrder.BlockEnergyComponent-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "BlockEnergyOrder.BlockEnergyComponent-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:BlockEnergyOrder.BlockEnergyComponent ;
+        sh:severity     sh:Violation .
+
+er:GeneratingUnit.ScheduleResource-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "GeneratingUnit.ScheduleResource-cardinality" ;
+        sh:order        0 ;
+        sh:path         cim:GeneratingUnit.ScheduleResource ;
+        sh:severity     sh:Violation .
+
+er:SchedulingArea.BiddingZone-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:BiddingZone ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:BiddingZone" ;
+        sh:name         "SchedulingArea.BiddingZone-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        13 ;
+        sh:path         ( nc:SchedulingArea.BiddingZone rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:TransmissionSystemOperator
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.mRID-cardinality , er:OrganisationRole.globalLocationNumber-cardinality , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.name-datatype , er:OrganisationRole.globalLocationNumber-datatype , er:OrganisationRole.Organisation-cardinality , er:OrganisationRole.Organisation-valueType , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.description-datatype ;
+        sh:targetClass  nc:TransmissionSystemOperator .
+
+er:EnergyConsumer.minEconomicP-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "EnergyConsumer.minEconomicP-cardinality" ;
+        sh:order        5 ;
+        sh:path         nc:EnergyConsumer.minEconomicP ;
+        sh:severity     sh:Violation .
+
+er:PTCTriggeredEquipment.ExceptionalPowerTransferCorridor-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "PTCTriggeredEquipment.ExceptionalPowerTransferCorridor-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:PTCTriggeredEquipment.ExceptionalPowerTransferCorridor ;
+        sh:severity     sh:Violation .
+
+er:TieCorridor.maxFRRramp-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "TieCorridor.maxFRRramp-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        4 ;
+        sh:path         nc:TieCorridor.maxFRRramp ;
+        sh:severity     sh:Violation .
+
+er:LoadFrequencyControlArea
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.mRID-datatype , er:LoadFrequencyControlArea.FrequencyControlOperator-valueType , er:LoadFrequencyControlArea.LoadFrequencyControlBlock-cardinality , ido:IdentifiedObject.description-cardinality , er:LoadFrequencyControlArea.frequencyRestorationReserveThreshold-cardinality , er:LoadFrequencyControlArea.frequencyRestorationReserveDelay-cardinality , er:LoadFrequencyControlArea.frequencyRestorationReserveThreshold-datatype , ido:IdentifiedObject.mRID-cardinality , er:LoadFrequencyControlArea.frequencyBiasFactor-cardinality , er:LoadFrequencyControlArea.FrequencyControlOperator-cardinality , er:LoadFrequencyControlArea.frequencyRestorationReserveDelay-datatype , er:LoadFrequencyControlArea.frequencyRestorationReserveMaxRamp-cardinality , ido:IdentifiedObject.name-datatype , er:LoadFrequencyControlArea.deficientGenerationLimit-cardinality , er:LoadFrequencyControlArea.frequencyBiasFactor-datatype , er:LoadFrequencyControlArea.frequencyRestorationReserveMaxRamp-datatype , er:LoadFrequencyControlArea.includeFrequencyBias-datatype , ido:IdentifiedObject.name-cardinality , er:LoadFrequencyControlArea.LoadFrequencyControlBlock-valueType , er:LoadFrequencyControlArea.deficientGenerationLimit-datatype , er:LoadFrequencyControlArea.includeFrequencyBias-cardinality ;
+        sh:targetClass  nc:LoadFrequencyControlArea .
+
+er:AreaDispatchableUnit.EnergyConsumer-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "AreaDispatchableUnit.EnergyConsumer-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:AreaDispatchableUnit.EnergyConsumer ;
+        sh:severity     sh:Violation .
+
+er:LoadFrequencyControlArea.frequencyRestorationReserveThreshold-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "LoadFrequencyControlArea.frequencyRestorationReserveThreshold-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        5 ;
+        sh:path         nc:LoadFrequencyControlArea.frequencyRestorationReserveThreshold ;
+        sh:severity     sh:Violation .
+
+er:PowerTransferCorridor.normalEnabled-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "PowerTransferCorridor.normalEnabled-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        2 ;
+        sh:path         nc:PowerTransferCorridor.normalEnabled ;
+        sh:severity     sh:Violation .
+
+er:EnergyGroup.SchedulingArea-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:SchedulingArea nc:SubSchedulingArea ) ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "EnergyGroup.SchedulingArea-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        3 ;
+        sh:path         ( nc:EnergyGroup.SchedulingArea rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:GeneratingUnit.shutdownCost-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "GeneratingUnit.shutdownCost-cardinality" ;
+        sh:order        4 ;
+        sh:path         nc:GeneratingUnit.shutdownCost ;
+        sh:severity     sh:Violation .
+
+er:Feeder.NormalEnergizingSubstation-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "Feeder.NormalEnergizingSubstation-cardinality" ;
+        sh:order        2 ;
+        sh:path         cim:Feeder.NormalEnergizingSubstation ;
+        sh:severity     sh:Violation .
+
+er:DCPole.DCController-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "DCPole.DCController-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:DCPole.DCController ;
+        sh:severity     sh:Violation .
+
+er:SchedulingArea.ControlArea-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "SchedulingArea.ControlArea-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:SchedulingArea.ControlArea ;
+        sh:severity     sh:Violation .
+
+er:Feeder.SubSchedulingArea-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "Feeder.SubSchedulingArea-cardinality" ;
+        sh:order        0 ;
+        sh:path         cim:Feeder.SubSchedulingArea ;
+        sh:severity     sh:Violation .
+
+er:BiddingZoneBorder.CapacityCalculationRegion-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "BiddingZoneBorder.CapacityCalculationRegion-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:BiddingZoneBorder.CapacityCalculationRegion ;
+        sh:severity     sh:Violation .
+
+er:OutageCoordinationRegion.OutageCoordinator-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:OutageCoordinator ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:OutageCoordinator" ;
+        sh:name         "OutageCoordinationRegion.OutageCoordinator-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( nc:OutageCoordinationRegion.OutageCoordinator rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:DCPole.SchedulingArea-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:SchedulingArea nc:SubSchedulingArea ) ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "DCPole.SchedulingArea-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( nc:DCPole.SchedulingArea rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:OperationalLimitType.TemporaryBaseOverloadLimitCurve-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "OperationalLimitType.TemporaryBaseOverloadLimitCurve-cardinality" ;
+        sh:order        5 ;
+        sh:path         cim:OperationalLimitType.TemporaryBaseOverloadLimitCurve ;
+        sh:severity     sh:Violation .
+
+er:PTCTriggeredEquipment.ExceptionalPowerTransferCorridor-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:ExceptionalPowerTransferCorridor ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:ExceptionalPowerTransferCorridor" ;
+        sh:name         "PTCTriggeredEquipment.ExceptionalPowerTransferCorridor-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( nc:PTCTriggeredEquipment.ExceptionalPowerTransferCorridor rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:Circuit.CircuitShare-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:CircuitShare ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:CircuitShare" ;
+        sh:name         "Circuit.CircuitShare-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( nc:Circuit.CircuitShare rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:AreaDispatchableUnit.SchedulingArea-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "AreaDispatchableUnit.SchedulingArea-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:AreaDispatchableUnit.SchedulingArea ;
+        sh:severity     sh:Violation .
+
+er:AreaDispatchableUnit.SchedulingArea-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:SchedulingArea nc:SubSchedulingArea ) ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "AreaDispatchableUnit.SchedulingArea-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( nc:AreaDispatchableUnit.SchedulingArea rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:DirectCurrentSystemOperator
+        rdf:type        sh:NodeShape ;
+        sh:property     er:OrganisationRole.Organisation-valueType , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.mRID-cardinality , er:OrganisationRole.globalLocationNumber-cardinality , ido:IdentifiedObject.name-cardinality , er:OrganisationRole.Organisation-cardinality , ido:IdentifiedObject.mRID-datatype , er:OrganisationRole.globalLocationNumber-datatype , ido:IdentifiedObject.description-datatype ;
+        sh:targetClass  nc:DirectCurrentSystemOperator .
+
+er:OperationalLimit.OperationalLimitSet-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "OperationalLimit.OperationalLimitSet-cardinality" ;
+        sh:order        2 ;
+        sh:path         cim:OperationalLimit.OperationalLimitSet ;
+        sh:severity     sh:Violation .
+
+er:GeneratingUnit.shutdownCost-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:decimal ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "GeneratingUnit.shutdownCost-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        4 ;
+        sh:path         nc:GeneratingUnit.shutdownCost ;
+        sh:severity     sh:Violation .
+
+er:AreaDispatchableUnit.PowerElectronicsUnit-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "AreaDispatchableUnit.PowerElectronicsUnit-cardinality" ;
+        sh:order        6 ;
+        sh:path         nc:AreaDispatchableUnit.PowerElectronicsUnit ;
+        sh:severity     sh:Violation .
+
+er:LoadFrequencyControlOperator
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.mRID-cardinality , er:OrganisationRole.globalLocationNumber-cardinality , ido:IdentifiedObject.mRID-datatype , er:OrganisationRole.Organisation-valueType , er:OrganisationRole.globalLocationNumber-datatype , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.name-cardinality , er:OrganisationRole.Organisation-cardinality , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.name-datatype ;
+        sh:targetClass  nc:LoadFrequencyControlOperator .
+
+er:Curve.y1Multiplier-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "Curve.y1Multiplier-cardinality" ;
+        sh:order        1 ;
+        sh:path         cim:Curve.y1Multiplier ;
+        sh:severity     sh:Violation .
+
+er:DCPole.SchedulingArea-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     er:DCPole.SchedulingArea-valueType ;
+        sh:targetClass  nc:DCPole .
+
+er:EnergyGroup  rdf:type  sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.name-cardinality , er:EnergyGroup.shortPF-datatype , er:EnergyGroup.shortPF-cardinality , er:EnergyGroup.SchedulingArea-cardinality , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.mRID-cardinality , er:EnergyGroup.EnergyType-valueType , er:EnergyGroup.longPF-cardinality , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.name-datatype , er:EnergyGroup.longPF-datatype , er:EnergyGroup.EnergyType-cardinality , ido:IdentifiedObject.description-cardinality ;
+        sh:targetClass  nc:EnergyGroup .
+
+er:SchedulingArea.isIslandingEnabled-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "SchedulingArea.isIslandingEnabled-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:SchedulingArea.isIslandingEnabled ;
+        sh:severity     sh:Violation .
+
+er:Curve.xMultiplier-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "Curve.xMultiplier-cardinality" ;
+        sh:order        6 ;
+        sh:path         cim:Curve.xMultiplier ;
+        sh:severity     sh:Violation .
+
+er:DCTieCorridor.AreaDispatchableUnit-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "DCTieCorridor.AreaDispatchableUnit-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:DCTieCorridor.AreaDispatchableUnit ;
+        sh:severity     sh:Violation .
+
+er:DCTieCorridor.minFRRlimit-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "DCTieCorridor.minFRRlimit-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         nc:DCTieCorridor.minFRRlimit ;
+        sh:severity     sh:Violation .
+
+er:Equipment.Circuit-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "Equipment.Circuit-cardinality" ;
+        sh:order        6 ;
+        sh:path         cim:Equipment.Circuit ;
+        sh:severity     sh:Violation .
+
+er:SchedulingArea.EnergyCoordinationRegion-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "SchedulingArea.EnergyCoordinationRegion-cardinality" ;
+        sh:order        7 ;
+        sh:path         nc:SchedulingArea.EnergyCoordinationRegion ;
+        sh:severity     sh:Violation .
+
+er:BiddingZone.CapacityCalculationRegion-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "BiddingZone.CapacityCalculationRegion-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:BiddingZone.CapacityCalculationRegion ;
+        sh:severity     sh:Violation .
+
+er:DCTieCorridor.maxFRRlimit-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "DCTieCorridor.maxFRRlimit-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        3 ;
+        sh:path         nc:DCTieCorridor.maxFRRlimit ;
+        sh:severity     sh:Violation .
+
+er:LoadFrequencyControlArea.LoadFrequencyControlBlock-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:LoadFrequencyControlBlock ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:LoadFrequencyControlBlock" ;
+        sh:name         "LoadFrequencyControlArea.LoadFrequencyControlBlock-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        6 ;
+        sh:path         ( nc:LoadFrequencyControlArea.LoadFrequencyControlBlock rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:AreaDispatchableUnit
+        rdf:type        sh:NodeShape ;
+        sh:property     er:AreaDispatchableUnit.PowerElectronicsUnit-valueType , er:AreaDispatchableUnit.normalEnabled-cardinality , er:AreaDispatchableUnit.PowerElectronicsUnit-cardinality , er:AreaDispatchableUnit.ScheduleResource-valueType , er:AreaDispatchableUnit.ScheduleResource-cardinality , er:AreaDispatchableUnit.SchedulingArea-cardinality , er:AreaDispatchableUnit.GeneratingUnit-valueType , er:AreaDispatchableUnit.EnergyConsumer-valueType , er:AreaDispatchableUnit.GeneratingUnit-cardinality , er:AreaDispatchableUnit.EnergyConsumer-cardinality , er:AreaDispatchableUnit.normalEnabled-datatype ;
+        sh:targetClass  nc:AreaDispatchableUnit .
+
+er:BiddingZoneBorder.BiddingZoneTwo-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:BiddingZone ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:BiddingZone" ;
+        sh:name         "BiddingZoneBorder.BiddingZoneTwo-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        2 ;
+        sh:path         ( nc:BiddingZoneBorder.BiddingZoneTwo rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:Substation.SchedulingArea-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "Substation.SchedulingArea-cardinality" ;
+        sh:order        3 ;
+        sh:path         cim:Substation.SchedulingArea ;
+        sh:severity     sh:Violation .
+
+er:LoadFrequencyControlArea.frequencyRestorationReserveDelay-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "LoadFrequencyControlArea.frequencyRestorationReserveDelay-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        8 ;
+        sh:path         nc:LoadFrequencyControlArea.frequencyRestorationReserveDelay ;
+        sh:severity     sh:Violation .
+
+er:OperationalLimitType.PermanentAmbientTemperatureDependencyCurve-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:AmbientTemperatureDependencyCurve ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:AmbientTemperatureDependencyCurve" ;
+        sh:name         "OperationalLimitType.PermanentAmbientTemperatureDependencyCurve-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        3 ;
+        sh:path         ( cim:OperationalLimitType.PermanentAmbientTemperatureDependencyCurve rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:EnergyTypeReference.kind-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:in           ( nc:EnergyKind.biomass nc:EnergyKind.other nc:EnergyKind.hydroPumpStorage nc:EnergyKind.consumer nc:EnergyKind.wind nc:EnergyKind.nuclear nc:EnergyKind.hydroWaterReservoir nc:EnergyKind.solar nc:EnergyKind.batteryStorage nc:EnergyKind.waste nc:EnergyKind.industrial nc:EnergyKind.geothermal nc:EnergyKind.fossil nc:EnergyKind.otherRenewable nc:EnergyKind.hydroRunOfRiver nc:EnergyKind.marine ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "EnergyTypeReference.kind-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         nc:EnergyTypeReference.kind ;
+        sh:severity     sh:Violation .
+
+er:ScheduleResource  rdf:type  sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.name-cardinality , er:ScheduleResource.SchedulingArea-cardinality , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.mRID-cardinality , er:ScheduleResource.ResourceOf-valueType , er:ScheduleResource.ResourceOf-cardinality ;
+        sh:targetClass  nc:ScheduleResource .
+
+er:OperationalLimitType.TemporaryBaseOverloadLimitCurve-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:BaseOverloadLimitCurve ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:BaseOverloadLimitCurve" ;
+        sh:name         "OperationalLimitType.TemporaryBaseOverloadLimitCurve-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        5 ;
+        sh:path         ( cim:OperationalLimitType.TemporaryBaseOverloadLimitCurve rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:GeneratingUnit.maxStartupLoad-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "GeneratingUnit.maxStartupLoad-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        5 ;
+        sh:path         nc:GeneratingUnit.maxStartupLoad ;
+        sh:severity     sh:Violation .
+
+er:LoadFrequencyControlArea.includeFrequencyBias-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "LoadFrequencyControlArea.includeFrequencyBias-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        3 ;
+        sh:path         nc:LoadFrequencyControlArea.includeFrequencyBias ;
+        sh:severity     sh:Violation .
+
+er:CircuitShare.normalContributionFactor-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "CircuitShare.normalContributionFactor-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:CircuitShare.normalContributionFactor ;
+        sh:severity     sh:Violation .
+
+er:LoadFrequencyControlArea.LoadFrequencyControlBlock-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "LoadFrequencyControlArea.LoadFrequencyControlBlock-cardinality" ;
+        sh:order        6 ;
+        sh:path         nc:LoadFrequencyControlArea.LoadFrequencyControlBlock ;
+        sh:severity     sh:Violation .
+
+er:OperationalLimitType.PermanentSolarRadiationCurve-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:SolarRadiationDepedencyCurve ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:SolarRadiationDepedencyCurve" ;
+        sh:name         "OperationalLimitType.PermanentSolarRadiationCurve-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        2 ;
+        sh:path         ( cim:OperationalLimitType.PermanentSolarRadiationCurve rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:OutagePlanningAgent
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.mRID-datatype , er:OrganisationRole.globalLocationNumber-cardinality , er:OrganisationRole.Organisation-valueType , er:OrganisationRole.globalLocationNumber-datatype , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.description-cardinality , er:OrganisationRole.Organisation-cardinality , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.name-cardinality ;
+        sh:targetClass  nc:OutagePlanningAgent .
+
+er:DCTieCorridor.AreaDispatchableUnit-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:AreaDispatchableUnit ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:AreaDispatchableUnit" ;
+        sh:name         "DCTieCorridor.AreaDispatchableUnit-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( nc:DCTieCorridor.AreaDispatchableUnit rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:OperationalLimitType.direction-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "OperationalLimitType.direction-cardinality" ;
+        sh:order        1 ;
+        sh:path         cim:OperationalLimitType.direction ;
+        sh:severity     sh:Violation .
+
+er:HydroPump.ScheduleResource-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "HydroPump.ScheduleResource-cardinality" ;
+        sh:order        2 ;
+        sh:path         cim:HydroPump.ScheduleResource ;
+        sh:severity     sh:Violation .
+
+er:OrdinaryPowerTransferCorridor
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.mRID-datatype , er:PowerTransferCorridor.normalEnabled-cardinality , er:PowerTransferCorridor.normalEnabled-datatype , ido:IdentifiedObject.description-cardinality ;
+        sh:targetClass  nc:OrdinaryPowerTransferCorridor .
+
+er:OperationalLimit.OperationalLimitType-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "OperationalLimit.OperationalLimitType-cardinality" ;
+        sh:order        3 ;
+        sh:path         cim:OperationalLimit.OperationalLimitType ;
+        sh:severity     sh:Violation .
+
+er:Substation  rdf:type  sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.name-cardinality , er:Substation.SchedulingArea-cardinality ;
+        sh:targetClass  cim:Substation .
+
+er:Equipment.Circuit-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     er:Equipment.Circuit-valueType ;
+        sh:targetClass  cim:EnergyConsumer , cim:GeneratingUnit , cim:Equipment , cim:PowerElectronicsUnit , cim:HydroPump .
+
+er:DCConverterUnit.DCPole-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "DCConverterUnit.DCPole-cardinality" ;
+        sh:order        0 ;
+        sh:path         cim:DCConverterUnit.DCPole ;
+        sh:severity     sh:Violation .
+
+er:BiddingZoneBorder.BiddingZoneOne-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "BiddingZoneBorder.BiddingZoneOne-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:BiddingZoneBorder.BiddingZoneOne ;
+        sh:severity     sh:Violation .
+
+er:PowerElectronicsUnit.minEconomicP-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "PowerElectronicsUnit.minEconomicP-cardinality" ;
+        sh:order        6 ;
+        sh:path         nc:PowerElectronicsUnit.minEconomicP ;
+        sh:severity     sh:Violation .
+
+er:HydroPump.minEconomicP-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "HydroPump.minEconomicP-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        5 ;
+        sh:path         nc:HydroPump.minEconomicP ;
+        sh:severity     sh:Violation .
+
+er:SchedulingArea.SynchronousArea-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:SynchronousArea ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:SynchronousArea" ;
+        sh:name         "SchedulingArea.SynchronousArea-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        14 ;
+        sh:path         ( nc:SchedulingArea.SynchronousArea rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:OperationalLimitSet.PowerTransferCorridor-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     er:OperationalLimitSet.PowerTransferCorridor-valueType ;
+        sh:targetClass  cim:OperationalLimitSet .
+
+er:SynchronousArea.nominalFrequency-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "SynchronousArea.nominalFrequency-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:SynchronousArea.nominalFrequency ;
+        sh:severity     sh:Violation .
+
+er:OperationalLimitSet.PowerTransferCorridor-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:ExceptionalPowerTransferCorridor nc:OrdinaryPowerTransferCorridor ) ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "OperationalLimitSet.PowerTransferCorridor-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( cim:OperationalLimitSet.PowerTransferCorridor rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ido:IdentifiedObject.mRID-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:string ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ido:DatatypesGroupIO ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "IdentifiedObject.mRID-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0.1 ;
+        sh:path         cim:IdentifiedObject.mRID ;
+        sh:severity     sh:Violation .
+
+er:PTCTriggeredEquipment.Equipment-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( cim:Equipment cim:PowerElectronicsUnit cim:HydroPump cim:GeneratingUnit cim:EnergyConsumer ) ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "PTCTriggeredEquipment.Equipment-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( nc:PTCTriggeredEquipment.Equipment rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:EnergyGroup.shortPF-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "EnergyGroup.shortPF-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         nc:EnergyGroup.shortPF ;
+        sh:severity     sh:Violation .
+
+er:CircuitShare.PowerTransferCorridor-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:ExceptionalPowerTransferCorridor nc:OrdinaryPowerTransferCorridor ) ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "CircuitShare.PowerTransferCorridor-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( nc:CircuitShare.PowerTransferCorridor rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:ControlArea  rdf:type  sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.name-cardinality , er:ControlArea.SystemOperator-cardinality , er:ControlArea.OutageCoordinationRegion-valueType , er:ControlArea.OutageCoordinationRegion-cardinality ;
+        sh:targetClass  cim:ControlArea .
+
+er:EnergyGroup.SchedulingArea-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "EnergyGroup.SchedulingArea-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:EnergyGroup.SchedulingArea ;
+        sh:severity     sh:Violation .
+
+er:Curve.xUnit-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:in           ( cim:UnitSymbol.HPerm cim:UnitSymbol.mol cim:UnitSymbol.m3Uncompensated cim:UnitSymbol.radPers cim:UnitSymbol.SPerm cim:UnitSymbol.Wb cim:UnitSymbol.bar cim:UnitSymbol.kat cim:UnitSymbol.cosPhi cim:UnitSymbol.VA cim:UnitSymbol.dBm cim:UnitSymbol.Btu cim:UnitSymbol.lm cim:UnitSymbol.mPers2 cim:UnitSymbol.ha cim:UnitSymbol.rotPers cim:UnitSymbol.A cim:UnitSymbol.A2 cim:UnitSymbol.JPerkgK cim:UnitSymbol.JPerm2 cim:UnitSymbol.Nm cim:UnitSymbol.kgPerJ cim:UnitSymbol.As cim:UnitSymbol.JPerm3 cim:UnitSymbol.m2Pers cim:UnitSymbol.d cim:UnitSymbol.C cim:UnitSymbol.WPersr cim:UnitSymbol.rad cim:UnitSymbol.kg cim:UnitSymbol.therm cim:UnitSymbol.CPerm3 cim:UnitSymbol.VArh cim:UnitSymbol.Mx cim:UnitSymbol.WPerW cim:UnitSymbol.JPermolK cim:UnitSymbol.cd cim:UnitSymbol.WPerm2sr cim:UnitSymbol.h cim:UnitSymbol.G cim:UnitSymbol.F cim:UnitSymbol.Vh cim:UnitSymbol.lPerl cim:UnitSymbol.HzPerHz cim:UnitSymbol.H cim:UnitSymbol.mmHg cim:UnitSymbol.CPerm2 cim:UnitSymbol.radPers2 cim:UnitSymbol.mPers cim:UnitSymbol.KPers cim:UnitSymbol.anglemin cim:UnitSymbol.PaPers cim:UnitSymbol.VPerHz cim:UnitSymbol.J cim:UnitSymbol.m2 cim:UnitSymbol.APerm cim:UnitSymbol.m3Perh cim:UnitSymbol.l cim:UnitSymbol.K cim:UnitSymbol.m3 cim:UnitSymbol.lPerh cim:UnitSymbol.WPers cim:UnitSymbol.dB cim:UnitSymbol.FPerm cim:UnitSymbol.m cim:UnitSymbol.A2s cim:UnitSymbol.kn cim:UnitSymbol.VAr cim:UnitSymbol.charPers cim:UnitSymbol.m3Compensated cim:UnitSymbol.M cim:UnitSymbol.onePerHz cim:UnitSymbol.Wh cim:UnitSymbol.gPerg cim:UnitSymbol.WPerm2 cim:UnitSymbol.molPerkg cim:UnitSymbol.Ah cim:UnitSymbol.N cim:UnitSymbol.mPerm3 cim:UnitSymbol.sPers cim:UnitSymbol.VPerV cim:UnitSymbol.kgm2 cim:UnitSymbol.m3Perkg cim:UnitSymbol.V2 cim:UnitSymbol.Oe cim:UnitSymbol.min cim:UnitSymbol.Vs cim:UnitSymbol.Q cim:UnitSymbol.V2h cim:UnitSymbol.CPerkg cim:UnitSymbol.JPerkg cim:UnitSymbol.Qh cim:UnitSymbol.s cim:UnitSymbol.tonne cim:UnitSymbol.NPerm cim:UnitSymbol.Pa cim:UnitSymbol.VAh cim:UnitSymbol.none cim:UnitSymbol.HzPers cim:UnitSymbol.S cim:UnitSymbol.deg cim:UnitSymbol.ohm cim:UnitSymbol.A2h cim:UnitSymbol.T cim:UnitSymbol.onePerm cim:UnitSymbol.lx cim:UnitSymbol.lPers cim:UnitSymbol.JPerK cim:UnitSymbol.character cim:UnitSymbol.APerA cim:UnitSymbol.V cim:UnitSymbol.ppm cim:UnitSymbol.WPermK cim:UnitSymbol.ohmPerm cim:UnitSymbol.VPerm cim:UnitSymbol.Bq cim:UnitSymbol.W cim:UnitSymbol.GyPers cim:UnitSymbol.Sv cim:UnitSymbol.molPerm3 cim:UnitSymbol.degC cim:UnitSymbol.JPermol cim:UnitSymbol.sr cim:UnitSymbol.count cim:UnitSymbol.m3Pers cim:UnitSymbol.ohmm cim:UnitSymbol.Hz cim:UnitSymbol.rev cim:UnitSymbol.WPerA cim:UnitSymbol.katPerm3 cim:UnitSymbol.gal cim:UnitSymbol.Pas cim:UnitSymbol.VPerVAr cim:UnitSymbol.VPerVA cim:UnitSymbol.anglesec cim:UnitSymbol.ft3 cim:UnitSymbol.molPermol cim:UnitSymbol.JPers cim:UnitSymbol.Gy cim:UnitSymbol.kgm cim:UnitSymbol.kgPerm3 ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "Curve.xUnit-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        5 ;
+        sh:path         cim:Curve.xUnit ;
+        sh:severity     sh:Violation .
+
+er:EnergyConsumer.shortPF-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "EnergyConsumer.shortPF-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:EnergyConsumer.shortPF ;
+        sh:severity     sh:Violation .
+
+er:CircuitShare  rdf:type  sh:NodeShape ;
+        sh:property     er:CircuitShare.PowerTransferCorridor-cardinality , er:CircuitShare.normalContributionFactor-datatype , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.name-datatype , er:CircuitShare.normalContributionFactor-cardinality , ido:IdentifiedObject.mRID-datatype ;
+        sh:targetClass  nc:CircuitShare .
+
+er:DatatypesGroup  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "Datatypes" ;
+        sh:order    1 .
+
+er:VoltageAngleLimit.value-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "VoltageAngleLimit.value-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         nc:VoltageAngleLimit.value ;
+        sh:severity     sh:Violation .
+
+er:OperationalLimitType.direction-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:in           ( cim:OperationalLimitDirectionKind.high cim:OperationalLimitDirectionKind.low cim:OperationalLimitDirectionKind.absoluteValue ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "OperationalLimitType.direction-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         cim:OperationalLimitType.direction ;
+        sh:severity     sh:Violation .
+
+er:CurveData.Curve-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:RecoveryOverloadLimitCurve nc:AmbientTemperatureDependencyCurve nc:DurationOverloadLimitCurve nc:BaseOverloadLimitCurve nc:SolarRadiationDepedencyCurve ) ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "CurveData.Curve-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( cim:CurveData.Curve rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:Feeder.SubSchedulingArea-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:SubSchedulingArea ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:SubSchedulingArea" ;
+        sh:name         "Feeder.SubSchedulingArea-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( cim:Feeder.SubSchedulingArea rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:EnergyComponent.GeneratingUnit-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( cim:GeneratingUnit ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: cim:GeneratingUnit" ;
+        sh:name         "EnergyComponent.GeneratingUnit-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        3 ;
+        sh:path         ( nc:EnergyComponent.GeneratingUnit rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:ScheduleResource.SchedulingArea-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     er:ScheduleResource.SchedulingArea-valueType ;
+        sh:targetClass  nc:ScheduleResource .
+
+er:ControlArea.OutageCoordinationRegion-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:OutageCoordinationRegion ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:OutageCoordinationRegion" ;
+        sh:name         "ControlArea.OutageCoordinationRegion-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( cim:ControlArea.OutageCoordinationRegion rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:HydroPump.ScheduleResource-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:ScheduleResource ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:ScheduleResource" ;
+        sh:name         "HydroPump.ScheduleResource-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        2 ;
+        sh:path         ( cim:HydroPump.ScheduleResource rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:Line.SchedulingArea-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:SchedulingArea nc:SubSchedulingArea ) ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "Line.SchedulingArea-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( cim:Line.SchedulingArea rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:LoadFrequencyControlArea.frequencyRestorationReserveThreshold-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "LoadFrequencyControlArea.frequencyRestorationReserveThreshold-cardinality" ;
+        sh:order        5 ;
+        sh:path         nc:LoadFrequencyControlArea.frequencyRestorationReserveThreshold ;
+        sh:severity     sh:Violation .
+
+er:SchedulingArea.LoadFrequencyControlArea-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "SchedulingArea.LoadFrequencyControlArea-cardinality" ;
+        sh:order        11 ;
+        sh:path         nc:SchedulingArea.LoadFrequencyControlArea ;
+        sh:severity     sh:Violation .
+
+er:OperationalLimit.OperationalLimitSet-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( cim:OperationalLimitSet ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: cim:OperationalLimitSet" ;
+        sh:name         "OperationalLimit.OperationalLimitSet-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        2 ;
+        sh:path         ( cim:OperationalLimit.OperationalLimitSet rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:EnergyCoordinationRegion
+        rdf:type        sh:NodeShape ;
+        sh:property     er:EnergyCoordinationRegion.EnergyAlignmentCoordinator-valueType , ido:IdentifiedObject.name-cardinality , er:EnergyCoordinationRegion.EnergyAlignmentCoordinator-cardinality , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.mRID-datatype ;
+        sh:targetClass  nc:EnergyCoordinationRegion .
+
+er:LoadFrequencyControlArea.frequencyBiasFactor-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "LoadFrequencyControlArea.frequencyBiasFactor-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         nc:LoadFrequencyControlArea.frequencyBiasFactor ;
+        sh:severity     sh:Violation .
+
+er:EnergyComponent.PowerElectronicsUnit-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "EnergyComponent.PowerElectronicsUnit-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:EnergyComponent.PowerElectronicsUnit ;
+        sh:severity     sh:Violation .
+
+er:HydroPump  rdf:type  sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.description-datatype , er:HydroPump.maxEconomicP-cardinality , er:HydroPump.minEconomicP-datatype , er:Equipment.AggregatedEquipment-cardinality , er:HydroPump.shortPF-cardinality , ido:IdentifiedObject.description-cardinality , er:HydroPump.longPF-datatype , ido:IdentifiedObject.name-datatype , er:HydroPump.minEconomicP-cardinality , er:Equipment.Circuit-cardinality , ido:IdentifiedObject.name-cardinality , er:HydroPump.maxEconomicP-datatype , er:HydroPump.longPF-cardinality , er:HydroPump.ScheduleResource-valueType , er:HydroPump.ScheduleResource-cardinality , er:HydroPump.shortPF-datatype ;
+        sh:targetClass  cim:HydroPump .
+
+er:DCPole.DCTieCorridor-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:DCTieCorridor ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:DCTieCorridor" ;
+        sh:name         "DCPole.DCTieCorridor-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        2 ;
+        sh:path         ( nc:DCPole.DCTieCorridor rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:RecoveryOverloadLimitCurve
+        rdf:type        sh:NodeShape ;
+        sh:property     er:Curve.xUnit-datatype , er:Curve.y1Multiplier-cardinality , er:Curve.xUnit-cardinality , er:Curve.curveStyle-cardinality , er:Curve.y1Multiplier-datatype , er:Curve.y1Unit-cardinality , er:Curve.y1Unit-datatype , er:Curve.xMultiplier-datatype , er:Curve.curveStyle-datatype , er:Curve.xMultiplier-cardinality ;
+        sh:targetClass  nc:RecoveryOverloadLimitCurve .
+
+er:OutageCoordinationRegion
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.description-cardinality , er:OutageCoordinationRegion.OutageCoordinator-cardinality , ido:IdentifiedObject.name-datatype , er:OutageCoordinationRegion.SecurityCoordinator-cardinality , er:OutageCoordinationRegion.OutageCoordinator-valueType , ido:IdentifiedObject.description-datatype , er:OutageCoordinationRegion.SecurityCoordinator-valueType ;
+        sh:targetClass  nc:OutageCoordinationRegion .
+
+er:Organisation  rdf:type  sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.name-cardinality ;
+        sh:targetClass  cim:Organisation .
+
+er:BiddingZone.tradeEnabled-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "BiddingZone.tradeEnabled-cardinality" ;
+        sh:order        4 ;
+        sh:path         nc:BiddingZone.tradeEnabled ;
+        sh:severity     sh:Violation .
+
+er:SynchronousArea.nominalFrequency-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "SynchronousArea.nominalFrequency-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         nc:SynchronousArea.nominalFrequency ;
+        sh:severity     sh:Violation .
+
+er:TieCorridor.maxFRRramp-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "TieCorridor.maxFRRramp-cardinality" ;
+        sh:order        4 ;
+        sh:path         nc:TieCorridor.maxFRRramp ;
+        sh:severity     sh:Violation .
+
+er:SubSchedulingArea  rdf:type  sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.name-datatype , er:SchedulingArea.isMeteringGridArea-datatype , er:SchedulingArea.SynchronousArea-valueType , er:SchedulingArea.SynchronousArea-cardinality , er:SchedulingArea.isMeteringGridArea-cardinality , er:SchedulingArea.ControlArea-cardinality , er:SchedulingArea.EnergyCoordinationRegion-cardinality , er:SchedulingArea.ControlArea-valueType , ido:IdentifiedObject.description-datatype , er:SchedulingArea.LoadFrequencyControlArea-cardinality , er:SchedulingArea.SystemOperator-cardinality , ido:IdentifiedObject.name-cardinality , er:SchedulingArea.BiddingZone-valueType , ido:IdentifiedObject.mRID-datatype , er:SchedulingArea.LoadFrequencyControlArea-valueType , ido:IdentifiedObject.mRID-cardinality , er:SchedulingArea.isIslandingEnabled-cardinality , er:SubSchedulingArea.SchedulingArea-cardinality , er:SchedulingArea.isIslandingEnabled-datatype , er:SchedulingArea.EnergyCoordinationRegion-valueType , er:SchedulingArea.BiddingZone-cardinality ;
+        sh:targetClass  nc:SubSchedulingArea .
+
+er:OperationalLimitType.PermanentSolarRadiationCurve-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "OperationalLimitType.PermanentSolarRadiationCurve-cardinality" ;
+        sh:order        2 ;
+        sh:path         cim:OperationalLimitType.PermanentSolarRadiationCurve ;
+        sh:severity     sh:Violation .
+
+er:DistributionSystemOperator
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.mRID-cardinality , er:OrganisationRole.Organisation-cardinality , ido:IdentifiedObject.description-cardinality , er:OrganisationRole.Organisation-valueType , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.name-cardinality , er:OrganisationRole.globalLocationNumber-datatype , ido:IdentifiedObject.name-datatype , er:OrganisationRole.globalLocationNumber-cardinality ;
+        sh:targetClass  nc:DistributionSystemOperator .
+
+er:LoadFrequencyControlArea.FrequencyControlOperator-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "LoadFrequencyControlArea.FrequencyControlOperator-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:LoadFrequencyControlArea.FrequencyControlOperator ;
+        sh:severity     sh:Violation .
+
+er:EnergyConsumer.minEconomicP-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "EnergyConsumer.minEconomicP-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        5 ;
+        sh:path         nc:EnergyConsumer.minEconomicP ;
+        sh:severity     sh:Violation .
+
+er:DCConverterUnit  rdf:type  sh:NodeShape ;
+        sh:property     er:DCConverterUnit.DCPole-valueType , er:DCConverterUnit.DCPole-cardinality , er:DCConverterUnit.Substation-valueType , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.name-datatype , er:DCConverterUnit.Substation-cardinality , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.description-datatype ;
+        sh:targetClass  cim:DCConverterUnit .
+
+er:OperationalLimitType.TemporaryDurationOverloadLimitCurve-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:DurationOverloadLimitCurve ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:DurationOverloadLimitCurve" ;
+        sh:name         "OperationalLimitType.TemporaryDurationOverloadLimitCurve-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        4 ;
+        sh:path         ( cim:OperationalLimitType.TemporaryDurationOverloadLimitCurve rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:EnergyConsumer  rdf:type  sh:NodeShape ;
+        sh:property     er:EnergyConsumer.longPF-cardinality , ido:IdentifiedObject.description-datatype , er:Equipment.Circuit-cardinality , er:EnergyConsumer.shortPF-datatype , ido:IdentifiedObject.description-cardinality , er:EnergyConsumer.longPF-datatype , ido:IdentifiedObject.name-cardinality , er:EnergyConsumer.ScheduleResource-valueType , er:EnergyConsumer.maxEconomicP-datatype , er:EnergyConsumer.shortPF-cardinality , er:Equipment.AggregatedEquipment-cardinality , er:EnergyConsumer.minEconomicP-datatype , ido:IdentifiedObject.name-datatype , er:EnergyConsumer.minEconomicP-cardinality , er:EnergyConsumer.maxEconomicP-cardinality , er:EnergyConsumer.ScheduleResource-cardinality ;
+        sh:targetClass  cim:EnergyConsumer .
+
+er:AreaDispatchableUnit.PowerElectronicsUnit-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( cim:PowerElectronicsUnit ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: cim:PowerElectronicsUnit" ;
+        sh:name         "AreaDispatchableUnit.PowerElectronicsUnit-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        6 ;
+        sh:path         ( nc:AreaDispatchableUnit.PowerElectronicsUnit rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:Equipment  rdf:type  sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.name-cardinality , er:Equipment.AggregatedEquipment-cardinality , er:Equipment.Circuit-cardinality ;
+        sh:targetClass  cim:Equipment .
+
+er:Curve.y1Multiplier-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:in           ( cim:UnitMultiplier.Z cim:UnitMultiplier.y cim:UnitMultiplier.Y cim:UnitMultiplier.z cim:UnitMultiplier.T cim:UnitMultiplier.c cim:UnitMultiplier.none cim:UnitMultiplier.d cim:UnitMultiplier.a cim:UnitMultiplier.k cim:UnitMultiplier.da cim:UnitMultiplier.micro cim:UnitMultiplier.G cim:UnitMultiplier.h cim:UnitMultiplier.E cim:UnitMultiplier.f cim:UnitMultiplier.P cim:UnitMultiplier.p cim:UnitMultiplier.m cim:UnitMultiplier.M cim:UnitMultiplier.n ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "Curve.y1Multiplier-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         cim:Curve.y1Multiplier ;
+        sh:severity     sh:Violation .
+
+er:OperationalLimitSet.Terminal-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "OperationalLimitSet.Terminal-cardinality" ;
+        sh:order        1 ;
+        sh:path         cim:OperationalLimitSet.Terminal ;
+        sh:severity     sh:Violation .
+
+er:AreaDispatchableUnit.ScheduleResource-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:ScheduleResource ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:ScheduleResource" ;
+        sh:name         "AreaDispatchableUnit.ScheduleResource-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        5 ;
+        sh:path         ( nc:AreaDispatchableUnit.ScheduleResource rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:ScheduleResource.SchedulingArea-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:SchedulingArea nc:SubSchedulingArea ) ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "ScheduleResource.SchedulingArea-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        7 ;
+        sh:path         ( nc:ScheduleResource.SchedulingArea rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:BlockEnergyOrder.longPF-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "BlockEnergyOrder.longPF-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:BlockEnergyOrder.longPF ;
+        sh:severity     sh:Violation .
+
+er:DCPole.DCController-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:DCController ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:DCController" ;
+        sh:name         "DCPole.DCController-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( nc:DCPole.DCController rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:SchedulingArea.ControlArea-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( cim:ControlArea ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: cim:ControlArea" ;
+        sh:name         "SchedulingArea.ControlArea-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        3 ;
+        sh:path         ( nc:SchedulingArea.ControlArea rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:EnergyComponent.PowerElectronicsUnit-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( cim:PowerElectronicsUnit ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: cim:PowerElectronicsUnit" ;
+        sh:name         "EnergyComponent.PowerElectronicsUnit-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( nc:EnergyComponent.PowerElectronicsUnit rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:AreaDispatchableUnit.normalEnabled-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "AreaDispatchableUnit.normalEnabled-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        4 ;
+        sh:path         nc:AreaDispatchableUnit.normalEnabled ;
+        sh:severity     sh:Violation .
+
+er:BlockEnergyOrder.BlockEnergyComponent-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:BlockEnergyComponent ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:BlockEnergyComponent" ;
+        sh:name         "BlockEnergyOrder.BlockEnergyComponent-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( nc:BlockEnergyOrder.BlockEnergyComponent rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:Equipment.AggregatedEquipment-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( cim:Equipment cim:PowerElectronicsUnit cim:HydroPump cim:GeneratingUnit cim:EnergyConsumer ) ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "Equipment.AggregatedEquipment-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        9 ;
+        sh:path         ( cim:Equipment.AggregatedEquipment rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:OperationalLimitSet.PowerTransferCorridor-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "OperationalLimitSet.PowerTransferCorridor-cardinality" ;
+        sh:order        0 ;
+        sh:path         cim:OperationalLimitSet.PowerTransferCorridor ;
+        sh:severity     sh:Violation .
+
+er:HydroPump.shortPF-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "HydroPump.shortPF-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        3 ;
+        sh:path         nc:HydroPump.shortPF ;
+        sh:severity     sh:Violation .
+
+er:HydroPump.maxEconomicP-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "HydroPump.maxEconomicP-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        4 ;
+        sh:path         nc:HydroPump.maxEconomicP ;
+        sh:severity     sh:Violation .
+
+er:OrganisationRole.Organisation-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "OrganisationRole.Organisation-cardinality" ;
+        sh:order        3 ;
+        sh:path         cim:OrganisationRole.Organisation ;
+        sh:severity     sh:Violation .
+
+er:EnergyGroup.EnergyType-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "EnergyGroup.EnergyType-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:EnergyGroup.EnergyType ;
+        sh:severity     sh:Violation .
+
+er:SubSchedulingArea.SchedulingArea-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:SchedulingArea nc:SubSchedulingArea ) ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "SubSchedulingArea.SchedulingArea-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( nc:SubSchedulingArea.SchedulingArea rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:SubSchedulingArea.SchedulingArea-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "SubSchedulingArea.SchedulingArea-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:SubSchedulingArea.SchedulingArea ;
+        sh:severity     sh:Violation .
+
+er:GeneratingUnit.shutdownTime-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "GeneratingUnit.shutdownTime-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:GeneratingUnit.shutdownTime ;
+        sh:severity     sh:Violation .
+
+er:PowerElectronicsUnit.minEconomicP-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "PowerElectronicsUnit.minEconomicP-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        6 ;
+        sh:path         nc:PowerElectronicsUnit.minEconomicP ;
+        sh:severity     sh:Violation .
+
+er:AreaDispatchableUnit.SchedulingArea-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     er:AreaDispatchableUnit.SchedulingArea-valueType ;
+        sh:targetClass  nc:AreaDispatchableUnit .
+
+er:ControlArea.SystemOperator-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     er:ControlArea.SystemOperator-valueType ;
+        sh:targetClass  cim:ControlArea .
+
+er:Feeder.NormalEnergizedSubstation-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( cim:Substation ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: cim:Substation" ;
+        sh:name         "Feeder.NormalEnergizedSubstation-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        3 ;
+        sh:path         ( cim:Feeder.NormalEnergizedSubstation rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:EnergyComponent.HydroPump-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "EnergyComponent.HydroPump-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:EnergyComponent.HydroPump ;
+        sh:severity     sh:Violation .
+
+er:Curve.y1Unit-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "Curve.y1Unit-cardinality" ;
+        sh:order        3 ;
+        sh:path         cim:Curve.y1Unit ;
+        sh:severity     sh:Violation .
+
+er:BlockEnergyOrder.longPF-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "BlockEnergyOrder.longPF-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        3 ;
+        sh:path         nc:BlockEnergyOrder.longPF ;
+        sh:severity     sh:Violation .
+
+er:CircuitShare.PowerTransferCorridor-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     er:CircuitShare.PowerTransferCorridor-valueType ;
+        sh:targetClass  nc:CircuitShare .
+
+er:EnergyGroup.longPF-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "EnergyGroup.longPF-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:EnergyGroup.longPF ;
+        sh:severity     sh:Violation .
+
+er:AreaDispatchableUnit.EnergyConsumer-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( cim:EnergyConsumer ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: cim:EnergyConsumer" ;
+        sh:name         "AreaDispatchableUnit.EnergyConsumer-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( nc:AreaDispatchableUnit.EnergyConsumer rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:DCPole  rdf:type     sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.mRID-datatype , er:DCPole.DCLine-cardinality , er:DCPole.DCTieCorridor-valueType , er:DCPole.DCController-cardinality , ido:IdentifiedObject.name-cardinality , er:DCPole.SchedulingArea-cardinality , er:DCPole.DCController-valueType , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.description-cardinality , er:DCPole.DCTieCorridor-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.description-datatype ;
+        sh:targetClass  nc:DCPole .
+
+er:LoadFrequencyControlArea.deficientGenerationLimit-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "LoadFrequencyControlArea.deficientGenerationLimit-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        7 ;
+        sh:path         nc:LoadFrequencyControlArea.deficientGenerationLimit ;
+        sh:severity     sh:Violation .
+
+er:Equipment.AggregatedEquipment-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     er:Equipment.AggregatedEquipment-valueType ;
+        sh:targetClass  cim:EnergyConsumer , cim:GeneratingUnit , cim:Equipment , cim:PowerElectronicsUnit , cim:HydroPump .
+
+er:OperationalLimitSet.Terminal-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           () ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "OperationalLimitSet.Terminal-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( cim:OperationalLimitSet.Terminal rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:OperationalLimitType.TemporaryDurationOverloadLimitCurve-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "OperationalLimitType.TemporaryDurationOverloadLimitCurve-cardinality" ;
+        sh:order        4 ;
+        sh:path         cim:OperationalLimitType.TemporaryDurationOverloadLimitCurve ;
+        sh:severity     sh:Violation .
+
+er:GeneratingUnit.maxEconomicP-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "GeneratingUnit.maxEconomicP-cardinality" ;
+        sh:order        7 ;
+        sh:path         cim:GeneratingUnit.maxEconomicP ;
+        sh:severity     sh:Violation .
+
+er:SchedulingArea.isIslandingEnabled-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "SchedulingArea.isIslandingEnabled-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        2 ;
+        sh:path         nc:SchedulingArea.isIslandingEnabled ;
+        sh:severity     sh:Violation .
+
+er:Feeder  rdf:type     sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.description-datatype , er:Feeder.NormalEnergizedSubstation-valueType , er:Feeder.NormalEnergizingSubstation-valueType , ido:IdentifiedObject.name-cardinality , er:Feeder.SubSchedulingArea-valueType , ido:IdentifiedObject.description-cardinality , er:Feeder.NormalEnergizingSubstation-cardinality , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.name-datatype , er:Feeder.NamingSecondarySubstation-valueType , er:Feeder.SubSchedulingArea-cardinality ;
+        sh:targetClass  cim:Feeder .
+
+er:ScheduleResource.ResourceOf-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "ScheduleResource.ResourceOf-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:ScheduleResource.ResourceOf ;
+        sh:severity     sh:Violation .
+
+er:Curve.xUnit-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "Curve.xUnit-cardinality" ;
+        sh:order        5 ;
+        sh:path         cim:Curve.xUnit ;
+        sh:severity     sh:Violation .
+
+er:SchedulingArea.EnergyCoordinationRegion-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:EnergyCoordinationRegion ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:EnergyCoordinationRegion" ;
+        sh:name         "SchedulingArea.EnergyCoordinationRegion-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        7 ;
+        sh:path         ( nc:SchedulingArea.EnergyCoordinationRegion rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:CircuitShare.PowerTransferCorridor-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "CircuitShare.PowerTransferCorridor-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:CircuitShare.PowerTransferCorridor ;
+        sh:severity     sh:Violation .
+
+er:OutageCoordinator  rdf:type  sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.description-datatype , er:OrganisationRole.globalLocationNumber-datatype , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.name-datatype , er:OrganisationRole.globalLocationNumber-cardinality , er:OrganisationRole.Organisation-valueType , er:OrganisationRole.Organisation-cardinality ;
+        sh:targetClass  nc:OutageCoordinator .
+
+er:SchedulingArea  rdf:type  sh:NodeShape ;
+        sh:property     er:SchedulingArea.SystemOperator-cardinality , ido:IdentifiedObject.name-cardinality , er:SchedulingArea.ControlArea-valueType , er:SchedulingArea.isIslandingEnabled-cardinality , er:SchedulingArea.BiddingZone-valueType , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.name-datatype , er:SchedulingArea.LoadFrequencyControlArea-valueType , er:SchedulingArea.EnergyCoordinationRegion-cardinality , er:SchedulingArea.isIslandingEnabled-datatype , er:SchedulingArea.EnergyCoordinationRegion-valueType , er:SchedulingArea.ControlArea-cardinality , er:SchedulingArea.isMeteringGridArea-cardinality , ido:IdentifiedObject.description-cardinality , er:SchedulingArea.SynchronousArea-cardinality , er:SchedulingArea.SynchronousArea-valueType , er:SchedulingArea.LoadFrequencyControlArea-cardinality , er:SchedulingArea.BiddingZone-cardinality , er:SchedulingArea.isMeteringGridArea-datatype , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.description-datatype ;
+        sh:targetClass  nc:SchedulingArea .
+
+er:PTCTriggeredEquipment.Equipment-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     er:PTCTriggeredEquipment.Equipment-valueType ;
+        sh:targetClass  nc:PTCTriggeredEquipment .
+
+er:EnergyConsumer.longPF-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "EnergyConsumer.longPF-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:EnergyConsumer.longPF ;
+        sh:severity     sh:Violation .
+
+er:BiddingZone  rdf:type  sh:NodeShape ;
+        sh:property     er:BiddingZone.CapacityCalculationRegion-cardinality , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.mRID-datatype , er:BiddingZone.tradeEnabled-cardinality , er:BiddingZone.tradeEnabled-datatype , ido:IdentifiedObject.name-cardinality , er:BiddingZone.CapacityCalculationRegion-valueType , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.name-datatype ;
+        sh:targetClass  nc:BiddingZone .
+
+er:DCTieCorridor.minFRRlimit-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "DCTieCorridor.minFRRlimit-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:DCTieCorridor.minFRRlimit ;
+        sh:severity     sh:Violation .
+
+er:TieCorridor  rdf:type  sh:NodeShape ;
+        sh:property     er:TieCorridor.thresholdFRR-datatype , er:TieCorridor.delayFRR-cardinality , er:TieCorridor.delayFRR-datatype , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.description-datatype , er:TieCorridor.maxFRRramp-cardinality , er:TieCorridor.thresholdFRR-cardinality , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.name-datatype , er:TieCorridor.maxFRRramp-datatype ;
+        sh:targetClass  nc:TieCorridor .
+
+er:OutageCoordinationRegion.OutageCoordinator-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "OutageCoordinationRegion.OutageCoordinator-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:OutageCoordinationRegion.OutageCoordinator ;
+        sh:severity     sh:Violation .
+
+er:CurveData.Curve-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     er:CurveData.Curve-valueType ;
+        sh:targetClass  cim:CurveData .
+
+er:LoadFrequencyControlBlock.SynchronousArea-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:SynchronousArea ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:SynchronousArea" ;
+        sh:name         "LoadFrequencyControlBlock.SynchronousArea-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( nc:LoadFrequencyControlBlock.SynchronousArea rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:BiddingZone.CapacityCalculationRegion-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:CapacityCalculationRegion ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:CapacityCalculationRegion" ;
+        sh:name         "BiddingZone.CapacityCalculationRegion-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( nc:BiddingZone.CapacityCalculationRegion rdf:type ) ;
+        sh:severity     sh:Violation .
+
+ido:IdentifiedObject.description-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ido:CardinalityIO ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "IdentifiedObject.description-cardinality" ;
+        sh:order        0.1 ;
+        sh:path         cim:IdentifiedObject.description ;
+        sh:severity     sh:Violation .
+
+er:AreaDispatchableUnit.ScheduleResource-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "AreaDispatchableUnit.ScheduleResource-cardinality" ;
+        sh:order        5 ;
+        sh:path         nc:AreaDispatchableUnit.ScheduleResource ;
+        sh:severity     sh:Violation .
+
+er:BlockEnergyOrder.shortPF-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "BlockEnergyOrder.shortPF-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         nc:BlockEnergyOrder.shortPF ;
+        sh:severity     sh:Violation .
+
+er:OperationalLimit.OperationalLimitType-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( cim:OperationalLimitType ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: cim:OperationalLimitType" ;
+        sh:name         "OperationalLimit.OperationalLimitType-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        3 ;
+        sh:path         ( cim:OperationalLimit.OperationalLimitType rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:OperationalLimitSet.Terminal-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     er:OperationalLimitSet.Terminal-valueType ;
+        sh:targetClass  cim:OperationalLimitSet .
+
+er:ProportionalEnergyComponent
+        rdf:type        sh:NodeShape ;
+        sh:property     er:EnergyComponent.GeneratingUnit-valueType , er:EnergyComponent.EnergyConsumer-valueType , ido:IdentifiedObject.mRID-datatype , er:EnergyComponent.GeneratingUnit-cardinality , ido:IdentifiedObject.description-cardinality , er:EnergyComponent.EnergyGroup-cardinality , er:EnergyComponent.EnergyGroup-valueType , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.name-cardinality , er:EnergyComponent.PowerElectronicsUnit-valueType , er:EnergyComponent.PowerElectronicsUnit-cardinality , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.mRID-cardinality , er:EnergyComponent.HydroPump-cardinality , er:EnergyComponent.HydroPump-valueType , er:EnergyComponent.EnergyConsumer-cardinality ;
+        sh:targetClass  nc:ProportionalEnergyComponent .
+
+er:OperationalLimitSet
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.description-datatype , er:OperationalLimitSet.Terminal-cardinality , er:OperationalLimitSet.PowerTransferCorridor-cardinality , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.mRID-datatype ;
+        sh:targetClass  cim:OperationalLimitSet .
+
+er:HydroPump.longPF-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "HydroPump.longPF-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:HydroPump.longPF ;
+        sh:severity     sh:Violation .
+
+er:ClosedDistributionSystemOperator
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.name-datatype , er:OrganisationRole.Organisation-cardinality , er:OrganisationRole.globalLocationNumber-cardinality , er:OrganisationRole.globalLocationNumber-datatype , er:OrganisationRole.Organisation-valueType , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.mRID-datatype ;
+        sh:targetClass  nc:ClosedDistributionSystemOperator .
+
+er:SchedulingArea.LoadFrequencyControlArea-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:LoadFrequencyControlArea ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:LoadFrequencyControlArea" ;
+        sh:name         "SchedulingArea.LoadFrequencyControlArea-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        11 ;
+        sh:path         ( nc:SchedulingArea.LoadFrequencyControlArea rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:LoadFrequencyControlBlock.SynchronousArea-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "LoadFrequencyControlBlock.SynchronousArea-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:LoadFrequencyControlBlock.SynchronousArea ;
+        sh:severity     sh:Violation .
+
+er:SubSchedulingArea.SchedulingArea-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     er:SubSchedulingArea.SchedulingArea-valueType ;
+        sh:targetClass  nc:SubSchedulingArea .
+
+er:EnergyConsumer.ScheduleResource-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:ScheduleResource ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:ScheduleResource" ;
+        sh:name         "EnergyConsumer.ScheduleResource-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        3 ;
+        sh:path         ( cim:EnergyConsumer.ScheduleResource rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:EnergyConsumer.longPF-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "EnergyConsumer.longPF-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         nc:EnergyConsumer.longPF ;
+        sh:severity     sh:Violation .
+
+er:PowerElectronicsUnit.shortPF-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "PowerElectronicsUnit.shortPF-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:PowerElectronicsUnit.shortPF ;
+        sh:severity     sh:Violation .
+
+er:DCController  rdf:type  sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.name-cardinality ;
+        sh:targetClass  nc:DCController .
+
+er:ControlArea.SystemOperator-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "ControlArea.SystemOperator-cardinality" ;
+        sh:order        1 ;
+        sh:path         cim:ControlArea.SystemOperator ;
+        sh:severity     sh:Violation .
+
+er:Substation.SchedulingArea-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:SchedulingArea nc:SubSchedulingArea ) ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "Substation.SchedulingArea-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        3 ;
+        sh:path         ( cim:Substation.SchedulingArea rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:Equipment.AggregatedEquipment-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "Equipment.AggregatedEquipment-cardinality" ;
+        sh:order        9 ;
+        sh:path         cim:Equipment.AggregatedEquipment ;
+        sh:severity     sh:Violation .
+
+er:EnergyTypeReference
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.description-datatype , er:EnergyTypeReference.kind-datatype , er:EnergyTypeReference.kind-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.description-cardinality ;
+        sh:targetClass  nc:EnergyTypeReference .
+
+er:DCConverterUnit.Substation-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( cim:Substation ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: cim:Substation" ;
+        sh:name         "DCConverterUnit.Substation-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( cim:DCConverterUnit.Substation rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:EnergyGroup.shortPF-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "EnergyGroup.shortPF-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:EnergyGroup.shortPF ;
+        sh:severity     sh:Violation .
+
+er:Line.SchedulingArea-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "Line.SchedulingArea-cardinality" ;
+        sh:order        0 ;
+        sh:path         cim:Line.SchedulingArea ;
+        sh:severity     sh:Violation .
+
+er:SchedulingArea.SynchronousArea-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "SchedulingArea.SynchronousArea-cardinality" ;
+        sh:order        14 ;
+        sh:path         nc:SchedulingArea.SynchronousArea ;
+        sh:severity     sh:Violation .
+
+er:LoadFrequencyControlArea.FrequencyControlOperator-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:LoadFrequencyControlOperator ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:LoadFrequencyControlOperator" ;
+        sh:name         "LoadFrequencyControlArea.FrequencyControlOperator-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        0 ;
+        sh:path         ( nc:LoadFrequencyControlArea.FrequencyControlOperator rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:LoadFrequencyControlArea.frequencyBiasFactor-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "LoadFrequencyControlArea.frequencyBiasFactor-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:LoadFrequencyControlArea.frequencyBiasFactor ;
+        sh:severity     sh:Violation .
+
+er:CurveData.y1value-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "CurveData.y1value-cardinality" ;
+        sh:order        2 ;
+        sh:path         cim:CurveData.y1value ;
+        sh:severity     sh:Violation .
+
+er:EnergyAlignmentCoordinator
+        rdf:type        sh:NodeShape ;
+        sh:property     er:OrganisationRole.globalLocationNumber-datatype , ido:IdentifiedObject.description-cardinality , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.name-datatype , er:OrganisationRole.Organisation-cardinality , er:OrganisationRole.Organisation-valueType , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.name-cardinality , er:OrganisationRole.globalLocationNumber-cardinality ;
+        sh:targetClass  nc:EnergyAlignmentCoordinator .
+
+er:GeneratingUnit.minEconomicP-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "GeneratingUnit.minEconomicP-cardinality" ;
+        sh:order        6 ;
+        sh:path         cim:GeneratingUnit.minEconomicP ;
+        sh:severity     sh:Violation .
+
+er:SchedulingArea.SystemOperator-valueTypeNodeShape
+        rdf:type        sh:NodeShape ;
+        sh:property     er:SchedulingArea.SystemOperator-valueType ;
+        sh:targetClass  nc:SchedulingArea , nc:SubSchedulingArea .
+
+er:PowerTransformerCircuit
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.description-cardinality , er:Circuit.CircuitShare-cardinality , ido:IdentifiedObject.mRID-cardinality , er:Circuit.CircuitShare-valueType ;
+        sh:targetClass  nc:PowerTransformerCircuit .
+
+er:TieCorridor.delayFRR-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "TieCorridor.delayFRR-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        6 ;
+        sh:path         nc:TieCorridor.delayFRR ;
+        sh:severity     sh:Violation .
+
+er:Equipment.Circuit-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:PowerTransformerCircuit nc:LineCircuit ) ;
+        sh:message      "One of the following occurs: 1) The value type is not IRI; 2) The value type is not the right class." ;
+        sh:name         "Equipment.Circuit-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        6 ;
+        sh:path         ( cim:Equipment.Circuit rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:ScheduleResource.ResourceOf-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( nc:ScheduleResource ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: nc:ScheduleResource" ;
+        sh:name         "ScheduleResource.ResourceOf-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        3 ;
+        sh:path         ( nc:ScheduleResource.ResourceOf rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:OperationalLimitType.RecoveryOverloadLimitCurve-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "OperationalLimitType.RecoveryOverloadLimitCurve-cardinality" ;
+        sh:order        0 ;
+        sh:path         cim:OperationalLimitType.RecoveryOverloadLimitCurve ;
+        sh:severity     sh:Violation .
+
+er:PowerElectronicsUnit.maxEconomicP-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "PowerElectronicsUnit.maxEconomicP-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        5 ;
+        sh:path         nc:PowerElectronicsUnit.maxEconomicP ;
+        sh:severity     sh:Violation .
+
+er:PowerElectronicsUnit.maxEconomicP-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "PowerElectronicsUnit.maxEconomicP-cardinality" ;
+        sh:order        5 ;
+        sh:path         nc:PowerElectronicsUnit.maxEconomicP ;
+        sh:severity     sh:Violation .
+
+er:ScheduleResource.SchedulingArea-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "ScheduleResource.SchedulingArea-cardinality" ;
+        sh:order        7 ;
+        sh:path         nc:ScheduleResource.SchedulingArea ;
+        sh:severity     sh:Violation .
+
+er:HydroPump.longPF-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "HydroPump.longPF-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        1 ;
+        sh:path         nc:HydroPump.longPF ;
+        sh:severity     sh:Violation .
+
+er:EnergyComponent.HydroPump-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( cim:HydroPump ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: cim:HydroPump" ;
+        sh:name         "EnergyComponent.HydroPump-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( nc:EnergyComponent.HydroPump rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:GeneratingUnit.maxStartupLoad-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "GeneratingUnit.maxStartupLoad-cardinality" ;
+        sh:order        5 ;
+        sh:path         nc:GeneratingUnit.maxStartupLoad ;
+        sh:severity     sh:Violation .
+
+er:Curve.y1Unit-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:in           ( cim:UnitSymbol.HPerm cim:UnitSymbol.mol cim:UnitSymbol.m3Uncompensated cim:UnitSymbol.radPers cim:UnitSymbol.SPerm cim:UnitSymbol.Wb cim:UnitSymbol.bar cim:UnitSymbol.kat cim:UnitSymbol.cosPhi cim:UnitSymbol.VA cim:UnitSymbol.dBm cim:UnitSymbol.Btu cim:UnitSymbol.lm cim:UnitSymbol.mPers2 cim:UnitSymbol.ha cim:UnitSymbol.rotPers cim:UnitSymbol.A cim:UnitSymbol.A2 cim:UnitSymbol.JPerkgK cim:UnitSymbol.JPerm2 cim:UnitSymbol.Nm cim:UnitSymbol.kgPerJ cim:UnitSymbol.As cim:UnitSymbol.JPerm3 cim:UnitSymbol.m2Pers cim:UnitSymbol.d cim:UnitSymbol.C cim:UnitSymbol.WPersr cim:UnitSymbol.rad cim:UnitSymbol.kg cim:UnitSymbol.therm cim:UnitSymbol.CPerm3 cim:UnitSymbol.VArh cim:UnitSymbol.Mx cim:UnitSymbol.WPerW cim:UnitSymbol.JPermolK cim:UnitSymbol.cd cim:UnitSymbol.WPerm2sr cim:UnitSymbol.h cim:UnitSymbol.G cim:UnitSymbol.F cim:UnitSymbol.Vh cim:UnitSymbol.lPerl cim:UnitSymbol.HzPerHz cim:UnitSymbol.H cim:UnitSymbol.mmHg cim:UnitSymbol.CPerm2 cim:UnitSymbol.radPers2 cim:UnitSymbol.mPers cim:UnitSymbol.KPers cim:UnitSymbol.anglemin cim:UnitSymbol.PaPers cim:UnitSymbol.VPerHz cim:UnitSymbol.J cim:UnitSymbol.m2 cim:UnitSymbol.APerm cim:UnitSymbol.m3Perh cim:UnitSymbol.l cim:UnitSymbol.K cim:UnitSymbol.m3 cim:UnitSymbol.lPerh cim:UnitSymbol.WPers cim:UnitSymbol.dB cim:UnitSymbol.FPerm cim:UnitSymbol.m cim:UnitSymbol.A2s cim:UnitSymbol.kn cim:UnitSymbol.VAr cim:UnitSymbol.charPers cim:UnitSymbol.m3Compensated cim:UnitSymbol.M cim:UnitSymbol.onePerHz cim:UnitSymbol.Wh cim:UnitSymbol.gPerg cim:UnitSymbol.WPerm2 cim:UnitSymbol.molPerkg cim:UnitSymbol.Ah cim:UnitSymbol.N cim:UnitSymbol.mPerm3 cim:UnitSymbol.sPers cim:UnitSymbol.VPerV cim:UnitSymbol.kgm2 cim:UnitSymbol.m3Perkg cim:UnitSymbol.V2 cim:UnitSymbol.Oe cim:UnitSymbol.min cim:UnitSymbol.Vs cim:UnitSymbol.Q cim:UnitSymbol.V2h cim:UnitSymbol.CPerkg cim:UnitSymbol.JPerkg cim:UnitSymbol.Qh cim:UnitSymbol.s cim:UnitSymbol.tonne cim:UnitSymbol.NPerm cim:UnitSymbol.Pa cim:UnitSymbol.VAh cim:UnitSymbol.none cim:UnitSymbol.HzPers cim:UnitSymbol.S cim:UnitSymbol.deg cim:UnitSymbol.ohm cim:UnitSymbol.A2h cim:UnitSymbol.T cim:UnitSymbol.onePerm cim:UnitSymbol.lx cim:UnitSymbol.lPers cim:UnitSymbol.JPerK cim:UnitSymbol.character cim:UnitSymbol.APerA cim:UnitSymbol.V cim:UnitSymbol.ppm cim:UnitSymbol.WPermK cim:UnitSymbol.ohmPerm cim:UnitSymbol.VPerm cim:UnitSymbol.Bq cim:UnitSymbol.W cim:UnitSymbol.GyPers cim:UnitSymbol.Sv cim:UnitSymbol.molPerm3 cim:UnitSymbol.degC cim:UnitSymbol.JPermol cim:UnitSymbol.sr cim:UnitSymbol.count cim:UnitSymbol.m3Pers cim:UnitSymbol.ohmm cim:UnitSymbol.Hz cim:UnitSymbol.rev cim:UnitSymbol.WPerA cim:UnitSymbol.katPerm3 cim:UnitSymbol.gal cim:UnitSymbol.Pas cim:UnitSymbol.VPerVAr cim:UnitSymbol.VPerVA cim:UnitSymbol.anglesec cim:UnitSymbol.ft3 cim:UnitSymbol.molPermol cim:UnitSymbol.JPers cim:UnitSymbol.Gy cim:UnitSymbol.kgm cim:UnitSymbol.kgPerm3 ) ;
+        sh:message      "The datatype is not IRI (Internationalized Resource Identifier) or it is enumerated value not part of the profile." ;
+        sh:name         "Curve.y1Unit-datatype" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        3 ;
+        sh:path         cim:Curve.y1Unit ;
+        sh:severity     sh:Violation .
+
+er:EnergyCoordinationRegion.EnergyAlignmentCoordinator-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "EnergyCoordinationRegion.EnergyAlignmentCoordinator-cardinality" ;
+        sh:order        0 ;
+        sh:path         nc:EnergyCoordinationRegion.EnergyAlignmentCoordinator ;
+        sh:severity     sh:Violation .
+
+ido:IdentifiedObject.description-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:string ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        ido:DatatypesGroupIO ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "IdentifiedObject.description-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0.1 ;
+        sh:path         cim:IdentifiedObject.description ;
+        sh:severity     sh:Violation .
+
+er:GeneratingUnit.shutdownTime-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "GeneratingUnit.shutdownTime-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        3 ;
+        sh:path         nc:GeneratingUnit.shutdownTime ;
+        sh:severity     sh:Violation .
+
+er:SynchronousArea  rdf:type  sh:NodeShape ;
+        sh:property     er:SynchronousArea.nominalFrequency-datatype , ido:IdentifiedObject.description-cardinality , er:SynchronousArea.nominalFrequency-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.mRID-datatype ;
+        sh:targetClass  nc:SynchronousArea .
+
+er:LoadFrequencyControlArea.frequencyRestorationReserveMaxRamp-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "LoadFrequencyControlArea.frequencyRestorationReserveMaxRamp-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:LoadFrequencyControlArea.frequencyRestorationReserveMaxRamp ;
+        sh:severity     sh:Violation .
+
+er:BaseOverloadLimitCurve
+        rdf:type        sh:NodeShape ;
+        sh:property     er:Curve.y1Multiplier-datatype , er:Curve.y1Unit-cardinality , er:Curve.y1Multiplier-cardinality , er:Curve.xUnit-datatype , er:Curve.xUnit-cardinality , er:Curve.curveStyle-datatype , er:Curve.y1Unit-datatype , er:Curve.xMultiplier-datatype , er:Curve.xMultiplier-cardinality , er:Curve.curveStyle-cardinality ;
+        sh:targetClass  nc:BaseOverloadLimitCurve .
+
+er:CapacityCalculationRegion.SecurityCoordinator-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "CapacityCalculationRegion.SecurityCoordinator-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:CapacityCalculationRegion.SecurityCoordinator ;
+        sh:severity     sh:Violation .
+
+er:BlockEnergyOrder.sequence-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "BlockEnergyOrder.sequence-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:BlockEnergyOrder.sequence ;
+        sh:severity     sh:Violation .
+
+er:EnergyConsumer.ScheduleResource-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "EnergyConsumer.ScheduleResource-cardinality" ;
+        sh:order        3 ;
+        sh:path         cim:EnergyConsumer.ScheduleResource ;
+        sh:severity     sh:Violation .
+
+er:DurationOverloadLimitCurve
+        rdf:type        sh:NodeShape ;
+        sh:property     er:Curve.xUnit-datatype , er:Curve.curveStyle-datatype , er:Curve.y1Multiplier-datatype , er:Curve.curveStyle-cardinality , er:Curve.xMultiplier-cardinality , er:Curve.xUnit-cardinality , er:Curve.xMultiplier-datatype , er:Curve.y1Multiplier-cardinality , er:Curve.y1Unit-datatype , er:Curve.y1Unit-cardinality ;
+        sh:targetClass  nc:DurationOverloadLimitCurve .
+
+er:GeneratingUnit  rdf:type  sh:NodeShape ;
+        sh:property     er:GeneratingUnit.shutdownTime-datatype , er:Equipment.AggregatedEquipment-cardinality , er:GeneratingUnit.shutdownCost-datatype , er:GeneratingUnit.shutdownCost-cardinality , er:Equipment.Circuit-cardinality , ido:IdentifiedObject.name-datatype , er:GeneratingUnit.minEconomicP-cardinality , ido:IdentifiedObject.description-datatype , er:GeneratingUnit.shutdownTime-cardinality , er:GeneratingUnit.minEconomicP-datatype , er:GeneratingUnit.maxStartupLoad-cardinality , er:GeneratingUnit.maxEconomicP-cardinality , er:GeneratingUnit.ScheduleResource-valueType , ido:IdentifiedObject.name-cardinality , er:GeneratingUnit.ScheduleResource-cardinality , er:GeneratingUnit.maxEconomicP-datatype , ido:IdentifiedObject.description-cardinality , er:GeneratingUnit.maxStartupLoad-datatype ;
+        sh:targetClass  cim:GeneratingUnit .
+
+er:LoadFrequencyControlArea.frequencyRestorationReserveMaxRamp-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "LoadFrequencyControlArea.frequencyRestorationReserveMaxRamp-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        2 ;
+        sh:path         nc:LoadFrequencyControlArea.frequencyRestorationReserveMaxRamp ;
+        sh:severity     sh:Violation .
+
+er:TieCorridor.thresholdFRR-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "TieCorridor.thresholdFRR-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        5 ;
+        sh:path         nc:TieCorridor.thresholdFRR ;
+        sh:severity     sh:Violation .
+
+er:OperationalLimitType
+        rdf:type        sh:NodeShape ;
+        sh:property     er:OperationalLimitType.direction-cardinality , ido:IdentifiedObject.mRID-cardinality , er:OperationalLimitType.direction-datatype , ido:IdentifiedObject.name-datatype , er:OperationalLimitType.TemporaryDurationOverloadLimitCurve-valueType , er:OperationalLimitType.RecoveryOverloadLimitCurve-valueType , er:OperationalLimitType.TemporaryBaseOverloadLimitCurve-cardinality , er:OperationalLimitType.TemporaryBaseOverloadLimitCurve-valueType , er:OperationalLimitType.PermanentAmbientTemperatureDependencyCurve-valueType , er:OperationalLimitType.RecoveryOverloadLimitCurve-cardinality , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.name-cardinality , er:OperationalLimitType.PermanentSolarRadiationCurve-valueType , er:OperationalLimitType.TemporaryDurationOverloadLimitCurve-cardinality , ido:IdentifiedObject.description-cardinality , er:OperationalLimitType.PermanentAmbientTemperatureDependencyCurve-cardinality , er:OperationalLimitType.PermanentSolarRadiationCurve-cardinality , ido:IdentifiedObject.mRID-datatype ;
+        sh:targetClass  cim:OperationalLimitType .
+
+er:BiddingZone.tradeEnabled-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "BiddingZone.tradeEnabled-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        4 ;
+        sh:path         nc:BiddingZone.tradeEnabled ;
+        sh:severity     sh:Violation .
+
+er:SolarRadiationDepedencyCurve
+        rdf:type        sh:NodeShape ;
+        sh:property     er:Curve.y1Multiplier-datatype , er:Curve.y1Unit-cardinality , er:Curve.xMultiplier-datatype , er:Curve.y1Unit-datatype , er:Curve.y1Multiplier-cardinality , er:Curve.xUnit-datatype , er:Curve.curveStyle-cardinality , er:Curve.xUnit-cardinality , er:Curve.xMultiplier-cardinality , er:Curve.curveStyle-datatype ;
+        sh:targetClass  nc:SolarRadiationDepedencyCurve .
+
+er:Feeder.NamingSecondarySubstation-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( cim:Substation ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: cim:Substation" ;
+        sh:name         "Feeder.NamingSecondarySubstation-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        1 ;
+        sh:path         ( cim:Feeder.NamingSecondarySubstation rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:PowerTransferCorridor.normalEnabled-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "PowerTransferCorridor.normalEnabled-cardinality" ;
+        sh:order        2 ;
+        sh:path         nc:PowerTransferCorridor.normalEnabled ;
+        sh:severity     sh:Violation .
+
+er:HydroPump.maxEconomicP-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "HydroPump.maxEconomicP-cardinality" ;
+        sh:order        4 ;
+        sh:path         nc:HydroPump.maxEconomicP ;
+        sh:severity     sh:Violation .
+
+er:SchedulingArea.BiddingZone-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required association." ;
+        sh:minCount     1 ;
+        sh:name         "SchedulingArea.BiddingZone-cardinality" ;
+        sh:order        13 ;
+        sh:path         nc:SchedulingArea.BiddingZone ;
+        sh:severity     sh:Violation .
+
+ido:IdentifiedObject.mRID-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        ido:CardinalityIO ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "IdentifiedObject.mRID-cardinality" ;
+        sh:order        0.1 ;
+        sh:path         cim:IdentifiedObject.mRID ;
+        sh:severity     sh:Violation .
+
+er:BlockEnergyOrder.sequence-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:integer ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "BlockEnergyOrder.sequence-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        2 ;
+        sh:path         nc:BlockEnergyOrder.sequence ;
+        sh:severity     sh:Violation .
+
+er:PowerElectronicsUnit.ScheduleResource-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "PowerElectronicsUnit.ScheduleResource-cardinality" ;
+        sh:order        0 ;
+        sh:path         cim:PowerElectronicsUnit.ScheduleResource ;
+        sh:severity     sh:Violation .
+
+ido:DatatypesGroupIO  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "DatatypesIO" ;
+        sh:order    1 .
+
+er:ExceptionalPowerTransferCorridor
+        rdf:type        sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.name-cardinality , er:PowerTransferCorridor.normalEnabled-cardinality , ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.mRID-cardinality , er:PowerTransferCorridor.normalEnabled-datatype , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.description-cardinality ;
+        sh:targetClass  nc:ExceptionalPowerTransferCorridor .
+
+er:VoltageAngleLimit.value-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Missing required property (attribute)." ;
+        sh:minCount     1 ;
+        sh:name         "VoltageAngleLimit.value-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:VoltageAngleLimit.value ;
+        sh:severity     sh:Violation .
+
+er:EnergyComponent.EnergyGroup-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the association at the used direction." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "EnergyComponent.EnergyGroup-cardinality" ;
+        sh:order        4 ;
+        sh:path         nc:EnergyComponent.EnergyGroup ;
+        sh:severity     sh:Violation .
+
+er:AssociationsGroup  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "Associations" ;
+        sh:order    2 .
+
+er:CardinalityGroup  rdf:type  sh:PropertyGroup ;
+        rdfs:label  "Cardinality" ;
+        sh:order    0 .
+
+er:DCTieCorridor.maxFRRlimit-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "DCTieCorridor.maxFRRlimit-cardinality" ;
+        sh:order        3 ;
+        sh:path         nc:DCTieCorridor.maxFRRlimit ;
+        sh:severity     sh:Violation .
+
+er:BlockEnergyOrder.shortPF-cardinality
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the cardinality of the property (attribute)." ;
+        sh:group        er:CardinalityGroup ;
+        sh:maxCount     1 ;
+        sh:message      "Cardinality violation. Upper bound shall be 1" ;
+        sh:name         "BlockEnergyOrder.shortPF-cardinality" ;
+        sh:order        1 ;
+        sh:path         nc:BlockEnergyOrder.shortPF ;
+        sh:severity     sh:Violation .
+
+er:OrganisationRole.Organisation-valueType
+        rdf:type        sh:PropertyShape ;
+        sh:description  "This constraint validates the value type of the association at the used direction." ;
+        sh:group        er:AssociationsGroup ;
+        sh:in           ( cim:Organisation ) ;
+        sh:message      "One of the following does not conform: 1) The value type shall be IRI; 2) The value type shall be an instance of the class: cim:Organisation" ;
+        sh:name         "OrganisationRole.Organisation-valueType" ;
+        sh:nodeKind     sh:IRI ;
+        sh:order        3 ;
+        sh:path         ( cim:OrganisationRole.Organisation rdf:type ) ;
+        sh:severity     sh:Violation .
+
+er:EnergyGroup.longPF-datatype
+        rdf:type        sh:PropertyShape ;
+        sh:datatype     xsd:float ;
+        sh:description  "This constraint validates the datatype of the property (attribute)." ;
+        sh:group        er:DatatypesGroup ;
+        sh:message      "The datatype is not literal or it violates the xsd datatype." ;
+        sh:name         "EnergyGroup.longPF-datatype" ;
+        sh:nodeKind     sh:Literal ;
+        sh:order        0 ;
+        sh:path         nc:EnergyGroup.longPF ;
+        sh:severity     sh:Violation .
+
+er:LineCircuit  rdf:type  sh:NodeShape ;
+        sh:property     ido:IdentifiedObject.mRID-datatype , ido:IdentifiedObject.name-cardinality , ido:IdentifiedObject.mRID-cardinality , ido:IdentifiedObject.name-datatype , ido:IdentifiedObject.description-datatype , ido:IdentifiedObject.description-cardinality , er:Circuit.CircuitShare-cardinality , er:Circuit.CircuitShare-valueType ;
+        sh:targetClass  nc:LineCircuit .
