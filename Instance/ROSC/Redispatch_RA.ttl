@@ -1,0 +1,26 @@
+
+@prefix cim:   <http://iec.ch/TC57/CIM100#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix nc:    <http://entsoe.eu/ns/nc#> .
+@prefix eu:    <http://iec.ch/TC57/CIM100-European#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@base          <http://data.entsoe.eu/CSA/TestModel/> .
+
+
+<#RA1> a nc:RedispatchRemedialAction ;
+  nc:RemedialAction.kind <nc:RemedialActionKind.preventive> ;
+  nc:RemedialAction.penaltyFactor 0.8 ;
+  nc:RedispatchRemedialAction.BiddingZone <B1> .
+
+<#GSA1> a nc:RotatingMachineAction ;
+  nc:GridStateAlteration.timeToImplement "PT10M"^^xsd:duration ;
+  nc:GridStateAlteration.RemedialAction <#RA1> .
+
+<#GSA2> a nc:RotatingMachineAction ;
+  nc:GridStateAlteration.timeToImplement "PT35M"^^xsd:duration ;
+  nc:GridStateAlteration.RemedialAction <#RA1> .
+
+<#RS1> a nc:ContinuousIntertemporalRangeSchedule ;
+  nc:ContinuousIntertemporalRangeSchedule.GridStateAlteration <GSA1> ;
+  nc:IntertemporalRangeSchedule.direction <nc:RelativeDirectionKind.upAndDown> ;
+  nc:IntertemporalRangeSchedule.PropertyReference <cim:RotatingMachine.p> .

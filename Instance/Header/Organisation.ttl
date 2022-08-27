@@ -1,0 +1,48 @@
+
+@prefix cim:   <http://iec.ch/TC57/CIM100#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix nc:    <http://entsoe.eu/ns/nc#> .
+@prefix eu:    <http://iec.ch/TC57/CIM100-European#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix org:   <http://www.w3.org/ns/org#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix gr:     <http://purl.org/goodrelations/v1#vatID> .
+@prefix locn:   <http://www.w3.org/ns/locn#> .
+@base          <http://energy.referencedata.eu/Organisation/> .
+
+
+<#urn:uuid:e9e2da91-417b-44d9-bba3-3e222d40ebc0> 
+  rdf:type org:FormalOrganization, cim:Organisation ;
+  dcterms:identifier <urn:uuid:e9e2da91-417b-44d9-bba3-3e222d40ebc0> ;
+  skos:prefLabel "STATNETT SF" ;
+  skos:altLabel "STATNETT_SF" ;
+  cim:IdentifiedObject.mRID <urn:uuid:e9e2da91-417b-44d9-bba3-3e222d40ebc0> ;
+  cim:IdentifiedObject.name "STATNETT SF" ;
+  gr.legalName "STATNETT SF" ;
+  gr.vatID "NO962 986 633" ;
+  gr.hasISICv4 "35.120" ;
+  gr.hasISICv4 "3510" ;
+  nc:Agent.url "https://www.statnett.no/om-statnett/kontakt-oss/" 
+  locn:address <#urn:uuid:15c35a6e-6bad-4fbc-bd6f-6b6ea19e53d7> .
+
+<#urn:uuid:a20490cf-9611-49e7-a535-ef069b329afd> 
+  rdf:type nc:TransmissionSystemOperator ;
+  dcterms:identifier <urn:uuid:a20490cf-9611-49e7-a535-ef069b329afd> ;
+  skos:prefLabel "TSO STATNETT SF" ;
+  skos:altLabel "TSO STATNETT_SF" ;
+  cim:IdentifiedObject.mRID <urn:eic:10X1001A1001A38Y> ;
+  cim:IdentifiedObject.name "TSO STATNETT SF" ;
+  gr.hasGlobalLocationNumber "7080000923168" ;
+  nc:eicType <http://energy.referencedata.eu/StandardEicTypeList/X> .
+
+<#urn:uuid:15c35a6e-6bad-4fbc-bd6f-6b6ea19e53d7> 
+  rdf:type nc:Address, locn:Address ;
+  dcterms:identifier <urn:uuid:15c35a6e-6bad-4fbc-bd6f-6b6ea19e53d7> ;
+  cim:IdentifiedObject.mRID <urn:uuid:15c35a6e-6bad-4fbc-bd6f-6b6ea19e53d7> ;
+  locn:addressId <urn:uuid:15c35a6e-6bad-4fbc-bd6f-6b6ea19e53d7> ;
+  skos:prefLabel "Forretningsadresse"@nb ;
+  skos:prefLabel "Business address"@en ;
+  locn:adminUnitL1 "NO" ;
+  nc:Address.country "NO" ;
+  locn:postCode "0302" ;
+  nc:Address.postCode "0302" .

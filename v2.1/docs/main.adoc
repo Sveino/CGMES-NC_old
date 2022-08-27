@@ -1,0 +1,31 @@
+= CSA Application Implementation Guide
+:doctype: book
+:icons: font
+:toc: left
+:toc-title: Content
+:toclevels: 4
+:table-stripes: even
+:leveloffset: +1
+:sectlinks:
+:docinfo:
+
+
+image::..\diagrams\images\DIGIN.png[width=50%, pdfwidth=30vw]
+
+
+
+NOTE: *Report Error:* +
+Please provide feedback in the case you are dicsovering any errors at, https://github.com/DIGINenergi/Grunnprofil/issues[Github Issues].
+
+
+*Status*: Current +
+*Version*: CSA-v2.1
+*Published*: 2022-05-12 +
+*Updated*: 2022-05-12 +
+*Current Version*: https://github.com/Sveino/CGMES-CSA +
+*Previous version*: https://github.com/Sveino/CGMES-CSA +
+
+= Related Documents
+
+
+
