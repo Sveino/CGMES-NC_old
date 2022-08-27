@@ -6,7 +6,7 @@
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix org:   <http://www.w3.org/ns/org#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix gr:     <http://purl.org/goodrelations/v1#vatID> .
+@prefix gr:     <http://purl.org/goodrelations/v1#> .
 @prefix locn:   <http://www.w3.org/ns/locn#> .
 @base          <http://energy.referencedata.eu/Organisation/> .
 
